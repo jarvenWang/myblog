@@ -1,6 +1,6 @@
 baseURL = "http://wangjinbao-dante.netlify.app"
 title = "The blog of wangjinbao"
-theme = "blog"
+theme = "zzo"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
