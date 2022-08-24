@@ -1,6 +1,6 @@
-baseURL = "http://example.org"
-title = "Hugo Zzo Theme"
-theme = "zzo"
+baseURL = "http://wangjinbao-dante.netlify.app"
+title = "The blog of wangjinbao"
+theme = "blog"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
