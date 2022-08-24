@@ -1,5 +1,5 @@
 English | 
-[한국어](https://github.com/zzossig/hugo-theme-zzo/blob/master/README.ko.md)
+[한국어](https://github.com/wjb375445/myblog/blob/master/README.ko.md)
 
 ## Hugo Theme Zzo
 
