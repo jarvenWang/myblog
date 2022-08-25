@@ -1,20 +1,13 @@
 [en]
-  title = "王金宝的个人博客"
+  title = "Home"
   languageName = "English"
-  weight = 2
+  weight = 1
   languagedir = "ltr"
   contentdir = "content/en"
 
 [ko]
   title = "Hugo Zzo Theme"
   languageName = "한국어"
-  weight = 3
+  weight = 2
   languagedir = "ltr"
   contentdir = "content/ko"
-
-[cn]
-  title = "主页"
-  languageName = "中文"
-  weight = 1
-  languagedir = "ltr"
-  contentdir = "content/cn"

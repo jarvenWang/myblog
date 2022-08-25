@@ -1,6 +1,6 @@
 # Zzo theme for Hugo
 
-[English](https://github.com/wjb375445/myblog/blob/master/README.md) | 
+[English](https://github.com/zzossig/hugo-theme-zzo/blob/master/README.md) | 
 한국어
 
 🔥🔥🔥
@@ -69,7 +69,7 @@ Zzo theme을 이용할 시 가장 매력적인 포인트 한가지는, 한글로
 업데이트 하고 싶으시면 해당 Zzo theme을 지우고 다시 다운로드 한 다음, 복붙하시면 되겠습니다.
 
 ```bash
-$ git clone https://github.com/wjb375445/myblog.git themes/zzo
+$ git clone https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
 ```
 
 깃헙을 이용하여 블로그를 관리하신다면, 섭모듈을 사용하여 Zzo theme을 쉽게 최신버전으로 유지하실 수 있습니다.
@@ -77,7 +77,7 @@ $ git clone https://github.com/wjb375445/myblog.git themes/zzo
 루트 폴더에서 다음 코드를 입력해주시면 submodule로써 Zzo theme이 설치됩니다:
 
 ```bash
-git submodule add https://github.com/wjb375445/myblog.git themes/zzo
+git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
 ```
 
 ## Updating
@@ -294,7 +294,7 @@ bioImageUrl = "" # image url like "http//..." or "images/anyfoldername/mybioimag
 useGravatar = false # we use this option highest priority
 location = "Seoul, Korea"
 organization = "Hugo"
-link = "https://github.com/wjb375445/myblog"
+link = "https://github.com/zzossig/hugo-theme-zzo"
 
 # sidebar
 enableBio = true # in home page sidebar
@@ -388,7 +388,7 @@ commento = false
   phone = ""
   facebook = "http://example.org/"
   twitter = "http://example.org/"
-  github = "https://github.com/wjb375445/myblog"
+  github = "https://github.com/zzossig/hugo-theme-zzo"
   stack-overflow = ""
   instagram = ""
   google-plus = ""
@@ -646,8 +646,8 @@ title: "My Awesome Project" # apperared on a card component
 date: 2020-01-19T21:13:42+09:00
 description: Hello world! This is my awesome project! # apperared on a card component
 weight: 1 # card ordering
-link: https://github.com/wjb375445/myblog
-repo: https://github.com/wjb375445/myblog
+link: https://github.com/zzossig/hugo-theme-zzo
+repo: https://github.com/zzossig/hugo-theme-zzo
 pinned: true # appreared on a overview page.
 thumb: feature3/css3.png # relative path in static/images
 ---

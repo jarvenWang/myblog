@@ -2,7 +2,7 @@ baseURL = "http://wangjinbao.netlify.app"
 title = "The blog of wangjinbao"
 theme = "zzo"
 
-defaultContentLanguage = "cn"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
 
