@@ -34,7 +34,7 @@
 
 [[main]]
   identifier = "posts"
-  name = "Posts"
+  name = "帖子"
   url = "posts"
   weight = 5
 

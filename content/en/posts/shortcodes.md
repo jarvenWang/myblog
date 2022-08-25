@@ -1,6 +1,6 @@
 ---
 title: "Shortcodes"
-date: 2020-01-25T06:40:51+09:00
+date: 2020-01-23T06:40:51+09:00
 description: tabs, code-tabs, expand, alert, warning, notice, img, box
 draft: false
 hideToc: false
@@ -13,7 +13,7 @@ series:
 -
 categories:
 -
-image: images/feature3/code-file.png
+image: images/feature3/css3.png
 ---
 
 ## Markdownify box
