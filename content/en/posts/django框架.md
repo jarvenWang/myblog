@@ -478,9 +478,9 @@ return=HttpResponse('session value is %s'%(value))
 
 ---
 ps:
-#### <font color='fuchsia' >**迁移文件防止报错:**</font>
+<font color='fuchsia' >**迁移文件防止报错:**</font>
 table exists
-#### <font color='lime' >**解决方法:**</font>
+<font color='lime' >**解决方法:**</font>
 ```python
 python manage.py makemigrations
 python manage.py migrate app --fake
@@ -488,10 +488,10 @@ python manage.py migrate app --fake
 app名称去settings.py中查看注册名称
 同时删除django_migrations表中的数据
 
-#### <font color='fuchsia' >**上传文件中文编码报错:**</font>
+<font color='fuchsia' >**上传文件中文编码报错:**</font>
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 260: ordinal not in range(128)
 
-#### <font color='lime' >**解决方法:**</font>
+<font color='lime' >**解决方法:**</font>
 ```python
 import sys
 
