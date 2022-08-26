@@ -1,6 +1,6 @@
 ---
 title: "Syntax highlighting"
-date: 2019-12-18T10:33:41+09:00
+date: 2020-01-24T06:40:51+09:00
 description: "Syntax highlighting test"
 draft: false
 hideToc: false
@@ -8,7 +8,7 @@ enableToc: true
 enableTocContent: false
 author: Jeus
 authorEmoji: 🎅
-pinned: true
+pinned: false
 tags:
 - hugo
 series:
@@ -18,7 +18,7 @@ categories:
 image: images/feature2/color-palette.png
 ---
 
-## Code Syntax Highlighting
+## Code Syntax Highlighting123123123
 
 Verify the following code blocks render as code blocks and highlight properly. 
 
