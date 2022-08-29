@@ -1,14 +1,3 @@
-<!--
- * @Author: jarvenwang wang_jin_bao@163.com
- * @Date: 2022-08-23 19:49:33
- * @LastEditors: jarvenwang wang_jin_bao@163.com
- * @LastEditTime: 2022-08-24 09:48:42
- * @FilePath: /myblog/content/en/about/index.md
- * @Description:
- *
- * Copyright (c) 2022 by jarvenwang wang_jin_bao@163.com, All Rights Reserved.
--->
-
 +++
 title = "About"
 description = "Hugo, the world’s fastest framework for building websites"

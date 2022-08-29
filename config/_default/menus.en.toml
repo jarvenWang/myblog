@@ -10,11 +10,11 @@
   url = "archive"
   weight = 2
 
-[[main]]
-  identifier = "presentation"
-  name = "Pt"
-  url = "presentation"
-  weight = 3
+#[[main]]
+#  identifier = "presentation"
+#  name = "Pt"
+#  url = "presentation"
+#  weight = 3
 
 [[main]]
   identifier = "gallery"
@@ -33,6 +33,37 @@
   url = "gallery/photo"
 
 [[main]]
+  identifier = "stack"
+  name = "语言"
+  url = "stack"
+  weight = 4
+    
+[[main]]
+  parent = "stack"
+  name = "python"
+  url = "stack/python"
+
+[[main]]
+  parent = "stack"
+  name = "golang"
+  url = "stack/golang"
+
+[[main]]
+  parent = "stack"
+  name = "linux"
+  url = "stack/linux"
+
+[[main]]
+  parent = "stack"
+  name = "php"
+  url = "stack/php"
+  
+[[main]]
+  parent = "stack"
+  name = "javascript"
+  url = "stack/javascript"
+
+[[main]]
   identifier = "posts"
   name = "帖子"
   url = "posts"
@@ -44,8 +75,14 @@
   url = "showcase"
   weight = 6
 
+#[[main]]
+#  identifier = "publication"
+#  name = "Pub"
+#  url = "publication"
+#  weight = 7
+
 [[main]]
-  identifier = "publication"
-  name = "Pub"
-  url = "publication"
-  weight = 7
+  identifier = "experience"
+  name = "图片"
+  url = "experience"
+  weight = 8
