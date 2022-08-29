@@ -16,4 +16,4 @@ tags:
 image: images/feature3/img_2.png
 ---
 
-+++ 左大括号 { 不能单独放一行
+![/images/docImages/img_1.png](/images/docImages/img_1.png)
