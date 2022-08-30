@@ -164,5 +164,5 @@ go version go1.18.5 darwin/amd64
 删除/usr/local下的go目录<font color='#aed581'>(备注: 这个目录是安装go的时候自动生成的. 如果删除完, 使用 go version, 会报找不到go命令)</font>
 
 #### 步骤三、双击amd安装包
-双击 go1.18.5.darwin-amd64.pkg 安装包，一路下一步
+双击 go1.18.5.darwin-arm64.pkg 安装包，一路下一步
 之后go version验证
