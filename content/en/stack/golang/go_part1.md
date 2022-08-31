@@ -149,6 +149,34 @@ dlv debug --headless --listen=:2345 --log --api-version 2
 + <font color="pink">go build</font> 编译并安装自身包和依赖包
 + <font color="pink">go install</font> 安装自身包和依赖包
 
+Go语言是 <font color="pink">编译型</font> 的 <font color="pink">静态语言</font>（和C语言一样），所以在运行Go语言程序之前，先要将其编译成二进制的可执行文件。
+
+#### go build:
+可以将Go语言程序代码编译成二进制的可执行文件，但是需要我们手动运行该二进制文件；
+
+go build 命令用来启动编译，它可以将Go语言程序与相关依赖编译成一个可执行文件，其语法格式如下。
+go build <font color="pink">fileName</font> 其中 fileName 为所需要的参数，可以是一个或者多个 Go 源文件名（当有多个参数时需要使用空格将两个相邻的参数隔开），也可以省略不写。
+
+使用 go build 命令进行编译时，不同参数的执行结果也是不同的。
+如编译打包linux <font color="pink">生产环境</font> 的包：
+```shell
+GOOS=linux GOARCH=amd64 GIN_MODE=release go build main.go
+```
+1. 当参数不为空时如果 fileName 为同一 main 包下的所有源文件名（可能有一个或者多个），编译器将生成一个与第一个 fileName 同名的可执行文件（如执行
+   go build abc.go def.go ...会生成一个 abc.exe 文件）；如果 fileName 为非 main 包下的源文件名，编译器将只对该包进行语法检查，不生成可执行文件。
+2. 当参数为空时如果当前目录下存在 main 包，则会生成一个与当前目录名同名的“目录名.exe”可执行文件（如在 hello 目录中执行 go build命令时，会生成 hello.exe 文件）；如果不存在 main 包，则只对当前目录下的程序源码进行语法检查，不会生成可执行文件。
+
+#### go run
+更加方便，它会在编译后直接运行Go语言程序，编译过程中会产生一个临时文件，但不会生成可执行文件，这个特点很适合用来调试程序。
+
+go run命令将编译和执行指令合二为一，会在编译之后立即执行Go语言程序，但是不会生成可执行文件。
+
+go run命令的语法格式如下：
+```shell
+go run fileName
+```
+其中 fileName 为所需要的参数，参数必须是同一 main 包下的所有源文件名，并且不能为空。
+
 ### 8、其它工具
 Go 自带的工具集主要使用脚本和 Go 语言自身编写的，目前版本的 Go 实现了以下三个工具：
 
