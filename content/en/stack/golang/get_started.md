@@ -12,8 +12,8 @@ authorEmoji: 👻
 tags: 
 - golang
 - categories:
-  -
-image: images/feature3/go.png
+#  -
+#image: images/feature3/go.png
 ---
 
 

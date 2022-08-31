@@ -12,8 +12,8 @@ authorEmoji: 👻
 tags:
 - golang
 - categories:
-  -
-image: images/feature3/img_3.png
+#  -
+#image: images/feature3/img_3.png
 ---
 
 ## 1、左大括号 { 不能单独放一行
