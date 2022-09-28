@@ -64,6 +64,11 @@
   url = "stack/javascript"
 
 [[main]]
+  parent = "stack"
+  name = "javascript"
+  url = "stack/javascript"
+
+[[main]]
   identifier = "posts"
   name = "帖子"
   url = "posts"
