@@ -450,7 +450,7 @@ commento = false
 갤러리는 두가지 모두가 존재해요. 하나씩 올리거나 한번에 올리거나.
 
 ```bash
-content/gallery/anygalleryname/index.md
+content/gallery/anygalleryname/_index.md
 
 ---
 title: "{{ replace .Name "-" " " | title }}"
@@ -498,7 +498,7 @@ root
 3. Make a index.md file under the sub folder using this command
 
 ```bash
-hugo new --kind gallery gallery/anygalleryname/index.md
+hugo new --kind gallery gallery/anygalleryname/_index.md
 ```
 
 4. Put your images in static folder
