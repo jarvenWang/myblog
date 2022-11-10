@@ -16,7 +16,7 @@ tags:
 ---
 
 
-## 一、框架安装
+## 核心组件
 ### 手动编译安装
 这是万能的安装方式：
 ```shell
@@ -416,6 +416,11 @@ logger:
     level:   "prod"
     stdout:  true
 #我本地如下：
+server:
+  address:     ":8002"
+#  openapiPath: "/api.json"
+#  swaggerPath: "/swagger"
+
 logger:
   path: "./log/"
   file: "{Y-m-d}.log"
@@ -423,12 +428,12 @@ logger:
   header: true
   stdout: false
   info:
-    path: "./log/info/"
+    path: "./log/user/info/"
     file: "{Y-m-d}.log"
     level: "INFO"
     stdout: false
   error:
-    path: "./log/error/"
+    path: "./log/user/error/"
     file: "{Y-m-d}.log"
     level: "ERRO"
     stdout: false
@@ -445,3 +450,197 @@ type User struct {
 
 g.Log("error").Error(ctx, User{100, "john"})
 ```
+
+组件通用Handler
+组件提供了一些常用的日志Handler，方便开发者使用，提高开发效率。
+
+HandlerJson
+该Handler可以```将日志内容转换为Json格式```打印，方法名：
+```glog.SetDefaultHandler(glog.HandlerJson)```
+```golang
+package main
+
+import (
+	"context"
+
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/os/glog"
+)
+
+func main() {
+	ctx := context.TODO()
+	#生成以json格式的日志
+	glog.SetDefaultHandler(glog.HandlerJson)
+
+	g.Log().Debug(ctx, "Debugging...")
+	glog.Warning(ctx, "It is warning info")
+	glog.Error(ctx, "Error occurs, please have a check")
+}
+```
+没有加载context的时候可以，用ctx := context.TODO()
+```shell
+ctx := context.TODO()
+```
+
+### 自定义中间件
+修改文件地址：internal/logic/middleware/middleware.go
+#### 添加日志中间件：
+（前置中间件）
+```golang
+func (s *sMiddleware) MiddlewareLog(r *ghttp.Request) {
+	//设置日志格式为json
+	glog.SetDefaultHandler(glog.HandlerJson)
+	rawQuery := r.URL.RawQuery
+	host := r.URL.Host
+	path := r.URL.Path
+	method := r.Method
+	clientIp := r.GetClientIp()
+	//记录所有请求
+	ctx := context.TODO()
+	g.Log().Info(ctx, g.Map{"host": host, "path": path, "method": method, "rawQuery": rawQuery, "clientIp": clientIp})
+
+	//前置中间件
+	r.Middleware.Next()
+
+}
+```
+#### 添加报错处理中间件：
+(后置中间件)
+```golang
+func (s *sMiddleware) MiddlewareErrorHandler(r *ghttp.Request) {
+	r.Middleware.Next()
+	if r.Response.Status >= http.StatusInternalServerError {
+		r.Response.ClearBuffer()
+		r.Response.WriteJson(ghttp.DefaultHandlerResponse{
+			Code:    r.Response.Status, //请求成功  想改成200自己来
+			Message: "服务器开小差了，请稍后再试",
+			Data:    "",
+		})
+	}
+}
+```
+#### 添加返回json格式中间件：
+（后置中间件）
+```golang
+func (s *sMiddleware) MiddlewareResponseEcf(r *ghttp.Request) {
+	r.Middleware.Next()
+
+	//后置中间件
+	if r.Response.BufferLength() > 0 {
+		return
+	}
+	//定义接受的相应结果及错误
+	var (
+		msg string
+		err = r.GetError()
+		res = r.GetHandlerResponse()
+		//s=r.params
+		//code = gerror.Code(err)
+	)
+
+	//返回相应对象  及 获取不了的错误结果
+	if err != nil {
+		code := gerror.Code(err) // 还没理解  后续补充
+		if code == gcode.CodeNil {
+			code = gcode.CodeInternalError
+		}
+		r.Response.WriteJson(v1.DefaultHandlerResponse{
+			Code: http.StatusInternalServerError, //服务器内部错误  想改成500自己来
+			Msg:  code.Message(),
+			Data: nil,
+		})
+		return
+	}
+
+	if ecfResponse, ok := res.(*v1.EcfRes); ok {
+		//没有问题返回结果
+		r.Response.WriteJson(v1.DefaultHandlerResponse{
+			Code: ecfResponse.Code, //请求成功  想改成200自己来
+			Msg:  ecfResponse.Msg,
+			Data: ecfResponse.Data,
+		})
+	} else {
+		msg = "成功"
+		//没有问题返回结果
+		r.Response.WriteJson(v1.DefaultHandlerResponse{
+			Code: http.StatusOK, //请求成功  想改成200自己来
+			Msg:  msg,
+			Data: res,
+		})
+	}
+
+}
+```
+
++ 注意获取接口类型中的结构体字段的值，使用```断言```
+```shell
+if ecfResponse, ok := res.(*v1.EcfRes); ok {
+		//没有问题返回结果
+		r.Response.WriteJson(v1.DefaultHandlerResponse{
+			Code: ecfResponse.Code, //请求成功  想改成200自己来
+			Msg:  ecfResponse.Msg,
+			Data: ecfResponse.Data,
+		})
+	}
+```
+
+### gtoken使用
+一、下载gtoken
+```shell
+go get github.com/goflyfox/gtoken
+```
+二、下载完包后整理依赖文件
+```shell
+go mod tidy
+```
+三、在中间件包中添加login登录方法
+```golang
+func AuthLogin(r *ghttp.Request) (string, interface{}) {
+	username := r.GetPostString("username")
+	passwd := r.GetPostString("passwd")
+
+	// TODO 进行登录校验
+	if username == "" || passwd == "" {
+		r.Response.WriteJson(gtoken.Fail("账号或密码错误."))
+		r.ExitAll()
+	}
+
+	return username, ""
+}
+```
+四、启动gtoken
+```golang
+loginFunc := AuthLogin
+gfToken := &gtoken.GfToken{
+	LoginPath:       "/auth-login", //上面的方法地址,对应的是/api/auth-login
+	LoginBeforeFunc: loginFunc, //只要固定类型方法：(r *ghttp.Request) (string, interface{})
+	LogoutPath:      "/api/logout", //暂时可以不写
+}
+```
+五、postman请求接口，获取token
++ 请求地址：/api/auth-login
++ 输入账号/密码：
++ 返回值如下：
+```shell
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "token": "F1om0nykaRN7gBi3u+Nr5RYYQSVCfkXjDGVz9lLaT+mnIoss6/knJ1uBT19A6QBW"
+    }
+}
+```
+六、附带上面生成的token请求需鉴权接口
++ 如请求地址：/api/info
++ 选择Bearer Token，输入：F1om0nykaRN7gBi3u+Nr5RYYQSVCfkXjDGVz9lLaT+mnIoss6/knJ1uBT19A6QBW
++ 返回如下：
+```shell
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "name": "jarvenwang"
+    }
+}
+```
+
