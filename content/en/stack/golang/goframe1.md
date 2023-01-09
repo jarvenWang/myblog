@@ -1,7 +1,7 @@
 ---
 author: "wangjinbao"
 title: "goframe框架-1"
-date: 2021-01-11T12:00:06+09:00
+date: 2021-02-02 01:01:00
 description: "go语言起源、安装运行环境、编辑器、集成等"
 draft: false
 hideToc: false
@@ -16,7 +16,7 @@ tags:
 ---
 
 
-## 核心组件
+
 ### 手动编译安装
 这是万能的安装方式：
 ```shell
@@ -519,6 +519,24 @@ func (s *sMiddleware) MiddlewareErrorHandler(r *ghttp.Request) {
 	}
 }
 ```
+升级版本，```捕获报错panic日志```
+```shell
+func (s *sMiddleware) MiddlewareErrorHandler(r *ghttp.Request) {
+	r.Middleware.Next()
+	if err := r.GetError(); err != nil {
+		// 记录到自定义错误日志文件
+		//g.Log("exception").Error(err)
+		ctx := context.TODO()
+		g.Log("panic").Critical(ctx, err)
+		r.Response.ClearBuffer()
+		r.Response.WriteJson(ghttp.DefaultHandlerResponse{
+			Code:    r.Response.Status, //请求成功  想改成200自己来
+			Message: "系统繁忙，请稍后再试",
+			Data:    "",
+		})
+	}
+}
+```
 #### 添加返回json格式中间件：
 （后置中间件）
 ```golang
@@ -644,3 +662,16 @@ gfToken := &gtoken.GfToken{
 }
 ```
 
+### 接口维护-gen service
+#### 设计背景
+在业务项目实践中，业务逻辑封装往往是最复杂的部分，同时，业务模块之间的依赖十分复杂、边界模糊，无法采用Golang包管理的形式。如何有效管理项目中的业务逻辑封装部分，对于每个采用Golang开发的项目都是必定会遇到的难题。
+#### 设计目标
++ 增加logic分类目录，将所有业务逻辑代码迁移到logic分类目录下，采用包管理形式来管理业务模块。
++ 业务模块之间的依赖通过接口化解耦，将原有的service分类调整为接口目录。这样每个业务模块将会各自维护、更加灵活
++ 可以按照一定的项目规范，从logic业务逻辑代码生成service接口定义代码。同时，也允许人工维护这部分service接口。
+
+#### 命令使用(自动模式)
+如果您是使用的GolandIDE，那么可以使用我们提供的配置文件：watchers.xml  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
+Preferences->Tools->File Watchers->添加'Import'点击导入配置
+提供的配置文件：<font color='green'>watchers.xml</font>
+下载地址：https://goframe.org/download/attachments/49770772/watchers.xml?version=1&modificationDate=1655298456643&api=v2

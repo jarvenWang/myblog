@@ -1,7 +1,7 @@
 ---
 author: "wangjinbao"
 title: "linux安装golang"
-date: 2022-06-01T12:00:06+09:00
+date: 2021-01-02 01:01:00
 description: "整理在mac上的golang安装、配置及版本升级"
 draft: false
 hideToc: false

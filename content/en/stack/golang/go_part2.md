@@ -1,7 +1,7 @@
 ---
 author: "wangjinbao"
 title: "学习go(第二部分)"
-date: 2021-01-12T12:00:06+09:00
+date: 2021-01-04 01:01:00
 description: "go语言起源、安装运行环境、编辑器、集成等"
 draft: false
 hideToc: false

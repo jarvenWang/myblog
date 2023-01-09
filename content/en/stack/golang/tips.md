@@ -1,7 +1,7 @@
 ---
 author: "wangjinbao"
 title: "golang注意事项"
-date: 2022-06-12T12:00:06+09:00
+date: 2021-01-02
 description: "golang开发中的一些小注意点整理"
 draft: false
 hideToc: false
