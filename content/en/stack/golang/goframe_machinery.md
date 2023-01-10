@@ -1,6 +1,6 @@
 ---
 author: "wangjinbao"
-title: "goframe框架集成任务队列machinery及定时任务"
+title: "goframe框架集成任务队列machinery和定时任务"
 date: 2021-12-01T12:00:06+09:00
 description: "goframe框架集成分布式异步任务队列machinery"
 draft: false
@@ -276,9 +276,106 @@ func (s *sMachinery) StartServer() (*machinery.Server, error) {
 }
 ```
 
+## Machinery定时任务
+### 步骤一：创建并配置broker
+体能在方法StartServer中
+```go
+//=====创建并配置broker=====
 
+//读取redis配置参数
+var ctx = gctx.New()
+redisData, _ := g.Cfg().Get(ctx, "redis")
+deMap := redisData.MapDeep()["default"]
+var redisAddress, redisPass, redisQueue string
+var redisDB, redisExpire int
+if cnf, ok := deMap.(map[string]interface{}); ok {
+	redisAddress = common.Strval(cnf["address"])
+	redisPass = common.Strval(cnf["pass"])
+	redisDB, _ = strconv.Atoi(common.Strval(cnf["work"]))
+	redisQueue = common.Strval(cnf["default_queue"])
+	redisExpire, _ = strconv.Atoi(common.Strval(cnf["expire_in"]))
+}
 
+cnf := &config.Config{
+	DefaultQueue:    redisQueue,
+	ResultsExpireIn: redisExpire,
+	Redis: &config.RedisConfig{
+		MaxIdle:                3,
+		IdleTimeout:            240,
+		ReadTimeout:            15,
+		WriteTimeout:           15,
+		ConnectTimeout:         15,
+		NormalTasksPollPeriod:  1000,
+		DelayedTasksPollPeriod: 500,
+	},
+}
+```
+### 步骤二：创建server实例
+```go
+// Create server instance
+broker := redisbroker.New(cnf, redisAddress, redisPass, "", redisDB)
+backend := redisbackend.New(cnf, redisAddress, redisPass, "", redisDB)
+lock := eagerlock.New()
+server := machinery.NewServer(cnf, broker, backend, lock)
+```
+### 步骤三：注册普通任务tasks
+```go
+//=====创建任务tasks=====
 
+// Register tasks
+tasksMap := map[string]interface{}{
+	"add":                exampletasks.Add,
+	"transferDepartment": s.TransferDepartment,
+	"transferBU":         s.TransferBU,
+	"transferStaff":      s.TransferStaff,
+	"ecfDepartment":      s.EcfDepartment,
+	"ecfBU":              s.EcfBU,
+	"ecfStaff":           s.EcfStaff,
+}
 
+return server, server.RegisterTasks(tasksMap)
+```
+### 步骤四：注册定时任务tasks
+在注册完普通任务return注册定时任务即可
+公式：Cron * * * * ?: `minute`, `hour`, `day of month`, `month and day of week`
+```go
+signatureBU := &tasks.Signature{
+	Name: "transferBU",
+}
+server.RegisterPeriodicTask("57 9 * * ?", "periodic-task-bu", signatureBU)
+```
 
+### 步骤五：写好注册定时任务执行方法
+```go
+// TransferDepartment
+/**
+ * @Name: TransferDepartment
+ * @Description: 集团数据中转-行政组织
+ * @receiver s
+ * @param args
+ * @return int64
+ * @return error
+ */
+func (s *sMachinery) TransferDepartment(args ...int64) (int64, error) {
+	ctx := context.TODO()
+	service.Tme().GetCenterData(ctx, "department")
 
+	return 1, nil
+}
+
+// TransferBU
+/**
+ * @Name: TransferBU
+ * @Description: 集团数据中转-业务单元
+ * @receiver s
+ * @param args
+ * @return int64
+ * @return error
+ */
+func (s *sMachinery) TransferBU(args ...int64) (int64, error) {
+	ctx := context.TODO()
+	service.Tme().GetCenterData(ctx, "business_unit")
+
+	return 1, nil
+}
+```

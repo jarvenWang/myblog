@@ -1,7 +1,7 @@
 ---
 author: "wangjinbao"
 title: "Nginx负载均衡中4层代理和7层代理的区别"
-date: 2022-06-07T12:00:06+09:00
+date: 2022-01-01 00:00:01
 description: "Nginx负载均衡中4层代理和7层代理的区别"
 draft: false
 hideToc: false
