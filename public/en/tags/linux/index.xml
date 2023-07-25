@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>linux on Home</title>
+    <link>http://wangjinbao.netlify.app/en/tags/linux/</link>
+    <description>Recent content in linux on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
+    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <copyright>©2023, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 02 Jan 2022 00:00:01 +0000</lastBuildDate>
+    
+        <atom:link href="http://wangjinbao.netlify.app/en/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>zsh下安装主题Powerlevel9k</title>
+        <link>http://wangjinbao.netlify.app/en/stack/linux/zsh/</link>
+        <pubDate>Sun, 02 Jan 2022 00:00:01 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Sun, 02 Jan 2022 00:00:01 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/linux/zsh/</guid>
+        <description>安装 Powerlevel9k 步骤一：安装 Powerline 字体库 1 2 3 4 $git clone https://github.com/powerline/fonts.git $./install.sh Copying fonts... Powerline fonts installed to /Users/wangdante/Library/Fonts （字段安装的目录） brew tap 更新第三方库，才能用 homebrew 安裝字型。执行过可以跳过 brew tap caskroom/fonts (旧版本，</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>linux</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Nginx负载均衡中4层代理和7层代理的区别</title>
+        <link>http://wangjinbao.netlify.app/en/stack/linux/proxy47/</link>
+        <pubDate>Sat, 01 Jan 2022 00:00:01 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Sat, 01 Jan 2022 00:00:01 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/linux/proxy47/</guid>
+        <description>一、4层代理和7层代理什么意思？ 这里的层是OSI 7层网络模型，OSI 模型是从上往下的，越底层越接近硬件，越往上越接近软件，这七层模型分别是：</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>linux</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

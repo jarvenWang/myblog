@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>golang on Home</title>
+    <link>http://wangjinbao.netlify.app/en/stack/golang/</link>
+    <description>Recent content in golang on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
+    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <copyright>©2023, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 08 Jun 2022 12:00:06 +0900</lastBuildDate>
+    
+        <atom:link href="http://wangjinbao.netlify.app/en/stack/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>go开发者成长路线图</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/grow_up/</link>
+        <pubDate>Wed, 08 Jun 2022 12:00:06 +0900</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Wed, 08 Jun 2022 12:00:06 +0900</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/grow_up/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        <media:content url="http://wangjinbao.netlify.appimages/feature3/img_2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>goframe框架集成任务队列machinery和定时任务</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/goframe_machinery/</link>
+        <pubDate>Wed, 01 Dec 2021 12:00:06 +0900</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Wed, 01 Dec 2021 12:00:06 +0900</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/goframe_machinery/</guid>
+        <description>Machinery Golang的分布式任务队列还不算多，目前比较成熟的应该就只有 Machinery 了。 如果熟悉Python中的异步任务框架的话，想必一定听过Celery。 异</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>goframe框架-2</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/goframe2/</link>
+        <pubDate>Wed, 03 Feb 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Wed, 03 Feb 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/goframe2/</guid>
+        <description>命令管理 GetArg*参数获取 GetArg 方法用以获取默认解析的命令行参数，参数通过输入索引位置获取，索引位置从 0 开始，但往往我们需要获取的参数是从 1</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>goframe框架-1</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/goframe1/</link>
+        <pubDate>Tue, 02 Feb 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Tue, 02 Feb 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/goframe1/</guid>
+        <description>手动编译安装 这是万能的安装方式： 1 git clone https://github.com/gogf/gf &amp;amp;&amp;amp; cd gf/cmd/gf &amp;amp;&amp;amp; go install 验证安装成功 1 2 3 4 5 $ gf -v GoFrame CLI Tool v2.2.1, https://goframe.org GoFrame Version: cannot find goframe requirement in go.mod CLI Installed At: /usr/local/go/bin/gf Current is a custom installed version, no installation information. 创建项目</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>goframe目录</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/gofamedir/</link>
+        <pubDate>Mon, 01 Feb 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Mon, 01 Feb 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/gofamedir/</guid>
+        <description>一、工程目录结构 GoFrame业务项目基本目录结构如下（以Single Repo为例）： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 / ├── api ├── hack</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>学习go(第二部分)</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/go_part2/</link>
+        <pubDate>Mon, 04 Jan 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Mon, 04 Jan 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/go_part2/</guid>
+        <description>一、基本结构与基本数据类型 1、文件名、关键字与标识符 1.1 文件名 文件名 均由小写字母组成，如 scanner.go。 如果文件名由多个部分组成，则使用</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>学习go(第一部分)</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/go_part1/</link>
+        <pubDate>Sun, 03 Jan 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Sun, 03 Jan 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/go_part1/</guid>
+        <description>一、起源与发展 起源 Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>linux安装golang</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/install_linux/</link>
+        <pubDate>Sat, 02 Jan 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Sat, 02 Jan 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/install_linux/</guid>
+        <description>一、下载 去官网下载 ，国内地址：https://golang.google.cn/dl/ 1 $ wget https://golang.google.cn/dl/go1.16.7.linux-amd64.tar.gz 二、解压(需要root权限) 1 $ sudo tar -C /usr/local -xzf go1.16.7.linux-amd64.tar.gz 三</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>golang注意事项</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/tips/</link>
+        <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Sat, 02 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/tips/</guid>
+        <description>1、左大括号 { 不能单独放一行 在其他大多数语言中，{ 的位置你自行决定。Go比较特别，遵守分号注入规则（automatic semicolon injection）</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>golang安装、配置及版本升级</title>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/get_started/</link>
+        <pubDate>Fri, 01 Jan 2021 01:01:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <atom:modified>Fri, 01 Jan 2021 01:01:00 +0000</atom:modified>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/get_started/</guid>
+        <description>一、下载 去官网下载 ，国内地址：https://golang.google.cn/dl/ 选择对应的版本即可，我本地使用的是https://go</description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>golang</category>
+            
+          
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
