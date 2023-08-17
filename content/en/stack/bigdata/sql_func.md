@@ -36,7 +36,7 @@ rank()over(partition by xxx 分组 order by xxx 排序)
 形如：`1,2,2,3...`
 
 ## 2.聚合函数
-+ sum,avg,min,max...
++ sum,avg,min,max,count ...
 
 ```SQL
 select name,deptno,salary,SUM(salary) over (partition by deptno)
@@ -89,4 +89,32 @@ select name,
        lead(hiredate) over (partition by deptno order by hiredate) as `lead`,
        lag(hiredate) over (partition by deptno order by hiredate)  as `lag`
 from employees;
+```
+## 5.滑动时间窗口(frame)
++ rows模式：
+按物理行来进行划分
++ range模式：
+按数值逻辑来进行划分
+
+滑动行范围的常用表达；
+```SQL
+{RANGE|ROWS}frame_start
+{RANGE|ROWS}BETWEEN frame_start AND frame_end
+```
+常用的五种表达式：
+1. UNBOUNDED PRECEDING
+2. expression PRECEDING -- only allowed in ROWS mode
+3. CURRENT ROW
+4. expression FOLLOWING -- only allowed in ROWS mode
+5. UNBOUNDED FOLLOWING
+
+默认：`BETWEEN unbounded preceding AND CURRENT ROW`
+
+例子：滚动3个月平均值：
+```SQL
+select product
+, year_month
+, gmv
+, avg(gmv) over (partition by department , product order by year_month
+ROWS 2 PRECEDING) AS avg_gmv from product
 ```
