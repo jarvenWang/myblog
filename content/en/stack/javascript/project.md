@@ -950,7 +950,7 @@ export function getCategoryAPI() {
     })
 }
 ```
-2. 利用pinia的store存储state和action
+2. 利用pinia的store存储和action
 在stores/category.js中：
 ```vue
 import { ref } from 'vue'
@@ -1018,4 +1018,352 @@ app.mount('#app')
 3. 使用
 ```vue
 <el-button>message</el-button>
+```
+
+## 左导航+轮播图
+element的 menu 菜单(el-menu) + Carousel 走马灯(el-carousel)
+```vue
+<script lang="ts" setup>
+import { useCategoryStore } from "@/stores/category";
+const categoryStore = useCategoryStore();
+</script>
+<template>
+  <div class="c-left">
+    <!-- 侧边导航 -->
+    <el-col
+      :span="12"
+      style="position: absolute; top: 0px; z-index: 10; width: 300px"
+    >
+      <el-menu
+        default-active="2"
+        class="el-menu-vertical-demo"
+        style="background-color: black; opacity: 0.8"
+        background-color="rgb(21, 249, 195)"
+      >
+        <el-menu-item v-for="i in categoryStore.categoryList" :key="i">
+          <!-- <el-icon><setting /></el-icon> -->
+          <span class="s-parent">{{ i.name }} </span>
+          <span class="s-children" v-for="ic in i.children.slice(0, 2)">{{
+            ic.name
+          }}</span>
+        </el-menu-item>
+      </el-menu>
+    </el-col>
+
+    <!-- 轮播图 -->
+    <div class="block text-center">
+      <el-carousel height="500px">
+        <el-carousel-item
+          v-for="item in 4"
+          :key="item"
+          style="position: absolute; top: 0px; z-index: 9"
+        >
+          <img
+            src="https://m.360buyimg.com/babel/jfs/t20260925/7569/37/22520/40263/65122aa8F7db4b1cc/4690718474f0e4b7.jpg"
+          />
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+  </div>
+</template>
+<style lang="scss">
+.c-left {
+  z-index: 8;
+  position: relative;
+  width: 1480px;
+  height: 500px;
+  // background: #000;
+  margin: auto;
+  .el-menu-vertical-demo {
+    border: 0;
+    .s-parent {
+      font-size: 20px;
+      color: white;
+      margin-left: 40px;
+    }
+    .s-children {
+      color: white;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+  }
+  .block {
+    img {
+      width: 100%;
+      height: 500px;
+    }
+  }
+  .text-center {
+  }
+
+  h3 {
+  }
+  img {
+    width: 100%;
+    height: 500px;
+  }
+}
+.demonstration {
+  color: var(--el-text-color-secondary);
+}
+
+.el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+  text-align: center;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+</style>
+```
+
+## 组件封装
+
+组件参数：
+1. props
+2. 插槽
+
+### 实现步骤
+1. 不做任何抽象，准备静态模板 
+- 定义属性 defineProps，占位模板
+- 加入<slot / >
+2. 抽象可变的部分
+- 主标题和副标题是`纯文本`，可以抽象成`prop`传入
+- 主体内容是`复杂的模版`，抽象成`插槽`
+```vue
+<script setup>
+//定义props
+defineProps({
+  //主标题
+  title: {
+    type: String,
+  },
+  //副标题
+  subTitle: {
+    type: String,
+  },
+});
+</script>
+<template>
+  <div class="container">
+    <div class="panel-item">
+      <div class="panel-head">
+        <!-- 主标题和副标题 -->
+        <h3>
+          {{ title }}<small>{{ subTitle }}</small>
+        </h3>
+      </div>
+      <!-- 主体内容 -->
+      <slot />
+    </div>
+  </div>
+</template>
+
+//其它面板加载组件
+<HomePanel title="新鲜好物" sub-title="新鲜好物 好多商品">
+...复杂的静态文件
+</HomePanel>
+```
+
+## 图片懒加载
+实现步骤：
+1. 定义全局指令，并绑定图片
+在main.js中：
+```vue
+//定义全局指令
+app.directive('img-lazy', {
+    mounted(el, binding) {
+        //el : 指令绑定的那个元素
+        //binding: binding.value 指令等于号后面绑定的表达式的值 图片url
+        // console.log(el, binding.value)
+
+        useIntersectionObserver(
+            el,
+            ([{ isIntersecting }]) => {
+                if (isIntersecting) {
+                    //进入视口区域
+                    el.src = binding.value
+                }
+                console.log(isIntersecting)
+            },
+        )
+    }
+})
+```
+在图片组件中：
+```vue
+<img v-img-lazy="item.picture" />
+```
+2. useIntersectionObserver 监听视口区
+判断isIntersecting=true
+```vue
+if (isIntersecting) {
+   //进入视口区域
+   el.src = binding.value
+}
+```
+3. 进入视口区域 图片src绑定
+   监听对象的src=binding.value
+   //el : 指令绑定的那个元素
+   //binding: binding.value 指令等于号后面绑定的表达式的值 图片url
+
+## 封装指定插件
+实现步骤：
+1. directives/index.js中加插件
+```vue
+//定义懒加载插件
+import { useIntersectionObserver } from '@vueuse/core'
+
+export const lazyPlugin = {
+    install(app) {
+        //懒加载指令逻辑
+
+        //定义全局指令
+        app.directive('img-lazy', {
+            mounted(el, binding) {
+                //el : 指令绑定的那个元素
+                //binding: binding.value 指令等于号后面绑定的表达式的值 图片url
+                // console.log(el, binding.value)
+
+                const { stop } = useIntersectionObserver(
+                    el,
+                    ([{ isIntersecting }]) => {
+                        if (isIntersecting) {
+                            //进入视口区域
+                            el.src = binding.value
+                            stop()
+                        }
+                        
+                        // console.log(isIntersecting)
+                    },
+                )
+            }
+        })
+
+    }
+}
+```
+2. main.js中加载
+```vue
+// 引入懒加载指令插件并且注册
+import { lazyPlugin } from '@/directives'
+
+app.use(lazyPlugin)
+
+app.mount('#app')
+```
+
+## 路由配置RouterLink
+```:to="" 中加 `` 符号，和变量${参数}```
+```vue
+<div class="dd-nav">
+<RouterLink to="/" >首页</RouterLink>
+</div>
+<RouterLink :to="`/category/${item.id}`">{{
+        item.name
+      }}</RouterLink>
+```
+
+## 获取url参数
+useRoute 插件
+```vue
+import { useRoute } from "vue-router";
+//（params.id 来至 API请求接收的参数设置）
+route.params.id
+```
+
+## 激活元素显示
+```vue
+active-class="active"
+.active {
+counter-reset: $xtxColor;
+border-bottom: 1px solid $xtxColor;
+}
+
+```
+
+## 路由缓存问题处理
+
++ 方式一：添加key
+```vue
+  <!-- 添加key 破坏复用机制 强制销毁重建-->
+  <RouterView :key="$route.fullPath" />
+```
++ 方式二：onBeforeRouteUpdate
+```vue
+<script setup>
+//默认id = route.params.id
+const getCategory = async (id = route.params.id) => {
+   const res = await getCategoryAPI(id);
+   cateGoryData.value = res.result;
+};
+onMounted(() => getCategory());
+
+//目录：路由参数变化的时候，可以把分类数据接口重新发送
+onBeforeRouteUpdate((to) => {
+   console.log("路由变化了");
+   //存在问题：使用最新的路由参数请求最新的分类数据
+   console.log(to);
+   getCategory(to.params.id);
+});
+</script>
+```
+
+## 函数封闭，拆分业务，利于维护
+基于逻辑函数拆分业务是把同一个组件中独立的业务代码通过函数做封装处理，提升代码的可维护性
+实现步骤：
+1. 把代码集中放于composables中并命名
+2. 方法中最后return对象结果
+3. 在模板中引用该引用
+
+
+## 无限加载数据
+实现步骤：
+1. 容器的div中添加v-infinite-scroll="load"
+```vue
+<div class="sub-body" v-infinite-scroll="load"></div>
+```
+2. 为load添加方法获取数据
+```vue
+<script>
+//加载更多
+const disabled = ref(false);
+const load = async () => {
+   console.log("加载更多数据");
+   //获取下一页数据
+   reqData.value.page++;
+   const resNew = await getSubCategoryAPI(reqData.value);
+   goodList.value = [...goodList.value, ...resNew.result.items];
+   //加载完毕 停止监听
+   if (res.result.items.length === 0) {
+      disabled.value = true;
+   }
+};
+</script>
+```
+3. 拼接第二页的数据
+```vue
+<script>
+goodList.value = [...goodList.value, ...resNew.result.items]
+</script>
+```
+
+## 路由切换滚动条置顶
+在router/index.js中：
+```vue
+  routes:[
+  ...
+  ],
+  //路由滚动顶部
+  scrollBehavior() {
+    return { top: 0 }
+  }
 ```

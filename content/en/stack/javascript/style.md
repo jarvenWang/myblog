@@ -41,6 +41,29 @@ src/assets/base.css
   align-items:center;
 }
 ```
++ ### div 竖 排列
+设置div的父元素的display为flex，再设置flex-direction为column，即可将div竖排列
+```vue
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+}
+<br>
+ .box {
+   width: 200px;
+   height: 100px;
+   margin-bottom: 10px;
+   background-color: #f1f1f1;
+ }
+</style>
+<br>
+<div class="container">
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</div>
+```
 + ### 自已顶端对齐
 ```vue
 .box{
@@ -147,4 +170,42 @@ position: relative;
 position: absolute; top: 0px; z-index: 10;
 子类div2
 position: absolute; top: 0px; z-index: 9;
+```
++ ### div居中最简单方法
+```vue
+<template>
+  <div class="pro-container">
+    <div class="pro-middle"></div>
+  </div>
+</template>
+<style lang="scss">
+.pro-container {
+  padding: 2vmin;
+  display: flex;
+  .pro-middle {
+    width: 1480px;
+    height: 500px;
+    background: rgb(213, 216, 248);
+    margin: auto;
+  }
+}
+</style>
+```
++ ### 图片懒加载
+自定义命令：v-img-lazy
+```vue
+v-img-lazy
+```
+
++ ### ul li横向排列
+```vue
+<style>
+ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+</style>
 ```
