@@ -1730,3 +1730,131 @@ const addCart = ()=>{
   }
 }
 ```
+
+## 删除购物车
+思路：
+1. 找到要删除项的下标值 - splice
+2. 使用数组的过滤方法 - filter
+```vue
+<script>
+const delCart = (skuId)=>{
+  const idx=cartList.value.findIndex((item)=> skuId === item.skuId)
+  cartList.value.splice(idx,1)
+}
+</script>
+```
+
+## 计算属性
+1. 总的数量 所有项的count之和
+```vue
+const allCount = computed( ()=>cartList.value.reduce( (a,c)=>a + c.count,0))
+```
+2. 总价 所有项的count * price 之和
+```vue
+const allPrice = computed( ()=>cartList.value.reduce( (a,c)=>a + c.count * c.price ,0))
+```
+//`保留两位小数`
+cartStore.allPrice.`toFixed(2)`
+
+## 列表购物车-单选功能
+核心思路：单选的核心思路就是始终把 `单行框的状态和Pinia中store对应的状态保持同步`
+注意事项：`v-model` 双向绑定指令不方便进行命令式的操作（因为后续还要调用接口），所以把 `v-model` 回退到一般模式，也就是: `model-value` 和 `@change` 的配合实现
+步骤：
++ 步骤一：pinia（store）-- (使用store渲染单行框) --> :model-value
++ 步骤二：@change -- 单选框切换时修改store中对应的状态 --> pinia（store）
+
+## 全选
+1. 是否全选：
+方法: `every`
+```vue
+const isAll=computed(()=>cartList.value.every((item) => item.selected ))
+...
+:model-value="cartStore.isAll"
+```
+2. 全选功能
+方法： `forEach`
+```vue
+const allCheck = (selected)=>{
+//把cartLst中的每一项的selected都设置为当前的全选框状态
+cartList.value.forEach(item => item.selected = selected)
+}
+```
+## 列表购物车-统计数据实现
+核心方法： `filter` 和 `reduce`
+1. 已选择数量 = cartList中所有selected字段为true项的count之和
+2. 商品合计 = cartList中所有selected字段为true项的count*price之和
+```vue
+//已选择数量:
+const selectedCount = computed( ()=>cartList.value.filter(item=>item.selected).reduce( (a,c)=>a + c.count,0))
+//已选择商品价钱合计:
+const selectedPrice = computed( ()=>cartList.value.filter(item=>item.selected).reduce( (a,c)=>a + c.count*c.price,0))
+```
+
+## tab切换类
+核心思想：
+1. 点击时记录一个当前激活地址对象activeAddress，点击哪个地址就把哪个地址对象记录下来
+2. 通过 动态类名 `:class` 控制激活样式类型 active 是否存在，判断条件为：`激活地址对象的id === 当前项id`
+```vue
+<template>
+   <div class="text item" :class="{active: activeAddress.id === item.id }"> TAB </div>
+</template>
+```
+
+## 倒计时函数
+```vue
+export const useCountDown = ()=>{
+   //1 响应式的数据
+  let timer = null
+   const time = ref(0)
+   //格式化时间为 XX分XX秒
+   const formatTime = computed(()=>dayjs.unix(time.value).format('mm分ss秒'))
+   //2 开启倒计时的函数
+   const start= (currentTime)=>{
+     //开始倒计时的逻辑
+     //核心逻辑的编写：每隔1s就--
+     time.value = currentTime
+     timer = setInterval(()=>{
+        time.value--
+     },1000)
+   }
+//组件销毁时清除定时器
+  onUnmounted(()=>{
+    timer && clearInterval(timer)
+  })
+
+   return {
+     formatTime,
+     start
+   }
+}
+```
+使用如下：
+```vue
+const { formatTime,start } = useCountDown()
+{{ formatTime }}
+start(60)
+```
+
+## 分页逻辑实现
+1. 使用列表数据生成分页（页数=总条数/每页条数）
+```vue
+<template>
+   <el-pagination :total="total" :page-size="params.pageSize" /> 
+</template>
+```
+2. 切换分页修改page参数，再次获取订单列表数据
+```vue
+```vue
+<script>
+const pageChange = (page)=>{
+  console.lgo(page)
+   params.value.page=page
+   //发送请求
+   getOrderList()
+}
+</script>
+<template>
+   <el-pagination :total="total" :page-size="params.pageSize" @current-change="pageChange"/> 
+</template>
+```
+```
