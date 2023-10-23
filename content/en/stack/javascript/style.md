@@ -209,3 +209,56 @@ li {
 }
 </style>
 ```
+
++ ### div鼠标悬停阴影
+```vue
+.div {
+  width: 240px;
+  height: 240px;
+  /* 设置相对移动 */
+  position: relative;
+}
+.div:hover {
+  /* 移动 */
+  top: -10px;
+  left: -10px;
+  /* 图片变大 */
+  transform: scale(1.1);
+  /* 阴影 */
+  box-shadow: 10px 5px 5px #888888;
+  /* 鼠标变化 */
+  cursor: pointer;
+}
+```
+
++ ### 动态 div鼠标悬停阴影
+```vue
+<style>
+.goods-item-img {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1);
+}
+.goods-item-img::after {
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.165, 0.94, 0.94, 1);
+}
+.goods-item-img:hover {
+  transform: scale(1.05, 1.05);
+}
+.goods-item-img:hover::after {
+  opacity: 1;
+}
+</style>
+```

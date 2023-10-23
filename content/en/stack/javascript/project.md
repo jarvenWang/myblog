@@ -1367,3 +1367,366 @@ goodList.value = [...goodList.value, ...resNew.result.items]
     return { top: 0 }
   }
 ```
+## 渲染模板遇到对象的多层属性访问为空
+`good.details.pictures`
+`TypeError:Cannot read properties of undefined (reading 'properties')`
+解决方法：
+1. 可选链 `?.`
+```vue
+//？号前端有值，才继续运算
+${goods.categories?.[1].id}
+```
+2. v-if控制渲染
+```vue
+<div class="container" v-if="goods.details">
+
+</div>
+```
+
+## tab类样式切换
+绑定class，判断当前元素的id和激动状态activeInde是不是相等
+```vue
+.active 是样式
+:class="{ active: i === activeIndex }"
+```
+
+## 扩大镜
+
+## 注册全局组件
+1. 在目录components目录下新建文件index.js 内容如下：
+```vue
+//把components中的所有组件都进行全局化注册
+//通过插件的方式
+import ImageView from './ImageView/index.vue'
+import Sku from './XtxSku/index.vue'
+
+export const componentPlugin = {
+   install(app) {
+      // app.component('组件名字',组件配置对象)
+      app.component('XtxImageView', ImageView)
+      app.component('XtxSku', Sku)
+   }
+}
+```
+2. main.js 增加内容如下：
+```vue
+//引入全局组件插件
+import { componentPlugin } from '@/components'
+
+app.use(componentPlugin)
+app.mount('#app')
+```
+3. 之后就可以把一些引入加载的组件去掉之后直接使用`XtxImageView` 和 `XtxSku`
+
+## 静态跳转
+```vue
+<a href="javascript:;" @click="$router.push(`/login`)">请先登录</a>
+```
+## 验证功能
+el-form => 绑定`表单对象`和`规则对象`
+el-form-item => 绑定使用的`规则字段`
+el-input => 双向绑定`表单数据`
+步骤：
+1. 准备表单对象
+```vue
+const form = ref({
+account: "",
+password: "",
+});
+```
+2. 准备规则对象
+```vue
+const rules = {
+account: [{ required: true, message: "用户名不能为空", trigger: "blur" }],
+password: [
+{ required: true, message: "密码不能为空", trigger: "blur" },
+{ min: 6, max: 14, message: "密码长度6-14", trigger: "blur" },
+],
+};
+```
+3. 指定表单域的检验字段名
+4. 双向绑定输入对象
+```vue
+<el-form :model="form" :rules="rules">
+   <el-form-item prop="account" label="账户">
+      <el-input v-model="form.account" />
+   </el-form-item>
+   <el-form-item prop="password" label="密码">
+      <el-input v-model="form.password" />
+   </el-form-item>
+   <el-button>点击登录</el-button>
+</el-form>
+```
+
+*** PS:vue处理复杂功能 ***
+思想：当功能很复杂时，通过 多个组件各自负责某个小功能，再组合成一个大功能是组件设计中的常用方法
+
+## 自定义验证规则 
+方法：
+```vue
+{
+  validator:(rule,val,callback) = >{
+    //自定义检验逻辑
+    //value：当前输入的数据
+    //callback:检验处理函数 校验通过调用 
+  }
+}
+```
+添加内容如下：
+```vue
+agree: [
+    {
+      validator: (rule, value, callback) => {
+        console.log(value);
+        //自定义梳校验逻辑
+        //勾选就通过 不勾选就不通过
+        if (value) {
+          callback();
+        } else {
+          callback(new Error("请勾选协议"));
+        }
+      },
+    },
+  ],
+.
+.
+.
+<el-form-item prop="agree" label="协议">
+<el-input v-model="form.agree" />
+</el-form-item>
+```
+
+## 整个表单的内容验证
+对所有需要检验的表单进行统一梳校验
+```vue
+formEl.validator((valid) => {
+  if (valid) {
+    console.log("submit");
+  } else {
+    console.log("error submit");
+    return false;
+  }
+});
+```
+增加内容如下：
+```vue
+//获取form实例做统一校验
+const formRef=ref(null)
+const doLogin=()=>{
+  //调用实例方法
+  formRef.value.validator(()=>{
+    //valid:所有表单都通过校验 才为true
+    console.log(valid)
+    //以valid做为判断条件 如果通过校验才执行登录逻辑
+    if(valid){
+      //TODO LOGIN
+    }
+  })
+}
+//vue 获取实例 :ref=""
+<el-form :ref="formRef" :model="form" :rules="rules">
+```
+
+### vue获取实例：
+1. 先定义空变量
+   `const formRef=ref(null)`
+2. 再用:ref绑定空变量
+   `:ref="formRef"`
+### 结构赋值
+ 有三个变量，但现在只取2个
+```vue
+const form = ref({
+   account: "",
+   password: "",
+   agree: true,
+});
+const { account , password } =form.value
+```
+
+### 登录操作
+```vue
+import { useRouter } from "vue-router";
+
+const res = await loginAPI({account,password})
+//1.提示用户
+ElMessage({type:'success',message:'登录成功'})
+//2.跳转首页
+const router=useRouter()
+router.replace({path:'/'})
+```
+
+### 存储localStorage
+挺久化存储插件：pinia-plugin-persistedstate
+1. 安装插件
+```vue
+npm i pinia-plugin-persistedstate
+```
+2.注册插件
+在main.js中，添加：
+```vue
+const pinia = createPinia()
+//注册持久化插件
+pinia.use(PiniaPluginPersistedstate)
+```
+3. 使用插件
+创建store时，将 persistent 选项设置为 true
+```vue
+import { defineStore } from 'pinia'
+export const useStore = defineStore('main', () => {
+   const someState = ref('你好token')
+   return { someState }
+   },
+   { persist: true }
+)
+```
+
+
+## 登录和非登录状态的模版乱配
+核心思想：`v-if="false  v-else`
+```vue
+<template v-if="userStore.userInfo.token">
+   //登录时显示第一块
+</template>
+<template v-else>
+   //非登录时显示第二块
+</template>
+```
+
+## 请求拦截器携带token
+核心思想：
+```vue
+httpInstance.interceptors.request.use(config => {
+    const userStore = userUserStore()
+    const token = userStore.userInfo.token
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`
+    }
+    return config
+}, e => Promise.rejecte)
+```
+
+## 退出登录
+1. 步骤一：pinia中写清除方法
+```vue
+  //退出时清除用户信息
+  const clearUserInfo = () => {
+    clearUserInfo.value = {}
+  }
+```
+2. 步骤二：登录页面处理逻辑
+```vue
+const confirm = () => {
+   console.log("用户要退出登录了");
+   //退出登录逻辑
+   //1 清除用户信息 触发action
+   useCounterStore.clearUserInfo();
+   //2 跳转路由地址
+   router.push("/login");
+};
+```
+## 统一错误提示
+```vue
+//axios响应式拦截器
+httpInstance.interceptors.response.use(res => res.data, e => {
+    //统一错误提示
+    ElMessage({
+        type:'warning',
+        message:e.response.data.message
+    })
+
+    return Promise.reject(e)
+})
+```
+## token失效401
+```vue
+//axios响应式拦截器
+httpInstance.interceptors.response.use(res => res.data, e => {
+    //统一错误提示
+    ElMessage({
+        type: 'warning',
+        message: e.response.data.message
+    })
+
+    //401 token失效处理
+    //1 清除本地用户数据
+    //2 跳转登录页
+    if(e.response.status==401){
+        userStore.clearUserInfo()
+        router.push('/login')
+    }
+
+    return Promise.reject(e)
+})
+```
+
+## 添加本地购物车
+stores/cartStore.js 的内容：
+```vue
+//封装财物车模块
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
+
+export const useCartStore=defineStore('cart',()=>{
+  //1 定义state - cartList
+  const cartList = ref([])
+  //2 定义action - addCart
+  const addCart=(goods)=>{
+    //添加购物车逻辑
+    //思路：通过匹配传递过来的商品对象中的skuId能不能在cartList中找到，找到了就是添加过
+cosnt item = cartList.value.find((item)=>goods.skuId === item.skuId )
+    //已添加过 count+1
+    if(item){
+    //找到了
+    item.count++
+    }else{
+    //没找到
+    cartList.value.push(goods)
+    }
+    //没有添加过 直接push
+    
+  }
+  return {
+    cartList,
+    addCart
+  }
+},{
+  persist:true,
+})
+```
+
+```vue
+//sku规格被操作时
+let skuObj={}
+const skuChange=()=>{
+  console.log(sku)
+  skuObj=sku
+}
+
+const count=ref(1)
+const countChange = (count)=>{
+  console.log(count)
+  
+}
+
+
+//添加财物车
+const cartStore = useCartStore()
+const addCart = ()=>{
+  if(skuObj.skuId){
+  //规则已经选择 触发action
+    cartStore.addCart({
+       id:goods.value.id,
+       name:goods.value.name,
+       picture:goods.value.picture,
+       price:goods.value.price,
+       count:count.value,
+       skuId:skuObj.skuId,
+       attrsText:skuObj.attrsText,
+       selected:true
+    })
+  }else{
+  //规则没有选择 提示用户
+  ElMessage.warning('请选择规则')
+  }
+}
+```
