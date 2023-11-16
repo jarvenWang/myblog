@@ -262,3 +262,32 @@ li {
 }
 </style>
 ```
++ ### 背景图片充满div
+```vue
+<style>
+background: url("../assets/bg3.webp") center no-repeat;
+background-attachment: fixed;
+background-size: cover;
+</style>
+```
+
++ ### element插件中的label样式
+```vue
+<el-form-item label="用户名" prop="username">
+</el-form-item>
+
+<style>
+.el-form-item__label {
+  color: white;
+}
+</style>
+```
+
++ ### element插件中的左对齐
+```vue
+<style>
+.demo-form-inline {
+  text-align: left;
+}
+</style>
+```

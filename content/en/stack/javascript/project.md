@@ -14,9 +14,12 @@ tags:
 - categories:
 
 ---
+>PS: 查看所有npm全局变量
+> <font color="lightgreen">npm list -global</font>
 
 ```vue
-npm init vue@latest
+npm cache clean --force //清除npm缓存 
+npm init vue@latest 或 npm create vue@latest
 ✔ Project name: … vue3-project
 ```
 package.json中修改：
@@ -32,6 +35,11 @@ package.json中修改：
 + 变化二：模板template不再要求唯一根元素
 + 变化三：脚本script添加setup标识支持组合式API
 5. `index.html` - 单页入口 提供id为app的挂载点
+
+> <font color="orange">报错信息</font>
+> npm install 时报错：code ERESOLVE
+> <font color="lightgreen">解决方法：</font>
+> 清除npm缓存 <font color="lightgreen">npm cache clean --force</font>
 
 ## reactive 和 ref
 生成响应式对象
@@ -400,8 +408,10 @@ plugins: [
 ```
 ### 主题定制
 如何定制（scss变量替换方案）
-1. 安装scss ==> npm i sass -D
-2. 准备定制样式文件 ==> styles/element/index.scss
+1. 安装scss 
+==> `npm i sass -D`
+2. 准备定制样式文件 
+==> `styles/element/index.scss`
 ```vue
 //index.scss的内容如下：
 @forward 'element-plus/theme-chalk/src/common/var.scss' with(
