@@ -34,6 +34,11 @@
   name = "javascript"
   url = "stack/javascript"
 
+  [[main]]
+    parent = "stack"
+    name = "docker"
+    url = "stack/docker"
+
 [[main]]
   identifier = "about"
   name = "个人经历"

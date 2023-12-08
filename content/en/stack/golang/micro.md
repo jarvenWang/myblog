@@ -244,3 +244,20 @@ INFO ts=2023-11-21T19:29:48+08:00 caller=grpc/server.go:205 service.id=wangdeMac
 
 ```
 
+打包项目
+```shell
+$go build -o ./bin/ ./...
+./helloworld 
+2023/12/05 11:05:26 maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+panic: stat ../../configs: no such file or directory
+cp -r ../configs ../../
+
+./helloworld 
+2023/12/05 11:07:05 maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+DEBUG msg=config loaded: config.yaml format: yaml
+INFO ts=2023-12-05T11:07:05+08:00 caller=http/server.go:317 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=[HTTP] server listening on: [::]:8000
+INFO ts=2023-12-05T11:07:05+08:00 caller=grpc/server.go:212 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=[gRPC] server listening on: [::]:9006
+INFO ts=2023-12-05T11:07:15+08:00 caller=biz/greeter.go:44 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=CreateGreeter: eric
+INFO ts=2023-12-05T11:07:16+08:00 caller=biz/greeter.go:44 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=CreateGreeter: eric
+
+```
