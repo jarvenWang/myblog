@@ -138,6 +138,12 @@ GOPROXY=https://goproxy.io,direct go install github.com/go-kratos/kratos/cmd/kra
 kratos -v
 kratos version v2.7.1
 ```
+
+> PS:把 $GOPATH/bin 加入系统环境变量PATH:
+> linux:
+> vim /etc/profile
+> export PATH="/path/to/$GOPATH/bin:$PATH"
+> source /etc/profile
 ## 创建项目
 
 `kratos new helloworld -r https://gitee.com/go-kratos/kratos-layout.git`
@@ -217,7 +223,7 @@ $ ./bin/helloworld -conf ./configs
 ```
  -r 指定源
 
-
+### 整理依赖关系
 ```shell
 go mod tidy
 go mod tidy: go.mod file indicates go 1.18, but maximum supported version is 1.17
@@ -227,6 +233,165 @@ go mod tidy: go.mod file indicates go 1.18, but maximum supported version is 1.1
 ```shell
 go mod tidy
 ```
+### 依赖注入wire
+```golang
+go get github.com/google/wire/cmd/wire
+go generate ./..
+// 写入依赖注入
+wrote /Users/wangdante/D/kugou/verify-code/cmd/verify-code/wire_gen.go 
+```
+
+### 添加服务
+共用 go.mod ，大仓模式
+```golang
+kratos new helloworld
+cd helloworld
+kratos new app/user --nomod
+
+├── app
+│   └── user
+│       ├── Dockerfile
+│       ├── Makefile
+│       ├── cmd
+│       │   └── user
+│       │       ├── main.go
+│       │       ├── wire.go
+│       │       └── wire_gen.go
+│       ├── configs
+│       │   └── config.yaml
+│       ├── internal
+│       │   ├── biz
+│       │   │   ├── biz.go
+│       │   │   └── greeter.go
+│       │   ├── conf
+│       │   │   ├── conf.pb.go
+│       │   │   └── conf.proto
+│       │   ├── data
+│       │   │   ├── data.go
+│       │   │   └── greeter.go
+│       │   ├── server
+│       │   │   ├── grpc.go
+│       │   │   ├── http.go
+│       │   │   └── server.go
+│       │   └── service
+│       │       ├── greeter.go
+│       │       └── service.go
+│       └── openapi.yaml
+```
+
+####  一、添加Proto文件
+> kratos-layout 项目中对 proto 文件进行了版本划分，放在了 v1 子目录下
+```golang 
+kratos proto add api/helloworld/v1/demo.proto
+```
+####  二、生成Proto代码
+```shell
+# 可以直接通过 make 命令生成
+make api
+
+# 或使用 kratos cli 进行生成
+kratos proto client api/helloworld/v1/demo.proto
+```
+会在proto文件同目录下生成:
+```shell
+api/helloworld/v1/demo.pb.go
+api/helloworld/v1/demo_grpc.pb.go
+# 注意 http 代码只会在 proto 文件中声明了 http 时才会生成
+api/helloworld/v1/demo_http.pb.go
+```
+####  三、生成Service代码
+通过 proto 文件，可以直接生成对应的 Service 实现代码：
+使用 -t 指定生成目录
+```shell
+kratos proto server api/helloworld/v1/demo.proto -t internal/service
+```
+输出：
+internal/service/demo.go
+
+
+
+
+
+### 规范代码 (举例verify-code项目)
+使用 internal/data 目录 完成数据(数据库，缓存，文件，OSS，云服务器)的操作
+对redis的操作，就属于此类
+##### 步骤一：在/internal/data/data.go中完成redis客户端的初始化
+##### 步骤二：使用配置文件，完成redis服务器信息的设置
+```golang
+// ProviderSet is data providers.
+var ProviderSet = wire.NewSet(NewData, NewGreeterRepo)
+
+// Data .
+type Data struct {
+	// TODO wrapped database client
+	Rdb *redis.Client
+}
+
+// NewData .
+func NewData(c *conf.Data, logger log.Logger) (*Data, func(), error) {
+	data := &Data{}
+	//初始化Rdb
+	//连接redis,使用服务的配置，c就是解析之后的变量
+	redisURL := fmt.Sprintf("redis://%s/1?dial_timeout=%d", c.Redis.Addr, 1)
+	options, err := redis.ParseURL(redisURL)
+	if err != nil {
+		data.Rdb = nil
+	}
+	// new client 不会立即连接，建立客户端，需要执行命令时才会连接
+	data.Rdb = redis.NewClient(options)
+
+	cleanup := func() {
+		//清理了redis连接
+		_ = data.Rdb.Close()
+		log.NewHelper(logger).Info("closing the data resources")
+	}
+	return data, cleanup, nil
+}
+```
+##### 步骤三：创建data中用于完成数据操作的对象(实体)
+1. 新建 internal/data/customer.go
+2. 定义完成后，为依赖注入 wire 提供 provider
+3. 在 internal/data/data.go 中
+
+##### 步骤四：完成设置验证码的业务逻辑代码
+更新 internal/data/customer.go 新建
+`func (cd CustomerData) SetVerifyCode(telephone, code string, ex int64) error` 方法，用于 完成设置
+
+##### 步骤五：更新 CustomerService 的定义，与 CustomerData 建立关联
+`internal/service/customer.go`
+修改如下：
+```golang
+type CustomerService struct {
+	pb.UnimplementedCustomerServer
+	cd *data.CustomerData //修改
+}
+
+func NewCustomerService(cd *data.CustomerData) *CustomerService {
+	return &CustomerService{
+		cd: cd, //修改
+	}
+}
+```
+
+##### 步骤六：调用 CustomerData 中定义的方法，实现设置验证码缓存的业务逻辑
+1. 添加 Req 和 Resp
+
+customer.proto 文件中 添加 Req 和 Resp 结构，生成更新customer.pd.go 文件：
+```proto
+message GetVerifyCodeReq{}
+message GetVerifyCodeResp{}
+```
+2. 更新customer.pb.go文件：
+```shell
+kratos proto client api/helloworld/v1/demo.proto
+```
+3. GetVerifyCode方法
+
+
+
+>每次更新ProviderSet后都要重新更新依赖注入
+> go generate ./...
+
 查看makefile:
 ```shell
 make help
@@ -260,4 +425,187 @@ INFO ts=2023-12-05T11:07:05+08:00 caller=grpc/server.go:212 service.id=wangdeMac
 INFO ts=2023-12-05T11:07:15+08:00 caller=biz/greeter.go:44 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=CreateGreeter: eric
 INFO ts=2023-12-05T11:07:16+08:00 caller=biz/greeter.go:44 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=CreateGreeter: eric
 
+```
+
+
+## 大集成demo
+### 创建服务customer
+```shell
+kratos new customer -r https://gitee.com/go-kratos/kratos-layout.git  
+```
+
+### 整理依赖包
+```shell
+cd customer
+go mod tidy
+```
+
+### 依赖注入wire
+```shell
+go get github.com/google/wire/cmd/wire
+// 写入依赖注入
+go generate ./...
+wire: customer/cmd/customer: wrote /Users/wangdante/D/kugou/kratos_backend/customer/cmd/customer/wire_gen.go
+```
+
+### 验证启动
+
+>PS kratos run 的时候报错：
+> missing go.sum entry for module providing package golang.org/x/sync/errgroup (imported by github.com/go-kratos/kratos/v2); to add:
+> 解决方法： go get golang.org/x/sync/errgroup
+
+修改 configs/config.yaml 端口：
+```yaml
+server:
+  http:
+    addr: 0.0.0.0:8600
+    timeout: 1s
+  grpc:
+    addr: 0.0.0.0:9600
+```
+
+开启项目：`kratos run` --在customer目录下
+
+验证访问：http://127.0.0.1:8600/helloworld/123
+
+### 添加proto文件
+```shell
+kratos proto add api/customer/customer.proto
+```
+
+### 增加路由代码
+vim api/customer/customer.proto 中添加内容如下：
+```proto
+// 导入包
+import "google/api/annotations.proto";
+...
+//获取验证码
+	rpc GetVerifyCode (GetVerifyCodeReq)returns(GetVerifyCodeResp){
+		option (google.api.http)={
+			get: "/customer/get-verify-code"
+		};
+	}
+...
+message GetVerifyCodeReq {
+	string Telephone = 1;
+}
+message GetVerifyCodeResp {
+	int64 Code = 1;
+	string Message = 2;
+	string Data = 3;
+}
+```
+
+### 增加客户端代码(client)
+```shell
+kratos proto client api/customer/customer.proto 
+```
+
+### 增加服务端代码(server)
+```shell
+kratos proto server api/customer/customer.proto
+#或者指定目录 -t
+kratos proto server api/customer/customer.proto -t internal/service
+```
+
+### http服务中加customer服务
+修改 internal/server/http.go ：内容如下：
+```go
+import customer2 "customer/api/customer"
+...
+func NewHTTPServer(c *conf.Server, customerService *service.CustomerService, greeter *service.GreeterService, logger log.Logger) *http.Server {
+...
+srv := http.NewServer(opts...)
+// 注册customer的http的服务
+customer2.RegisterCustomerHTTPServer(srv, customerService)
+v1.RegisterGreeterHTTPServer(srv, greeter)
+...
+```
+
+### (grpc服务中加customer服务)
+修改 internal/server/grpc.go ：内容如下：
+```go
+import customer2 "customer/api/customer"
+...
+func NewGRPCServer(c *conf.Server, customerService *service.CustomerService, greeter *service.GreeterService, logger log.Logger) *grpc.Server {
+...
+srv := grpc.NewServer(opts...)
+// 注册customer的grpc的服务
+customer2.RegisterCustomerServer(srv, customerService)
+v1.RegisterGreeterServer(srv, greeter)
+```
+
+### 修改依赖注入providerSet
+修改 internal/service/service.go 内容如下：
+```go
+var ProviderSet = wire.NewSet(NewCustomerService, NewGreeterService)
+```
+
+
+
+### 基于wire注入依赖
+集成根目录下 kratos_backend 执行
+```shell
+go get github.com/google/wire/cmd/wire
+```
+
+kratos_backend/customer目录下执行：
+```shell
+go generate ./...
+wire: customer/cmd/customer: wrote /Users/wangdante/D/kugou/kratos_backend/customer/cmd/customer/wire_gen.go
+
+```
+
+
+>PS:报错
+> go: cannot find main module, but found .git/config in /Users/wangdante/D/kugou/kratos_backend to create a module there, run:go mod init
+>解决方法：
+> go mod init customer
+> go mod tidy
+> 
+
+### 启动
+customer目录下执行：
+```shell
+kratos run
+2023/12/15 18:45:29 maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined
+DEBUG msg=config loaded: config.yaml format: yaml
+INFO ts=2023-12-15T18:45:29+08:00 caller=grpc/server.go:205 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=[gRPC] server listening on: [::]:9600
+INFO ts=2023-12-15T18:45:29+08:00 caller=http/server.go:302 service.id=wangdeMacBook-Pro.local service.name= service.version= trace.id= span.id= msg=[HTTP] server listening on: [::]:8600
+
+```
+#### 测试http服务
+浏览器输入：
+http://127.0.0.1:8600/customer/get-verify-code
+返回：
+```shell
+{
+"Code": "0",
+"Message": "",
+"Data": ""
+}
+```
+#### 测试grpc服务
+使用apifox工具
+1. 步骤一：设置.proto文件
+`/Users/wangdante/D/kugou/kratos_backend/customer/api/customer/customer.proto`
+2. 步骤二：设置依赖关系目录
+把 third_party 目录中的 google复制一份到项目customer根目录下
+`/Users/wangdante/D/kugou/kratos_backend/customer`
+3. 步骤三：设置环境
+开发环境：127.0.0.1:9600
+4. 步骤四：请求gRPC并传参
+参数：
+```shell
+{
+    "Telephone":"13510116521"
+}
+```
+返回值：
+```shell
+{
+    "Code": "0",
+    "Message": "13510116521获取验证码成功",
+    "Data": ""
+}
 ```
