@@ -609,3 +609,8 @@ http://127.0.0.1:8600/customer/get-verify-code
     "Data": ""
 }
 ```
+
+## IDE加载google/api/annotations.proto
+解决代码中google报红的方法：
+编辑器设置 GoLand -> Settings -> Languages & Frameworks -> Protocol Buffers -> 添加项目的 third_party 目录
+`file:///Users/wangdante/D/kugou/kratos_backend/customer/third_party`
