@@ -6,6 +6,12 @@ type: gallery
 mode: one-by-one
 description: "photo gallery"
 images:
+  - image: 302.JPG
+    caption: 腾讯音乐酷狗
+  - image: 301.JPG
+    caption: 健康乐动
+  - image: 299.JPG
+    caption: 酷狗中区
   - image: 13.webp
     caption: 圣索菲亚大教堂
   - image: 8.webp
