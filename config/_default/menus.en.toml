@@ -4,40 +4,54 @@
   url = "stack"
   weight = 2
 
-[[main]]
-  parent = "stack"
-  name = "python"
-  url = "stack/python"
 
 [[main]]
   parent = "stack"
   name = "golang"
   url = "stack/golang"
-
-[[main]]
-  parent = "stack"
-  name = "linux"
-  url = "stack/linux"
+  weight = 1
 
 [[main]]
   parent = "stack"
   name = "php"
   url = "stack/php"
+  weight = 2
 
 [[main]]
   parent = "stack"
-  name = "bigdata"
-  url = "stack/bigdata"
+  name = "python"
+  url = "stack/python"
+  weight = 3
 
 [[main]]
   parent = "stack"
   name = "javascript"
   url = "stack/javascript"
+  weight = 4
+
+[[main]]
+  parent = "stack"
+  name = "linux"
+  url = "stack/linux"
+  weight = 5
+
+[[main]]
+  parent = "stack"
+  name = "db"
+  url = "stack/db"
+  weight = 6
+
+[[main]]
+  parent = "stack"
+  name = "bigdata"
+  url = "stack/bigdata"
+  weight = 7
 
   [[main]]
     parent = "stack"
     name = "docker"
     url = "stack/docker"
+    weight = 8
 
 [[main]]
   identifier = "about"

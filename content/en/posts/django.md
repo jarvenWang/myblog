@@ -1,7 +1,7 @@
 ---
 title: "django框架"
 date: 2020-01-25T06:40:51+09:00
-description: tabs, code-tabs, expand, alert, warning, notice, img, box
+description: Django是一个由Python编写的具有完整架站能力的开源Web框架。使用Django，只要很少的代码，就可以轻松地完成一个正式网站的大部分内容，并进一步开发出全功能的Web
 draft: false
 hideToc: false
 enableToc: true
@@ -12,7 +12,7 @@ tags:
 series:
   -
 categories:
-  -
+  - python
 image: images/feature3/django.png
 ---
 

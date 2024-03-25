@@ -11,8 +11,8 @@ author: wangjinbao
 authorEmoji: 👨‍🎓
 tags: 
 - golang
-- categories:
-  -
+categories:
+- golang
 image: images/feature3/img_2.png
 ---
 
