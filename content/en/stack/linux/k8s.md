@@ -60,11 +60,11 @@ kubectl get pod -n kube-system
 NAME                                     READY   STATUS    RESTARTS      AGE
 coredns-5d78c9869d-d6qvr                 1/1     Running   4 (20m ago)   2d16h
 coredns-5d78c9869d-nxd7x                 1/1     Running   4 (20m ago)   2d16h
-etcd-docker-desktop                      1/1     Running   4 (20m ago)   2d16h
-kube-apiserver-docker-desktop            1/1     Running   4 (20m ago)   2d16h
-kube-controller-manager-docker-desktop   1/1     Running   4 (20m ago)   2d16h
+etcd-k8s-desktop                      1/1     Running   4 (20m ago)   2d16h
+kube-apiserver-k8s-desktop            1/1     Running   4 (20m ago)   2d16h
+kube-controller-manager-k8s-desktop   1/1     Running   4 (20m ago)   2d16h
 kube-proxy-qpqsk                         1/1     Running   4 (20m ago)   2d16h
-kube-scheduler-docker-desktop            1/1     Running   4 (20m ago)   2d16h
+kube-scheduler-k8s-desktop            1/1     Running   4 (20m ago)   2d16h
 storage-provisioner                      1/1     Running   8 (20m ago)   2d16h
 vpnkit-controller                        1/1     Running   4 (20m ago)   2d16h
 ```
@@ -112,7 +112,7 @@ Namespace:            kube-system
 Priority:             2000000000
 Priority Class Name:  system-cluster-critical
 Service Account:      coredns
-Node:                 docker-desktop/192.168.65.4
+Node:                 k8s-desktop/192.168.65.4
 Start Time:           Mon, 16 Oct 2023 17:42:55 +0800
 Labels:               k8s-app=kube-dns
                       pod-template-hash=5d78c9869d
@@ -124,9 +124,9 @@ IPs:
 Controlled By:  ReplicaSet/coredns-5d78c9869d
 Containers:
   coredns:
-    Container ID:  docker://c3778f5414c9fae0e988ad5e8826de296d9be51712f9131e339150e8e9594de2
+    Container ID:  k8s://c3778f5414c9fae0e988ad5e8826de296d9be51712f9131e339150e8e9594de2
     Image:         registry.k8s.io/coredns/coredns:v1.10.1
-    Image ID:      docker://sha256:97e04611ad43405a2e5863ae17c6f1bc9181bdefdaa78627c432ef754a4eb108
+    Image ID:      k8s://sha256:97e04611ad43405a2e5863ae17c6f1bc9181bdefdaa78627c432ef754a4eb108
     Ports:         53/UDP, 53/TCP, 9153/TCP
     Host Ports:    0/UDP, 0/TCP, 0/TCP
     Args:

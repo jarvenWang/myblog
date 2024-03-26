@@ -93,9 +93,9 @@ cd demo && gf run main.go
 │   │               ├── configmap.yaml
 │   │               ├── deployment.yaml
 │   │               └── kustomization.yaml
-│   └── docker
+│   └── k8s
 │       ├── Dockerfile
-│       └── docker.sh
+│       └── k8s.sh
 ├── resource
 │   ├── i18n
 │   ├── public

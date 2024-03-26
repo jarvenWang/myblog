@@ -10,7 +10,7 @@ enableTocContent: false
 author: wangjinbao
 authorEmoji: 👻
 tags:
-- docker
+- db
 categories:
 - db
 image: images/docImages/liwuzb.png

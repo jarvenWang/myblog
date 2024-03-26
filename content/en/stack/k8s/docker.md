@@ -28,7 +28,7 @@ git clone http://git.tmeoa.com/TMEIT/container-step-by-step
 ```
 3. 切换目录:
 ```sh
-cd ${PWD}/container-step-by-step/docker
+cd ${PWD}/container-step-by-step/k8s
 ```
 
 ## 实验一 容器基本操作
@@ -40,31 +40,31 @@ cd ${PWD}/container-step-by-step/docker
 #### 运行nginx
 1. 前台运行
     ```shell
-    docker run nginx
+    k8s run nginx
     ```
 2. 后台运行
     ```shell
-    docker run -ti -d nginx
+    k8s run -ti -d nginx
     ```
 #### 查看容器运行状况
 ```shell
-docker ps
+k8s ps
 # 不加参数，查看正在运行的容器
 # -a 查看全部容器，包括已停止的
 ```
 #### 停止和启动容器
 ```shell
  # 停止容器
- docker stop <name or id>
+ k8s stop <name or id>
  # 强制停止
- # docker kill <name or id>
+ # k8s kill <name or id>
  # 启动容器
- docker start <name or id>
+ k8s start <name or id>
 ```
 #### 暴露容器端口
 1. 启动新的nginx容器
     ```shell
-    docker run -ti -d -p 8080:80 nginx
+    k8s run -ti -d -p 8080:80 nginx
     ```
 2. 打开浏览器，访问：http://127.0.0.1:8080
    @startuml
@@ -84,7 +84,7 @@ docker ps
 #### 删除容器
 ```shell
 # 容器停止状态下执行
-docker rm <name or id>
+k8s rm <name or id>
 ```
 
 ## 实验二 在容器内使用指定文件
@@ -98,20 +98,20 @@ docker rm <name or id>
 #### 文件拷贝方式
 1. 启动nginx
     ```bash
-    docker run -d -ti -p 8081:80 nginx
+    k8s run -d -ti -p 8081:80 nginx
     ```
 2. 拷贝静态文件到容器指定目录
     ```bash
-    docker cp dist/ <id or name>:/usr/share/nginx/html/
+    k8s cp dist/ <id or name>:/usr/share/nginx/html/
     ```
 4. 浏览器访问http://127.0.0.1:8081
 #### 挂载文件方式
 1. 启动nginx并挂载文件夹(或文件)
     ```bash
     cp -R exp2/* data/
-    docker run -d -ti -p 8082:80  -v ${PWD}/data/dist:/usr/share/nginx/html nginx
+    k8s run -d -ti -p 8082:80  -v ${PWD}/data/dist:/usr/share/nginx/html nginx
     # 或
-    #  docker run -d -ti -p 8082:80 -v ${PWD}/data/dist/index.html:/usr/share/nginx/html/index.html nginx
+    #  k8s run -d -ti -p 8082:80 -v ${PWD}/data/dist/index.html:/usr/share/nginx/html/index.html nginx
     ```
 4. 浏览器访问http://127.0.0.1:8082
 3. 修改dist/index.html
@@ -127,18 +127,18 @@ docker rm <name or id>
 ### 实验步骤
 1. 创建自定义网络
     ```bash
-    docker network create my_network
+    k8s network create my_network
     # 查看现有网络列表
-    docker network ls
+    k8s network ls
     ```
 2. 启动php-fpm容器，并挂载代码到指定目录
     ```bash
     cp -R exp3/* data/
-    docker run -d -ti --name php-fpm-svr -v ${PWD}/data/php:/app/php --network my_network php:fpm  
+    k8s run -d -ti --name php-fpm-svr -v ${PWD}/data/php:/app/php --network my_network php:fpm  
     ```
 2. 启动nginx容器，并挂载配置文件和静态文件
     ```bash
-    docker run -d -ti --name nginx-front -v ${PWD}/data/nginx_configs/default.conf:/etc/nginx/conf.d/default.conf -v ${PWD}/data/dist:/app/dist --network my_network -p 8080:80 nginx 
+    k8s run -d -ti --name nginx-front -v ${PWD}/data/nginx_configs/default.conf:/etc/nginx/conf.d/default.conf -v ${PWD}/data/dist:/app/dist --network my_network -p 8080:80 nginx 
     ```
 4. 浏览器访问：http://localhost:8080/api/getCurTime http://localhost:8080/
 
@@ -198,21 +198,21 @@ my_network -[#red,dotted]- cp3
 1. 浏览器访问 hub.docker.com，搜索mysql，进入mysql镜像页面
 2. 下载指定版本镜像
     ```bash
-    docker pull mysql:5.7
+    k8s pull mysql:5.7
     # 查看镜像列表
-    docker images
+    k8s images
     ```
 3. 启动mysql
     ```bash
-    docker run -d -ti -e MYSQL_ROOT_PASSWORD=rootpass mysql:5.7
+    k8s run -d -ti -e MYSQL_ROOT_PASSWORD=rootpass mysql:5.7
     #查看容器IP
-    docker inspect <id or name>
-    # 或者 docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <id or name>
+    k8s inspect <id or name>
+    # 或者 k8s inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <id or name>
     ```
 4. 启动临时容器，导入数据
     ```sh
     cp -R exp4/* data/
-    docker run --rm -ti -v ${PWD}/data/exp4.sql:/root/exp4.sql mysql:5.7 bash
+    k8s run --rm -ti -v ${PWD}/data/exp4.sql:/root/exp4.sql mysql:5.7 bash
     mysql -h<ip> -uroot -p
     # mysql shell
     source /root/exp4.sql
@@ -222,23 +222,23 @@ my_network -[#red,dotted]- cp3
     ```
    或者
     ```sh
-    docker run --rm -ti -v ${PWD}/data/exp4.sql:/root/exp4.sql mysql:5.7 mysql -h<ip> -uroot -p
+    k8s run --rm -ti -v ${PWD}/data/exp4.sql:/root/exp4.sql mysql:5.7 mysql -h<ip> -uroot -p
     # mysql shell
     source /root/exp4.sql
     quit
     ```
 5. 查看容器
     ```bash
-    docker ps -a
+    k8s ps -a
     ```
 #### 数据持久化
 启动新的mysql容器，指定数据存储目录，并导入数据
 ```sh
-docker run -d -ti --name mysql_svr -e MYSQL_ROOT_PASSWORD=rootpass -v ${PWD}/data/mysql_data:/var/lib/mysql mysql:5.7
+k8s run -d -ti --name mysql_svr -e MYSQL_ROOT_PASSWORD=rootpass -v ${PWD}/data/mysql_data:/var/lib/mysql mysql:5.7
 # 将mysql容器加入到my_network网络中，以便使用容器名进行访问
-docker network connect my_network mysql_svr
+k8s network connect my_network mysql_svr
 # 导入数据
-docker run --rm -ti -v ${PWD}/data/exp4.sql:/root/exp4.sql --network my_network mysql:5.7 mysql -hmysql_svr -uroot -p
+k8s run --rm -ti -v ${PWD}/data/exp4.sql:/root/exp4.sql --network my_network mysql:5.7 mysql -hmysql_svr -uroot -p
 # mysql shell
 source /root/exp4.sql
 quit
@@ -272,13 +272,13 @@ mysql_data <--> var_lib_mysql
 1. 为PHP安装mysql驱动
     ```sh
     # 进入容器shell
-    docker exec -ti php-fpm-svr bash
+    k8s exec -ti php-fpm-svr bash
     # 容器内 bash
-    docker-php-ext-install pdo pdo_mysql
+    k8s-php-ext-install pdo pdo_mysql
     exit
     # 重启php-fpm-svr容器
-    docker stop php-fpm-svr
-    docker start php-fpm-svr 
+    k8s stop php-fpm-svr
+    k8s start php-fpm-svr 
     ```
 2. 浏览器访问：http://localhost:8080/api/getDbData
 
@@ -302,11 +302,11 @@ mysql_data <--> var_lib_mysql
 4. 构建镜像
     ```sh
     cd data/php
-    docker build -t php-fpm-svr:v1.0 .
+    k8s build -t php-fpm-svr:v1.0 .
     ```
 5. 运行1.0版本镜像
     ```sh
-    docker run -d -ti --name php-fpm-svr-v1 --network my_network php-fpm-svr:v1.0
+    k8s run -d -ti --name php-fpm-svr-v1 --network my_network php-fpm-svr:v1.0
     ```
 6. 修改nginx_configs/default.conf文件，添加如下配置：
     ```nginx
@@ -322,7 +322,7 @@ mysql_data <--> var_lib_mysql
     ```
 7. reload nginx使配置生效
     ```sh
-    docker exec -ti nginx-front nginx -s reload
+    k8s exec -ti nginx-front nginx -s reload
     ```
 1. 修改 data/php/api.php 文件 第23行
     ```php
@@ -369,7 +369,7 @@ br -- hnp
 #### 手动编译vuejs
 1. 运行nodejs容器，并初始化vuejs项目
     ```sh
-    docker run -ti --rm -v ${PWD}/data/vuejs:/app node:19 bash
+    k8s run -ti --rm -v ${PWD}/data/vuejs:/app node:19 bash
     # 容器shell
     npm install -g @vue/cli
     cd /app
@@ -399,11 +399,11 @@ br -- hnp
 2. 制作镜像
     ```sh
     cd data 
-    docker build -t front:v1.0 .
+    k8s build -t front:v1.0 .
     ```
 3. 运行前端镜像
     ```sh
-    docker run -d -ti --name front-1.0 -p 8081:80 --network my_network front:v1.0 
+    k8s run -d -ti --name front-1.0 -p 8081:80 --network my_network front:v1.0 
     ```
 4. 浏览器访问： http://127.0.0.1:8081/
 
@@ -452,25 +452,25 @@ br -- hnp1
 #### 镜像导出和导入
 ```shell
 #导出镜像
-docker save -o front-v1.0.tar front:v1.0
+k8s save -o front-v1.0.tar front:v1.0
 # 删除正在运行的容器和镜像
-docker kill front-1.0
-docker rm front-1.0 && docker rmi front:v1.0
+k8s kill front-1.0
+k8s rm front-1.0 && k8s rmi front:v1.0
 #导入镜像
-docker load -i front-v1.0.tar
+k8s load -i front-v1.0.tar
 ```
 #### 利用镜像仓库上传下载镜像
 <i>以腾讯云的个人镜像仓库为例</i>
 
 ```shell
 # 登录镜像仓库
-docker login ccr.ccs.tencentyun.com --username=<username>
+k8s login ccr.ccs.tencentyun.com --username=<username>
 # 设置镜像别名
-docker tag front:v1.0 ccr.ccs.tencentyun.com/consbs/front:v1.0
+k8s tag front:v1.0 ccr.ccs.tencentyun.com/consbs/front:v1.0
 # 上传镜像
-docker push ccr.ccs.tencentyun.com/consbs/front:v1.0
+k8s push ccr.ccs.tencentyun.com/consbs/front:v1.0
 # 下载镜像
-docker pull ccr.ccs.tencentyun.com/consbs/front:v1.0
+k8s pull ccr.ccs.tencentyun.com/consbs/front:v1.0
 ```
 
 ## 实验八 限制容器使用资源
@@ -483,14 +483,14 @@ docker pull ccr.ccs.tencentyun.com/consbs/front:v1.0
 1. 启动主机压测程序stress
 ```bash
 # 建议设置一个超时时间，防止参数错误将服务器压垮
-docker run --rm -it progrium/stress --cpu 1 --timeout 60s
+k8s run --rm -it progrium/stress --cpu 1 --timeout 60s
 # --cpu=1 程序会让一个CPU核心使用率到达100%
 ```
 2. 登录docker服务器，用top命令观察stress进程消耗资源
 ```sh
 # 打开另一个终端窗口
 # （可选）mac上登录docker服务器
-docker run --rm -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh
+k8s run --rm -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh
 top
 # 按pid排序
 N
@@ -500,7 +500,7 @@ N
 3. 重新启动stress，并设置CPU=0.5核
 ```shell
 # ctl+C 结束原来的street容器，重新启动
-docker run --cpus=0.5 --rm -it progrium/stress  --cpu 1  --timeout 60s
+k8s run --cpus=0.5 --rm -it progrium/stress  --cpu 1  --timeout 60s
 # --cpus=0.5 限制容器最大可用CPU资源为0.5个
 #
 ```
@@ -509,14 +509,14 @@ docker run --cpus=0.5 --rm -it progrium/stress  --cpu 1  --timeout 60s
 1. 启动主机压测程序stress
 ```bash
 # 建议设置一个超时时间，防止参数错误将服务器压垮
-docker run --rm -it progrium/stress --vm 1 --vm-bytes 256M --timeout 60s
+k8s run --rm -it progrium/stress --vm 1 --vm-bytes 256M --timeout 60s
 # --vm 1 --vm-bytes 256M 程序会启动一个进程，申请256MB内存
 ```
 2. 登录docker服务器，用top命令观察stress进程消耗资源
 ```sh
 # 打开另一个终端窗口
 # （可选）mac上登录docker服务器
-docker run --rm -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh
+k8s run --rm -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh
 top
 # 按pid排序
 N
@@ -524,7 +524,7 @@ N
 3. 重新启动stress，并设置CPU=0.5核
 ```shell
 # ctl+C 结束原来的street容器，重新启动
-docker run --rm -m 128m -it progrium/stress --vm 1 --vm-bytes 256M --timeout 60s
+k8s run --rm -m 128m -it progrium/stress --vm 1 --vm-bytes 256M --timeout 60s
 # -m 128m 限制容器最大可用内存为128MB
 # 会发现容器由于无法申请到足够的内存，启动后马上退出
 ```
@@ -561,7 +561,7 @@ docker-build:
    only:
       - tags
    before_script:
-      - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+      - k8s login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
    # Default branch leaves tag empty (= latest tag)
    # All other branches are tagged with the escaped branch name (commit ref slug)
    script:
@@ -573,9 +573,9 @@ docker-build:
          echo "******"
          echo "${imageUrl}"
          echo "******"
-      - docker build -f ./Dockerfile -t "${imageUrl}" .
-      - docker push "${imageUrl}"
-      - docker rmi "${imageUrl}"
+      - k8s build -f ./Dockerfile -t "${imageUrl}" .
+      - k8s push "${imageUrl}"
+      - k8s rmi "${imageUrl}"
    tags:
       - tmeit-share
 ```
@@ -654,11 +654,11 @@ echo ‘.gitlab-ci.yml merge=kg merge=ours‘ >> .gitattributes
 ### 实验步骤
 #### 查看镜像或容器详细信息
 ```sh
-docker inspect <container/image id or name>
+k8s inspect <container/image id or name>
 ```
 #### 查看容器的标准输出
 ```sh
-docker logs <container id or name> -n 10 -f
+k8s logs <container id or name> -n 10 -f
 # -n <num> 显示最新num行日志
 # -f 自动滚动更新
 ```
@@ -669,7 +669,7 @@ docker attach <container id or name>
 ```
 #### 在容器中执行命令
 ```sh
-docker exec -ti <container id or name> <command> <args>
+k8s exec -ti <container id or name> <command> <args>
 ```
 #### 无法启动或启动后退出
 分别构建exp10/Dockerfile中注释的两种错误镜像
@@ -683,6 +683,6 @@ CMD [ "nginx", "-g", "daemon off;" ]
 ```
 分别启动这两种错误镜像：
 ```sh
-docker run -ti <image name>
+k8s run -ti <image name>
 ```
 

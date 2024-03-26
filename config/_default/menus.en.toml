@@ -37,21 +37,15 @@
 
 [[main]]
   parent = "stack"
-  name = "db"
-  url = "stack/db"
-  weight = 6
-
-[[main]]
-  parent = "stack"
   name = "bigdata"
   url = "stack/bigdata"
-  weight = 7
+  weight = 6
 
   [[main]]
     parent = "stack"
-    name = "docker"
-    url = "stack/docker"
-    weight = 8
+    name = "k8s"
+    url = "stack/k8s"
+    weight = 7
 
 [[main]]
   identifier = "about"
