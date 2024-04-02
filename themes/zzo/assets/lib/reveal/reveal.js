@@ -3346,7 +3346,7 @@
 
 	/**
 	 * Updates the visibility of the speaker notes sidebar that
-	 * is used to share annotated slides. The notes sidebar is
+	 * is used to knowledge annotated slides. The notes sidebar is
 	 * only visible if showNotes is true and there are notes on
 	 * one or more slides in the deck.
 	 */

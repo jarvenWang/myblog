@@ -430,11 +430,11 @@ commento = false
   copyrightLinkImage = ""
   copyrightLinkText = ""
 
-# possible share name: "facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "whatsapp", "telegram"
-[[share]]
+# possible knowledge name: "facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "whatsapp", "telegram"
+[[knowledge]]
   name = "facebook"
   username = ""
-[[share]]
+[[knowledge]]
   name = "twitter"
 
 [[footerLinks]]

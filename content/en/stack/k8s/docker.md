@@ -102,16 +102,16 @@ k8s rm <name or id>
     ```
 2. 拷贝静态文件到容器指定目录
     ```bash
-    k8s cp dist/ <id or name>:/usr/share/nginx/html/
+    k8s cp dist/ <id or name>:/usr/knowledge/nginx/html/
     ```
 4. 浏览器访问http://127.0.0.1:8081
 #### 挂载文件方式
 1. 启动nginx并挂载文件夹(或文件)
     ```bash
     cp -R exp2/* data/
-    k8s run -d -ti -p 8082:80  -v ${PWD}/data/dist:/usr/share/nginx/html nginx
+    k8s run -d -ti -p 8082:80  -v ${PWD}/data/dist:/usr/knowledge/nginx/html nginx
     # 或
-    #  k8s run -d -ti -p 8082:80 -v ${PWD}/data/dist/index.html:/usr/share/nginx/html/index.html nginx
+    #  k8s run -d -ti -p 8082:80 -v ${PWD}/data/dist/index.html:/usr/knowledge/nginx/html/index.html nginx
     ```
 4. 浏览器访问http://127.0.0.1:8082
 3. 修改dist/index.html
@@ -577,7 +577,7 @@ docker-build:
       - k8s push "${imageUrl}"
       - k8s rmi "${imageUrl}"
    tags:
-      - tmeit-share
+      - tmeit-knowledge
 ```
 
 2. 设置镜像仓库、镜像名称、用户名和密码等变量（GitLab 项目群组可使用同一套变量，如需独立的用户，可向运维申请）

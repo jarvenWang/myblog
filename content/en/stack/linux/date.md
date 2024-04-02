@@ -52,7 +52,7 @@ sudo dpkg-reconfigure -f noninteractive tzdata
 ### 2. 运行命令cd /etc进入/etc目录
 ### 3. 运行命令
 ```shell
-sudo ln -sf /usr/share/zoneinfo/<时区> localtime
+sudo ln -sf /usr/knowledge/zoneinfo/<时区> localtime
 ```
 将<时区>替换为你要设置的时区，例如Asia/Shanghai
 ### 4. 输入用户密码确认修改
