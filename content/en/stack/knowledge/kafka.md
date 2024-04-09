@@ -178,7 +178,7 @@ kafka-topics.sh --create --zookeeper 127.0.0.1:2182 --replication-factor 1 --par
 ### 查看创建的主题：
 ```shell
 $ kafka-topics.sh --list --zookeeper 127.0.0.1:2182
-__consumer_offsets
+jarvenwang
 test
 ```
 
