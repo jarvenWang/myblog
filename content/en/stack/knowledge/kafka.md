@@ -12,7 +12,7 @@ authorEmoji: 👻
 tags:
 - knowledge
 categories:
-
+- kafka
 ---
 
 ## 新建Dockerfile

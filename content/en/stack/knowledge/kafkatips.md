@@ -12,6 +12,7 @@ authorEmoji: 👻
 tags:
 - knowledge
 categories:
+- kafka
 
 ---
 
