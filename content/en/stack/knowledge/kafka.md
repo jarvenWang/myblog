@@ -106,7 +106,7 @@ cd /opt/kafka/config/
 vim zookeeper.properties
 #配置如下：
 dataDir=/opt/kafka/zooLogs
-clientPort=2182
+clientPort=2181
 maxClientCnxns=0
 admin.enableServer=false
 ```
@@ -139,7 +139,7 @@ log.retention.check.interval.ms=300000
 ############################# Zookeeper #############################
 #zookeeper.connect=zookeeper:2181
 #jarvenwang update
-zookeeper.connect=127.0.0.1:2182
+zookeeper.connect=127.0.0.1:2181
 zookeeper.connection.timeout.ms=18000
 ############################# Group Coordinator Settings #############################
 group.initial.rebalance.delay.ms=0
@@ -168,16 +168,16 @@ kafka-server-start.sh server.properties &
 ## 生产消息 和 消费消息
 ### 创建一个主题：
 PS：如果已经创建了主题可以，直接查看:
-`kafka-topics.sh --list --zookeeper 127.0.0.1:2182`
-前提必须要开启zookeeper的服务==》kafka-topics.sh --create --zookeeper 127.0.0.1:2182 --replication-factor 1 --partitions 1 --topic test
+`kafka-topics.sh --list --zookeeper 127.0.0.1:2181`
+前提必须要开启zookeeper的服务==》kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic test
 ```shell
-kafka-topics.sh --create --zookeeper 127.0.0.1:2182 --replication-factor 1 --partitions 1 --topic test
-#kafka-topics.sh --create --zookeeper 127.0.0.1:2182 --replication-factor 1 --partitions 1 --topic test2
+kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic test
+#kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic test2
 ```
 
 ### 查看创建的主题：
 ```shell
-$ kafka-topics.sh --list --zookeeper 127.0.0.1:2182
+$ kafka-topics.sh --list --zookeeper 127.0.0.1:2181
 jarvenwang
 test
 ```
@@ -203,3 +203,57 @@ $ kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9093 --topic test --fro
 ```shell
 ps -ef|grep '/libs/kafka.\{2,40\}.jar'
 ```
+
+
+## 进入kafka-manager容器修改配置
+进入容器（可能要尝试多次）
+> 提示：qemu: uncaught target signal 11 (Segmentation fault) - core dumped （镜像的问题）
+`docker-compose exec kafka-manager /bin/bash`
+```shell
+[root@65567f1ceed6 kafka-manager-1.3.1.8]# ls
+README.md                      bin              lib
+RUNNING_PID                    conf             share
+application.home_IS_UNDEFINED  hs_err_pid1.log  start-kafka-manager.sh
+```
+
+### 修改配置信息zkhosts
+修改配置
+`vi conf/application.conf`
+```shell
+# 修改
+kafka-manager.zkhosts="172.19.0.18:2181"
+# 如果是集群，参考如下
+# kafka-manager.zkhosts="10.0.0.50:2181,10.0.0.60:2181,10.0.0.70:2181"
+```
+
+### 启动kafka-manager
+确保自己本地的ZK已经启动了之后，我们来启动Kafka-manager, kafka-manager 默认的端口是9000
+>如果想修改端口：
+> -Dhttp.port=8081，指定端口; 如：bin/kafka-manager -Dhttp.port=8081
+> -Dconfig.file=conf/application.conf 指定配置文件；如：nohup bin/kafka-manager -Dconfig.file=conf/application.conf -Dhttp.port=8081 >/dev/null 2>&1 &
+
+#### 前台启动
+```shell
+$ bin/kafka-manager
+05:18:59,993 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+05:18:59,995 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+...
+```
+如果要结束进程：
+`rm -rf /kafka-manager-1.3.1.8/RUNNING_PID`
+![/images/docImages/kfkm.png](/images/docImages/kfkm.png)
+
+#### 后台启动
+```shell
+$ nohup bin/kafka-manager -Dconfig.file=conf/application.conf >/dev/null 2>&1 &
+[1] 3722
+```
+#### 访问
+测试端口是否成功：
+nc -zv 一下
+`nc -zv 127.0.0.1 9020`
+由于9000端口映射的端口为9020
+输入地址：`127.0.0.1:9020` 即可访问
+
+启动完毕后可以查看端口是否启动，由于启动过程需要一段时间，端口起来的时间可能会延后
+![/images/docImages/kfkm2.png](/images/docImages/kfkm2.png)
