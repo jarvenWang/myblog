@@ -1548,7 +1548,7 @@ npm install vue-router@4
 </template>
 <style>
 div.home {
-  background-color: pink;
+  background-color: cyan;
 }
 </style>
 ```
@@ -1776,7 +1776,7 @@ function getParams() {
 <style>
 div.home {
   padding: 20px;
-  background-color: pink;
+  background-color: cyan;
 }
 </style>
 ```
@@ -2105,7 +2105,7 @@ export const useStore=defineStore('main',()=>{
 `mapState( storeObj , array | object )`
 获取state中的值：`mapState`
 
-<font color="pink">**思路整理:**</font>
+<font color="cyan">**思路整理:**</font>
 1. 步骤一：在xxxStore.js中设置一些共享数据 export const useUserStore = defineStore('user',{xxx})
 2. 步骤二：vue页面引入 `useUserStore` , 动态获取 const u = useUserStore();
 3. 步骤三：使用 `computed` 获取对象中的变量值
@@ -2216,7 +2216,7 @@ const { age, level,account:userAccount } = storeToRefs(u);
 ```
 
 #### getters
-<font color="pink">**思路整理:**</font>
+<font color="cyan">**思路整理:**</font>
 1. 步骤一：在xxxStore.js中设置一些共享计算的数据 
 ```vue
 getters:{
@@ -2272,7 +2272,7 @@ vue中内容：
 ```
 
 #### actions
-<font color="pink">**思路整理:**</font>
+<font color="cyan">**思路整理:**</font>
 1. 定义共享数据
 2. 设置actions修改共享数据
 ```vue

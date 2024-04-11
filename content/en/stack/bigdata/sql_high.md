@@ -42,7 +42,7 @@ from student;
 ```
 
 ## 4.分组连接函数 (GROUP_CONCAT)
-分组连接函数 可以在分组后指定字段的 <b><font color="pink">字符串连接方式</font></b> ，并且还可以 <b><font color="pink">指定排序逻辑</font></b> ；连接字符串默认为`英文逗号`。
+分组连接函数 可以在分组后指定字段的 <b><font color="cyan">字符串连接方式</font></b> ，并且还可以 <b><font color="cyan">指定排序逻辑</font></b> ；连接字符串默认为`英文逗号`。
 ```SQL
 select actors,
 GROUP_CONCAT(movie_name),

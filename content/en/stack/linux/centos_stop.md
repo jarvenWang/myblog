@@ -35,7 +35,7 @@ CentOS Stream 本身介于 Fedora 和 RHEL 之间，离 RHEL 更近，相当于 
 ### 1.RHEL Linux
 RHEL 大家都熟悉, 就不做简介了. 不考虑钱的因素, RHEL Linux 是最完美的替代品
 
-<font style="color:pink">**特点：**
+<font style="color:cyan">**特点：**
 1. 不差钱
 2. 对稳定性要求极高
 3. 需要购买专业Linux维护服务
@@ -46,7 +46,7 @@ RHEL 大家都熟悉, 就不做简介了. 不考虑钱的因素, RHEL Linux 是�
 Rocky Linux 直接从 RHEL® 重建源代码，无论用例如何，您都将拥有超级稳定的体验。
 使用 Rocky Linux 替代 CentOS, 代价也是最小的. 但是 Rocky Linux 的稳定性还需要经过更长时间的检验.
 
-<font style="color:pink">**特点：**
+<font style="color:cyan">**特点：**
 1. 开源
 2. 期望寻找 CentOS 的平替
 3. 熟悉 Fedora RHEL CentOS 生态
@@ -57,7 +57,7 @@ Rocky Linux 直接从 RHEL® 重建源代码，无论用例如何，您都将拥
 + Amazon Linux
 + Alibaba Cloud Linux
 
-<font style="color:pink">**特点：**
+<font style="color:cyan">**特点：**
 1. 公有云用户
 </font>
 
@@ -70,7 +70,7 @@ Rocky Linux 直接从 RHEL® 重建源代码，无论用例如何，您都将拥
 + 大多数人的观点是 Debian 系统不像 RHEL/CentOS 那样稳定或无故障
 + Debian 的内核/软件相对更新
 
-<font style="color:pink">**特点：**
+<font style="color:cyan">**特点：**
 1. 相比稳定性, 更追求创新
 2. 熟悉 Debian 生态
 3. 已经较多使用容器/K8s (因为 Debian 在容器生态中更常见)
@@ -82,7 +82,7 @@ Rocky Linux 直接从 RHEL® 重建源代码，无论用例如何，您都将拥
 
 这两款也是基于 Fedora 的生态系统, 其官网也往往会有用于一键迁移 OS 的实用工具. 但是软件生态还需要更多时间来培养成熟.
 
-<font style="color:pink">**特点：**
+<font style="color:cyan">**特点：**
 1. 信创需求
 2. 面向政企/金融客户
 </font>

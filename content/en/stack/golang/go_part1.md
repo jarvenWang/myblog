@@ -35,7 +35,7 @@ Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9
 ### Go 语言的发展目标
 Go 语言的主要目标 ：
 
-将 <font color="pink">静态语言的 安全性 和 高效性 </font> 与 <font color="pink">动态语言的 易开发性</font> 进行有机结合，达到完美平衡，从而使编程变得更加有乐趣，而不是在艰难抉择中痛苦前行。
+将 <font color="cyan">静态语言的 安全性 和 高效性 </font> 与 <font color="cyan">动态语言的 易开发性</font> 进行有机结合，达到完美平衡，从而使编程变得更加有乐趣，而不是在艰难抉择中痛苦前行。
 因此，Go 语言是一门类型安全和内存安全的编程语言。虽然 Go 语言中仍有指针的存在，但并不允许进行指针运算。
 
 Go 语言的另一个目标是对于网络通信、并发和并行编程的极佳支持，从而更好地利用大量的分布式和多核的计算机，这一点对于谷歌内部的使用来说就非常重要了。设计者通过 goroutine 这种轻量级线程的概念来实现这个目标，然后通过 channel 来实现各个 goroutine 之间的通信。他们实现了分段栈增长和 goroutine 在线程基础上多路复用技术的自动化。
@@ -44,7 +44,7 @@ Go 语言的另一个目标是对于网络通信、并发和并行编程的极�
 
 Go 语言中另一个非常重要的特性就是它的构建速度（编译和链接到机器代码的速度），一般情况下构建一个程序的时间只需要数百毫秒到几秒。作为大量使用 C++ 来构建基础设施的谷歌来说，无疑从根本上摆脱了 C++ 在构建速度上非常不理想的噩梦。这不仅极大地提升了开发者的生产力，同时也使得软件开发过程中的代码测试环节更加紧凑，而不必浪费大量的时间在等待程序的构建上。
 
-<font color="pink">依赖管理 </font>  是现今软件开发的一个重要组成部分，但是 C 语言中“头文件”的概念却导致越来越多因为依赖关系而使得构建一个大型的项目需要长达几个小时的时间。人们越来越需要一门具有严格的、简洁的依赖关系分析系统从而能够快速编译的编程语言。这正是 Go 语言采用包模型的根本原因，这个模型通过严格的依赖关系检查机制来加快程序构建的速度，提供了非常好的可量测性。
+<font color="cyan">依赖管理 </font>  是现今软件开发的一个重要组成部分，但是 C 语言中“头文件”的概念却导致越来越多因为依赖关系而使得构建一个大型的项目需要长达几个小时的时间。人们越来越需要一门具有严格的、简洁的依赖关系分析系统从而能够快速编译的编程语言。这正是 Go 语言采用包模型的根本原因，这个模型通过严格的依赖关系检查机制来加快程序构建的速度，提供了非常好的可量测性。
 
 整个 Go 语言标准库的编译时间一般都在 20 秒以内，其它的常规项目也只需要半秒钟的时间来完成编译工作。这种闪电般的编译速度甚至比编译 C 语言或者 Fortran 更加快，使得编译这一环节不再成为在软件开发中困扰开发人员的问题。在这之前，动态语言将快速编译作为自身的一大亮点，像 C++ 那样的静态语言一般都有非常漫长的编译和链接工作。而同样作为静态语言的 Go 语言，通过自身优良的构建机制，成功地了去除了这个弊端，使得程序的构建过程变得微不足道，拥有了像脚本语言和动态语言那样的高效开发的能力。
 
@@ -56,7 +56,7 @@ Go 语言中另一个非常重要的特性就是它的构建速度（编译和�
 
 Go 语言还能够在运行时进行反射相关的操作。
 
-使用 <font color="pink">go install</font>  能够很轻松地对第三方包进行部署。
+使用 <font color="cyan">go install</font>  能够很轻松地对第三方包进行部署。
 
 此外，Go 语言还支持调用由 C 语言编写的海量库文件（第 3.9 节），从而能够将过去开发的软件进行快速迁移。
 
@@ -90,7 +90,7 @@ Go 语言开发团队开发了适用于以下操作系统的编译器：
 + FreeBSD
 + Mac OS X（也称为 Darwin）
 
-目前有2个版本的编译器：<font color="pink">Go 原生编译器 gc</font> 和 <font color="pink">非原生编译器 gccgo</font>，这两款编译器都是在类 Unix 系统下工作 。其中，gc 版本的编译器已经被移植到 Windows 平台上，并集成在主要发行版中，你也可以通过安装 MinGW 从而在 Windows 平台下使用 gcc 编译器。这两个编译器都是以单通道的形式工作。
+目前有2个版本的编译器：<font color="cyan">Go 原生编译器 gc</font> 和 <font color="cyan">非原生编译器 gccgo</font>，这两款编译器都是在类 Unix 系统下工作 。其中，gc 版本的编译器已经被移植到 Windows 平台上，并集成在主要发行版中，你也可以通过安装 MinGW 从而在 Windows 平台下使用 gcc 编译器。这两个编译器都是以单通道的形式工作。
 
 你可以获取以下平台上的 Go 1.4 源码和二进制文件：
 
@@ -113,52 +113,52 @@ Go 语言的编译器和链接器都是使用 C 语言编写并产生本地代�
  
 ### 3、Go 环境变量
 Go 开发环境依赖于一些操作系统环境变量，你最好在安装 Go 之间就已经设置好他们。如果你使用的是 Windows 的话，你完全不用进行手动设置，Go 将被默认安装在目录 c:/go 下。这里列举几个最为重要的环境变量：
-+ <font color="pink">$GOROOT</font> 表示 Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go，当然，你也可以安装在别的地方。
-+ <font color="pink">$GOARCH</font>  表示目标机器的处理器架构，它的值可以是 386、amd64 或 arm<font color="pink">(苹果M1 芯片)</font>。
-+ <font color="pink">$GOOS</font>  表示目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows。
-+ <font color="pink">$GOBIN</font>  表示编译器和链接器的安装位置，默认是 $GOROOT/bin，如果你使用的是 Go 1.0.3 及以后的版本，一般情况下你可以将它的值设置为空，Go 将会使用前面提到的默认值。
++ <font color="cyan">$GOROOT</font> 表示 Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go，当然，你也可以安装在别的地方。
++ <font color="cyan">$GOARCH</font>  表示目标机器的处理器架构，它的值可以是 386、amd64 或 arm<font color="cyan">(苹果M1 芯片)</font>。
++ <font color="cyan">$GOOS</font>  表示目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows。
++ <font color="cyan">$GOBIN</font>  表示编译器和链接器的安装位置，默认是 $GOROOT/bin，如果你使用的是 Go 1.0.3 及以后的版本，一般情况下你可以将它的值设置为空，Go 将会使用前面提到的默认值。
 
 Go 编译器支持交叉编译，也就是说你可以在一台机器上构建运行在具有不同操作系统和处理器架构上运行的应用程序，也就是说编写源代码的机器可以和目标机器有完全不同的特性（操作系统与处理器架构）。
 
 为了区分本地机器和目标机器，你可以使用 $GOHOSTOS 和 $GOHOSTARCH 设置目标机器的参数，这两个变量只有在进行交叉编译的时候才会用到，如果你不进行显示设置，他们的值会和本地机器（$GOOS 和 $GOARCH）一样。
 
-+ <font color="pink">$GOPATH</font> 默认采用和 $GOROOT 一样的值，但从 Go 1.1 版本开始，你<font color="pink">必须修改为其它路径</font>。它可以包含多个包含 Go 语言源码文件、包文件和可执行文件的路径，而这些路径下又<font color="pink">必须分别包含三个规定的目录：src、pkg 和bin</font>，这三个目录分别用于存放源码文件、包文件和可执行文件。
-+ <font color="pink">$GOARM</font> 专门针对基于 arm 架构的处理器，它的值可以是 5 或 6，默认为 6。
-+ <font color="pink">$GOMAXPROCS</font> 用于设置应用程序可使用的处理器个数与核数，详见第 14.1.3 节
++ <font color="cyan">$GOPATH</font> 默认采用和 $GOROOT 一样的值，但从 Go 1.1 版本开始，你<font color="cyan">必须修改为其它路径</font>。它可以包含多个包含 Go 语言源码文件、包文件和可执行文件的路径，而这些路径下又<font color="cyan">必须分别包含三个规定的目录：src、pkg 和bin</font>，这三个目录分别用于存放源码文件、包文件和可执行文件。
++ <font color="cyan">$GOARM</font> 专门针对基于 arm 架构的处理器，它的值可以是 5 或 6，默认为 6。
++ <font color="cyan">$GOMAXPROCS</font> 用于设置应用程序可使用的处理器个数与核数，详见第 14.1.3 节
 
 ### 4、linux安装
 传送门：[/en/stack/golang/install_linux/](/en/stack/golang/install_linux/)
 ### 5、mac安装
 传送门：[/en/stack/golang/get_started/](/en/stack/golang/get_started/)
 ### 6、调试器
-1、<font color="pink">dlv</font> 
+1、<font color="cyan">dlv</font> 
 ```shell
 dlv debug --headless --listen=:2345 --log --api-version 2
 ```
-2、在 <font color="pink">fmt.Printf</font> 中使用下面的说明符来打印有关变量的相关信息：
-+ <font color="pink">%+v</font> 打印包括字段在内的实例的完整信息
-+<font color="pink">%#v</font> 打印包括字段和限定类型名称在内的实例的完整信息
-+ <font color="pink">%T</font> 打印某个类型的完整说明
+2、在 <font color="cyan">fmt.Printf</font> 中使用下面的说明符来打印有关变量的相关信息：
++ <font color="cyan">%+v</font> 打印包括字段在内的实例的完整信息
++<font color="cyan">%#v</font> 打印包括字段和限定类型名称在内的实例的完整信息
++ <font color="cyan">%T</font> 打印某个类型的完整说明
 
-3、<font color="pink">panic</font> 语句
-4、关键字 <font color="pink">defer</font> 来跟踪代码执行过程
+3、<font color="cyan">panic</font> 语句
+4、关键字 <font color="cyan">defer</font> 来跟踪代码执行过程
 
 ### 7、构建并运行 Go 程序
 从 Go 1 版本开始，使用 Go 自带的更加方便的工具来构建应用程序：
 
-+ <font color="pink">go build</font> 编译并安装自身包和依赖包
-+ <font color="pink">go install</font> 安装自身包和依赖包
++ <font color="cyan">go build</font> 编译并安装自身包和依赖包
++ <font color="cyan">go install</font> 安装自身包和依赖包
 
-Go语言是 <font color="pink">编译型</font> 的 <font color="pink">静态语言</font>（和C语言一样），所以在运行Go语言程序之前，先要将其编译成二进制的可执行文件。
+Go语言是 <font color="cyan">编译型</font> 的 <font color="cyan">静态语言</font>（和C语言一样），所以在运行Go语言程序之前，先要将其编译成二进制的可执行文件。
 
 #### go build:
 可以将Go语言程序代码编译成二进制的可执行文件，但是需要我们手动运行该二进制文件；
 
 go build 命令用来启动编译，它可以将Go语言程序与相关依赖编译成一个可执行文件，其语法格式如下。
-go build <font color="pink">fileName</font> 其中 fileName 为所需要的参数，可以是一个或者多个 Go 源文件名（当有多个参数时需要使用空格将两个相邻的参数隔开），也可以省略不写。
+go build <font color="cyan">fileName</font> 其中 fileName 为所需要的参数，可以是一个或者多个 Go 源文件名（当有多个参数时需要使用空格将两个相邻的参数隔开），也可以省略不写。
 
 使用 go build 命令进行编译时，不同参数的执行结果也是不同的。
-如编译打包linux <font color="pink">生产环境</font> 的包：
+如编译打包linux <font color="cyan">生产环境</font> 的包：
 ```shell
 GOOS=linux GOARCH=amd64 GIN_MODE=release go build main.go
 ```
@@ -180,9 +180,9 @@ go run fileName
 ### 8、其它工具
 Go 自带的工具集主要使用脚本和 Go 语言自身编写的，目前版本的 Go 实现了以下三个工具：
 
-+ <font color="pink">go install</font> 是安装 Go 包的工具，类似 Ruby 中的 rubygems。主要用于安装非标准库的包文件，将源代码编译成对象文件。
-+ <font color="pink">go fix</font> 用于将你的 Go 代码从旧的发行版迁移到最新的发行版，它主要负责简单的、重复的、枯燥无味的修改工作，如果像 API 等复杂的函数修改，工具则会给出文件名和代码行数的提示以便让开发人员快速定位并升级代码。Go 开发团队一般也使用这个工具升级 Go 内置工具以及 谷歌内部项目的代码。go fix 之所以能够正常工作是因为 Go 在标准库就提供生成抽象语法树和通过抽象语法树对代码进行还原的功能。该工具会尝试更新当前目录下的所有 Go 源文件，并在完成代码更新后在控制台输出相关的文件名称。
-+ <font color="pink">go test</font> 是一个轻量级的单元测试框架
++ <font color="cyan">go install</font> 是安装 Go 包的工具，类似 Ruby 中的 rubygems。主要用于安装非标准库的包文件，将源代码编译成对象文件。
++ <font color="cyan">go fix</font> 用于将你的 Go 代码从旧的发行版迁移到最新的发行版，它主要负责简单的、重复的、枯燥无味的修改工作，如果像 API 等复杂的函数修改，工具则会给出文件名和代码行数的提示以便让开发人员快速定位并升级代码。Go 开发团队一般也使用这个工具升级 Go 内置工具以及 谷歌内部项目的代码。go fix 之所以能够正常工作是因为 Go 在标准库就提供生成抽象语法树和通过抽象语法树对代码进行还原的功能。该工具会尝试更新当前目录下的所有 Go 源文件，并在完成代码更新后在控制台输出相关的文件名称。
++ <font color="cyan">go test</font> 是一个轻量级的单元测试框架
 
 ### 9、与 C 进行交互
 工具 cgo 提供了对 FFI（外部函数接口）的支持，能够使用 Go 代码安全地调用 C 语言库，你可以访问 cgo 文档主页：http://golang.org/cmd/cgo。cgo 会替代 Go 编译器来产生可以组合在同一个包中的 Go 和 C 代码。在实际开发中一般使用 cgo 创建单独的 C 代码包。

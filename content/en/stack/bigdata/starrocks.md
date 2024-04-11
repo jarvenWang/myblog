@@ -213,7 +213,7 @@ PARTITION BY RANGE(`ds`)(
 DISTRIBUTED BY HASH(`ds`) BUCKETS 24;
 ```
 #### 批量创建分区
-如下例，通过指定 <font color="lightgreen">START END EVERY</font> 语句可以自动创建分区。其中，START 的值将被 <font color="lightgreen">包括在内</font>，而 END 的值会被 <font color="pink">排除在外</font>。
+如下例，通过指定 <font color="lightgreen">START END EVERY</font> 语句可以自动创建分区。其中，START 的值将被 <font color="lightgreen">包括在内</font>，而 END 的值会被 <font color="cyan">排除在外</font>。
 ```sql
 CREATE TABLE kg_hr_ods.test
 (

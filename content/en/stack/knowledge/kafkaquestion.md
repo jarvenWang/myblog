@@ -89,7 +89,7 @@ Kafka生产者生产消息后，会将消息发送到Kafka集群的Leader中，�
 ![/images/docImages/kfk1.png](/images/docImages/kfk1.png)
 
 因此，Kafka集群（其实是分区的Leader）最终会返回一个ACK来确认Producer推送消息的结果，这里
-Kafka提供了发送消息三种模式：
+Kafka提供了 <font color='cyan'>**发送消息三种模式：**</font>
 1. <font color='cyan'>**NoResponse**</font> RequiredAcks = 0：
 这个代表的就是不进行消息推送是否成功的确认。
 2. WaitForLocal RequiredAcks = 1：

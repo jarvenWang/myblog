@@ -16,9 +16,9 @@ tags:
 ---
 ## 1.基本概念
 ### FE
-FE:  负责 <b><font color="pink">查询解析</font></b> ， <b><font color="pink">查询优化</font></b> ， <b><font color="pink">查询调度</font></b> 和 <b><font color="pink">元数据管理</font></b>
+FE:  负责 <b><font color="cyan">查询解析</font></b> ， <b><font color="cyan">查询优化</font></b> ， <b><font color="cyan">查询调度</font></b> 和 <b><font color="cyan">元数据管理</font></b>
 ### BE
-BE： 负责 <b><font color="pink">查询执行</font></b> 和 <b><font color="pink">数据存储</font></b>
+BE： 负责 <b><font color="cyan">查询执行</font></b> 和 <b><font color="cyan">数据存储</font></b>
 
 ## 2.完整处理一条查询 SQL
 ### 2.1 从 SQL 文本到执行计划
@@ -89,12 +89,12 @@ StarRocks Optimizer 的输入是一棵逻辑计划树，输出是一棵 Cost “
  
 ![/images/docImages/img_1.png](/images/docImages/transform.png)
 
-  如图 5 所示， 在 CBO 优化中，Logical Plan 会先转成 Memo 的数据结构。<b><font color="pink">Memo 的中文含义是备忘录</font></b>，所有的逻辑计划和物理计划都会记录在 Memo 中， Memo 就构成了整个搜索空间 。
+  如图 5 所示， 在 CBO 优化中，Logical Plan 会先转成 Memo 的数据结构。<b><font color="cyan">Memo 的中文含义是备忘录</font></b>，所有的逻辑计划和物理计划都会记录在 Memo 中， Memo 就构成了整个搜索空间 。
   然后如图 6 所示，StarRocks 应用各种 Rule 扩展搜索空间，并生成对应的物理执行计划，再基于统计信息和 Cost 估计从 Memo 中选择一组 Cost 最低的物理执行计划。
   ![/images/docImages/img_1.png](/images/docImages/memo.png)
 
 ##### （3）统计信息 和 Cost 估计
-CBO 优化器好坏的 ```关键``` 之一是 <b><font color="pink">Cost 估计是否准确</font></b>，而 Cost 估计是否准确的关键点之一是 <b><font color="pink">统计信息是否收集及时准确</font></b>。
+CBO 优化器好坏的 ```关键``` 之一是 <b><font color="cyan">Cost 估计是否准确</font></b>，而 Cost 估计是否准确的关键点之一是 <b><font color="cyan">统计信息是否收集及时准确</font></b>。
 StarRocks 目前支持表级别和列级别的统计信息，支持自动收集和手动收集两种方式。无论自动还是手动，都支持全量和抽样收集两种方式。
 有了统计信息之后， StarRocks 就会基于统计信息进行 Cost 估算。StarRocks 估算 Cost 时会考虑 CPU、内存、网络、IO 等资源因子，每个资源因子会有不同的权重，每个执行算子的 Cost 计算公式都不太一样。
 当你使用 StarRocks 发现 Join 左右表不合理、Join 分布式执行策略不合理时，可以参考 StarRocks CBO 使用文档收集统计信息。
@@ -103,10 +103,10 @@ StarRocks 目前支持表级别和列级别的统计信息，支持自动收集�
 #### 生成 Plan fragment
 ![/images/docImages/img_1.png](/images/docImages/fragment.png)
 
-StarRocks Optimizer 的输出是一棵 <b><font color="pink">分布式物理执行计划树</font></b> ，但并不能直接被 BE 节点执行，所以需要转换成 <b><font color="pink">BE 可以直接执行的 PlanFragment</font></b>。转换过程基本是个一一<b><font color="pink">映射的过程</font></b>。
+StarRocks Optimizer 的输出是一棵 <b><font color="cyan">分布式物理执行计划树</font></b> ，但并不能直接被 BE 节点执行，所以需要转换成 <b><font color="cyan">BE 可以直接执行的 PlanFragment</font></b>。转换过程基本是个一一<b><font color="cyan">映射的过程</font></b>。
 
 ## 3.执行计划的调度
-在生成查询的分布式 Plan 之后，FE 调度模块会负责 <b><font color="pink">PlanFragment 的执行实例生成</font></b>、 <b><font color="pink">PlanFragment 的调度</font></b>、 <b><font color="pink">每个 BE 执行状态的管理</font></b>、 <b><font color="pink">查询结果的接收</font></b>。
+在生成查询的分布式 Plan 之后，FE 调度模块会负责 <b><font color="cyan">PlanFragment 的执行实例生成</font></b>、 <b><font color="cyan">PlanFragment 的调度</font></b>、 <b><font color="cyan">每个 BE 执行状态的管理</font></b>、 <b><font color="cyan">查询结果的接收</font></b>。
 ![/img_1.png](/images/docImages/plan.png)
 
 有了分布式执行计划之后，我们需要解决下面的问题：
@@ -123,7 +123,7 @@ StarRocks 会首先确认 Scan Operator 所在的 Fragment 在哪些 BE 节点�
 ## 4.执行计划的执行
 StarRocks 是通过 MPP 多机并行机制来充分利用多机的资源，通过 Pipeline 并行机制来充分利用单机上多核的资源，通过向量化执行来充分利用单核的资源，进而达到极致的查询性能。
 ### MPP 多机并行执行
-MPP 是<b><font color="pink"> 大规模并行计算</font></b> 的简称，核心做法是将查询 Plan 拆分成很多可在单个节点上执行的计算实例，然后多个节点并行执行。每个节点不共享 CPU、内存、磁盘资源。MPP 数据库的查询性能可以随着集群的水平扩展而不断提升。
+MPP 是<b><font color="cyan"> 大规模并行计算</font></b> 的简称，核心做法是将查询 Plan 拆分成很多可在单个节点上执行的计算实例，然后多个节点并行执行。每个节点不共享 CPU、内存、磁盘资源。MPP 数据库的查询性能可以随着集群的水平扩展而不断提升。
 ![/img_1.png](/images/docImages/mpp.png)
 如图 所示，StarRocks 会将一个查询在逻辑上切分为多个 Query Fragment（查询片段），每个 Query Fragment 可以有一个或者多个 Fragment 执行实例，每个 Fragment 执行实例会被调度到集群某个 BE 上执行。一个 Fragment 可以包括一个或者多个 Operator（执行算子），图中的 Fragment 包括了 Scan、Filter、Aggregate。每个 Fragment 可以有不同的并行度。
 

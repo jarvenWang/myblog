@@ -24,7 +24,7 @@ tags:
 
 + Full / Left / Right Outer Join：Outer Join 需要根据语义，对两表/左表/右表上没有匹配上的行进行补 Null。
 
-+ Anti Join：反连接，输出连接关系上 <b><font color="pink"> 没有匹配上 </font></b>的数据行，通常 Anti Join 出现在not in 或者not exists 子查询的规划中。
++ Anti Join：反连接，输出连接关系上 <b><font color="cyan"> 没有匹配上 </font></b>的数据行，通常 Anti Join 出现在not in 或者not exists 子查询的规划中。
 
 + Semi Join：与 Anti Join 相反，只输出在连接关系上匹配的数据行即可，一般是一行数据结果。
 
@@ -54,7 +54,7 @@ Join 的执行效率通常分成两部分来优化，一是 提高单机上 Join
 
 ### 1.3SQL的优化流程
 ![/img_1.png](/images/docImages/joinSQL.png)
-StarRocks 对于 SQL 的优化主要通过 <b><font color="pink">优化器</font></b> 完成，主要集中在 <b><font color="pink">Rewrite</font></b> 和 <b><font color="pink">Optimize</font></b> 阶段。
+StarRocks 对于 SQL 的优化主要通过 <b><font color="cyan">优化器</font></b> 完成，主要集中在 <b><font color="cyan">Rewrite</font></b> 和 <b><font color="cyan">Optimize</font></b> 阶段。
 
 ### 1.4 Join 优化的原则
 StarRocks 目前 Join 的算法主要是一个 Hash Join，默认使用右表去构建 Hash 表，在这个前提下，我们总结了五个优化方向：
@@ -117,17 +117,17 @@ Select *  From t1 Left Outer Join t2 On t1.v1 = t2.v1 Where t2.v1 > 0;
 -- 转换后， t2.v1 > 0 是一个 t2 表上的严格谓词
 Select *  From t1 Inner Join t2 On t1.v1 = t2.v1 Where t2.v1 > 0;
 ```
-需要注意的是，在 Outer Join 中，需要根据 On 子句的连接谓词进行 <b><font color="pink"> 补 Null </font></b> 操作， 
-<b><font color="pink">而不是过滤 </font></b>，所以该转换规则不适用 On 子句中的连接谓词。
+需要注意的是，在 Outer Join 中，需要根据 On 子句的连接谓词进行 <b><font color="cyan"> 补 Null </font></b> 操作， 
+<b><font color="cyan">而不是过滤 </font></b>，所以该转换规则不适用 On 子句中的连接谓词。
 例如：
 ```shell
 Select *  From t1 Left Outer Join t2 On t1.v1 = t2.v1 And t2.v1 > 1; 
 -- 显然，上面的SQL和下面SQL的语义并不等价
 Select *  From t1 Inner Join t2  On t1.v1 = t2.v1 And t2.v1 > 1;
 ```
-这里需要提到一个概念，即 <b><font color="pink">严格（Restrick Null）谓词 </font></b>.
-StarRocks 把一个可以过滤掉 Null 值的谓词叫做 <b><font color="pink">严格谓词 </font></b>，例如a > 0；
-而不能过滤 Null 的谓词，叫做 <b><font color="pink">非严格谓词 </font></b>，例如：a IS Null;
+这里需要提到一个概念，即 <b><font color="cyan">严格（Restrick Null）谓词 </font></b>.
+StarRocks 把一个可以过滤掉 Null 值的谓词叫做 <b><font color="cyan">严格谓词 </font></b>，例如a > 0；
+而不能过滤 Null 的谓词，叫做 <b><font color="cyan">非严格谓词 </font></b>，例如：a IS Null;
 大部分谓词都是严格谓词，非严格谓词主要是 ```IS Null``` 、```IF```、 ```CASE WHEN``` 或 ```函数构成的谓词```
 StarRocks 对于严格谓词的判断，用了一个简单的方法：
 将需要检测的列全部替换成 Null，然后进行表达式化简。如果结果是 True，意味着输入为 Null 时，Where 子句无法过滤数据，那么该谓词是一个非严格谓词；反之，如果结果是 False 或 Null，那么是一个严格谓词。
@@ -145,7 +145,7 @@ Select *  From t1 Left Outer Join t2 On t1.v1 = t2.v1 Where t1.v1 > 0;
 ```
 
 ### 2.2 谓词下推
-<b><font color="pink"> 谓词下推 </font></b>是一个 Join 上非常重要，也是很常用的一个优化规则，其主要目的是 <b><font color="pink">提前过滤 Join 的输入 </font></b>，从而提升 Join 的性能。
+<b><font color="cyan"> 谓词下推 </font></b>是一个 Join 上非常重要，也是很常用的一个优化规则，其主要目的是 <b><font color="cyan">提前过滤 Join 的输入 </font></b>，从而提升 Join 的性能。
 
 对于 Where 子句，当满足以下约束时，我们可以进行谓词下推，并且伴随着谓词下推，我们可以做 Join 类型转换：
 1. 任意 Join 类型；
@@ -191,7 +191,7 @@ From t1 Left Outer Join t2 On t1.v1 = t2.v1 And t1.v1 = 1 And t2.v1 = 2
 
 ### 2.3 谓词提取
 
-在之前的谓词下推的规则中，只能下推满足 <b><font color="pink">合取 </font></b>语义的谓词，例如 t1.v1 = 1 And t2.v1 = 2 And t3.v2 = 3 中，三个子谓词都是通过合取谓词连接，而无法下推 <b><font color="pink">析取 </font></b>语义的谓词，例如t1.v1 = 1 Or t2.v1 = 2 Or t3.v2 = 3。
+在之前的谓词下推的规则中，只能下推满足 <b><font color="cyan">合取 </font></b>语义的谓词，例如 t1.v1 = 1 And t2.v1 = 2 And t3.v2 = 3 中，三个子谓词都是通过合取谓词连接，而无法下推 <b><font color="cyan">析取 </font></b>语义的谓词，例如t1.v1 = 1 Or t2.v1 = 2 Or t3.v2 = 3。
 
 但是在实际场景中，析取谓词也十分常见，对此 StarRocks 做了一个提取谓词（列值推导）的优化。通过一系列的交并集操作，将析取谓词中的列值范围提取出合取谓词，继而下推合取谓词。例如：
 ```
@@ -208,7 +208,7 @@ AND t2.v1 >= 2 AND t1.v2 IN (3, 4);
 ```
 这里需要注意的是，提取出来的谓词范围可能是原始谓词范围的超集，所以不一定能直接替换原始谓词。
 ### 2.4 等价推导
-在谓词上，除了上述的谓词提取，还有另一个重要的优化，叫 <b><font color="pink">等价推导</font></b> 。等价推导主要利用了 Join 的连接关系，从左表/右表列的取值范围，推导出右表/左表对应列的取值范围。例如：
+在谓词上，除了上述的谓词提取，还有另一个重要的优化，叫 <b><font color="cyan">等价推导</font></b> 。等价推导主要利用了 Join 的连接关系，从左表/右表列的取值范围，推导出右表/左表对应列的取值范围。例如：
 ```
 -- 原始SQL
 Select *  
