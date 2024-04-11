@@ -54,9 +54,9 @@ Kafka消费端的参数 <font color='cyan'>**max.poll.interval.ms**</font> 定�
 
 幂等性角度大概两种实现：
 
-1. 将唯一标识存入第三方介质（如Redis）
+1. <font color='cyan'>**解决方法一：**</font>将唯一标识存入第三方介质（如Redis）
   要操作数据的时候先判断第三方介质(数据库或者缓存)有没有这个唯一标识。
-2. 将版本号(offset)存入到数据里面
+2. <font color='cyan'>**解决方法二：**</font>将版本号(offset)存入到数据里面
   然后再要操作数据的时候用这个版本号做 <font color='cyan'>**乐观锁**</font> ，当 <font color='cyan'>**版本号大于**</font> 原先的才能操作。
 
 >PS:乐观锁的实现：
@@ -69,9 +69,9 @@ Kafka消费端的参数 <font color='cyan'>**max.poll.interval.ms**</font> 定�
 > 更新操作： `UPDATE items SET value = 'new value', version = version + 1 WHERE id = 1 AND version = 0;`
 
 #### 2.2 针对于Consumer消费时间过长带来的重复消费问题
-1. 提高单条消息的处理速度。
+1. <font color='cyan'>**解决方法一：**</font>提高单条消息的处理速度。
 例如对消息处理中比较耗时的操作可通过 异步的方式 <font color='cyan'>**进行处理**</font>、<font color='cyan'>**多线程处理**</font>  等。
-2. 将 `max.poll.interval.ms` 值设置大一点
+2. <font color='cyan'>**解决方法二：**</font>将 `max.poll.interval.ms` 值设置大一点
 避免不必要的rebalance，此外可适当减小 `max.poll.records` 的值，默认值是500，可根据实际消息速率适当调小。
 
 ## 消息丢失
@@ -90,11 +90,11 @@ Kafka生产者生产消息后，会将消息发送到Kafka集群的Leader中，�
 
 因此，Kafka集群（其实是分区的Leader）最终会返回一个ACK来确认Producer推送消息的结果，这里
 Kafka提供了 <font color='cyan'>**发送消息三种模式：**</font>
-1. <font color='cyan'>**NoResponse**</font> RequiredAcks = 0：
+1. <font color='cyan'>**NoResponse RequiredAcks = 0**</font>：
 这个代表的就是不进行消息推送是否成功的确认。
-2. WaitForLocal RequiredAcks = 1：
+2. <font color='cyan'>**WaitForLocal RequiredAcks = 1**</font>：
 当local(Leader)确认接收成功后，就可以返回了。
-3. WaitForAll RequiredAcks = -1：
+3. <font color='cyan'>**WaitForAll RequiredAcks = -1**</font>：
 当所有的Leader和Follower都接收成功时，才会返回。
 
 因此这个配置的影响也分为下面三种情况：
@@ -106,9 +106,9 @@ Producer在确认到 Topic Leader 已经接收到消息后，完成发送，此�
 可以很好的确认Kafka集群是否已经完成消息的接收和本地化存储，并且可以在Producer发送失败时进行重试。
 
 #### 生产端解决消息丢失方案：
-1. 通过设置 <font color='cyan'>**RequiredAcks模式**</font> 来解决，选用WaitForAll（对应值为-1）可以保证数据推送成功，不过会影响延时。
-2. 引入 <font color='cyan'>**重试机制**</font> ，设置重试次数和重试间隔。
-3. 使用Kafka的 <font color='cyan'>**多副本机制**</font> 保证Kafka集群本身的可靠性，确保当Leader挂掉之后能进行Follower选举晋升为新的Leader。
+1. <font color='cyan'>**解决方法一：**</font> 通过设置 <font color='cyan'>**RequiredAcks模式**</font> 来解决，选用WaitForAll（对应值为-1）可以保证数据推送成功，不过会影响延时。
+2. <font color='cyan'>**解决方法二：**</font> 引入 <font color='cyan'>**重试机制**</font> ，设置重试次数和重试间隔。
+3. <font color='cyan'>**解决方法三：**</font> 使用Kafka的 <font color='cyan'>**多副本机制**</font> 保证Kafka集群本身的可靠性，确保当Leader挂掉之后能进行Follower选举晋升为新的Leader。
 
 
 
@@ -121,7 +121,11 @@ Producer在确认到 Topic Leader 已经接收到消息后，完成发送，此�
 + 自动提交
   是引起消息丢失的主要诱因。因为消息的消费并不会影响到Offset的提交。
 
-大部分的解决方案为了尽可能的保证数据的完整性，都是尽量去选用 <font color='cyan'>**手动提交**</font> 的方式，当数据处理完之后再进行提交。
+
+----
+><font color='cyan'>**解决方法：**</font> 尽量使用手动提交的方式，或者用sarama自动提交方式（先进行标记，标记前处理数据，再进行提交，因此没有标记，offset没有提交）
+----
+大部分的解决方案为了 尽可能的保证数据的完整性，都是尽量去选用 <font color='cyan'>**手动提交**</font> 的方式，当数据处理完之后再进行提交。
 当然，在golang中我们主要使用sarama包的Kafka，sarama自动提交的原理是先进行标记，再进行提交，如下代码所示：
 ```go
 type exampleConsumerGroupHandler struct{}
