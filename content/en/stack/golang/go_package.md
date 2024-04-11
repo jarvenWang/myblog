@@ -20,12 +20,12 @@ tags:
 任何源代码文件必须属于某个包，同时源码文件的第一行有效代码必须是package pacakgeName语句，通过该语句声明自己所在的包
 
 ## 包的基本概念
-Go语言的包借助了 <font color='pink'>**目录树**</font> 的组织形式，一般包的名称就是其源文件所在目录的名称，虽然Go语言没有强制要求包名必须和其所在的目录名同名，
-但还是建议 <font color='pink'>**包名 和 所在目录同名**</font>，这样结构更清晰
+Go语言的包借助了 <font color='cyan'>**目录树**</font> 的组织形式，一般包的名称就是其源文件所在目录的名称，虽然Go语言没有强制要求包名必须和其所在的目录名同名，
+但还是建议 <font color='cyan'>**包名 和 所在目录同名**</font>，这样结构更清晰
 
 包可以定义在很深的目录中，包名的定义是不包括目录路径的，但是包在引用时一般使用全路径引用。比如在GOPATH/src/a/b/下定义一个包 c。
-在包 c 的源码中只需声明为 <font color='pink'>**package c**</font>，而不是声明为 <font color='pink'>**package a/b/c**</font>，
-但是在导入 c 包时，需要带上路径，例如 <font color='pink'>** import "a/b/c" **</font>
+在包 c 的源码中只需声明为 <font color='cyan'>**package c**</font>，而不是声明为 <font color='cyan'>**package a/b/c**</font>，
+但是在导入 c 包时，需要带上路径，例如 <font color='cyan'>** import "a/b/c" **</font>
 
 ### 包的习惯用法
 + 包名一般是 `小写的`，使用一个简短且有意义的名称。
@@ -165,15 +165,15 @@ func main() {
 }
 ```
 注意：
-+ <font color='pink'>**一个包可以有多个 init 函数**</font>，包加载时会执行全部的 init 函数，但并 <font color='pink'>**不能保证执行顺序**</font>，所以不建议在一个包中放入多个 init 函数，将需要初始化的逻辑放到一个 init 函数里面。
-+ <font color='pink'>**包不能出现环形引用**</font> 的情况，比如包 a 引用了包 b，包 b 引用了包 c，如果包 c 又引用了包 a，则编译不能通过。
-+ <font color='pink'>**包的重复引用是允许**</font> 的，比如包 a 引用了包 b 和包 c，包 b 和包 c 都引用了包 d。这种场景相当于重复引用了 d，这种情况是允许的，并且 Go 编译器保证包 d 的 init 函数只会执行一次。
++ <font color='cyan'>**一个包可以有多个 init 函数**</font>，包加载时会执行全部的 init 函数，但并 <font color='cyan'>**不能保证执行顺序**</font>，所以不建议在一个包中放入多个 init 函数，将需要初始化的逻辑放到一个 init 函数里面。
++ <font color='cyan'>**包不能出现环形引用**</font> 的情况，比如包 a 引用了包 b，包 b 引用了包 c，如果包 c 又引用了包 a，则编译不能通过。
++ <font color='cyan'>**包的重复引用是允许**</font> 的，比如包 a 引用了包 b 和包 c，包 b 和包 c 都引用了包 d。这种场景相当于重复引用了 d，这种情况是允许的，并且 Go 编译器保证包 d 的 init 函数只会执行一次。
 
 ## 包加载
 ### Go 包的初始化
 ![/images/docImages/package.png](/images/docImages/package.png)
 
 Go语言包的初始化有如下特点：
-+ 包初始化程序从 main 函数引用的包开始，<font color='pink'>**逐级查找包的引用**</font> ，直到找到没有引用其他包的包，最终生成一个 <font color='pink'>**包引用的 有向无环图**</font>
-+ Go 编译器会将有向无环图 <font color='pink'>**转换为一棵树**</font> ，然后从树的叶子节点开始逐层向上对包进行初始化
-+ 单个包的初始化过程如上图所示，<font color='pink'>**先初始化常量**</font>，<font color='pink'>**然后是全局变量**</font>，<font color='pink'>**最后执行包的 init 函数**</font>
++ 包初始化程序从 main 函数引用的包开始，<font color='cyan'>**逐级查找包的引用**</font> ，直到找到没有引用其他包的包，最终生成一个 <font color='cyan'>**包引用的 有向无环图**</font>
++ Go 编译器会将有向无环图 <font color='cyan'>**转换为一棵树**</font> ，然后从树的叶子节点开始逐层向上对包进行初始化
++ 单个包的初始化过程如上图所示，<font color='cyan'>**先初始化常量**</font>，<font color='cyan'>**然后是全局变量**</font>，<font color='cyan'>**最后执行包的 init 函数**</font>

@@ -50,13 +50,13 @@ image: images/docImages/liwuzb.png
 从三个方面处理：从数据结构、编码、监控 多种方面，保障资金安全
 
 #### 一、DB(数据结构)
-1. 数据库关键字段 <font color='pink'>**unsigned**</font>  ,避免扣穿
-2. 订单流水表 <font color='pink'>**记录操作数据**</font>，支持 <font color='pink'>**平衡对账**</font>
-3. 余额表增加更新时间与流水表一致，支持 <font color='pink'>**期初期末对账**</font>
+1. 数据库关键字段 <font color='cyan'>**unsigned**</font>  ,避免扣穿
+2. 订单流水表 <font color='cyan'>**记录操作数据**</font>，支持 <font color='cyan'>**平衡对账**</font>
+3. 余额表增加更新时间与流水表一致，支持 <font color='cyan'>**期初期末对账**</font>
 #### 二、编码
-1. <font color='pink'>**幂等**</font>，重复请求，返回一致结果
-2. <font color='pink'>**DB乐观锁**</font> ，避免并发扣错
-3. <font color='pink'>**预算SDK对接**</font> ，避免业务多发
+1. <font color='cyan'>**幂等**</font>，重复请求，返回一致结果
+2. <font color='cyan'>**DB乐观锁**</font> ，避免并发扣错
+3. <font color='cyan'>**预算SDK对接**</font> ，避免业务多发
 
 ![/images/docImages/designmodel.png](/images/docImages/designmodel.png)
 
@@ -69,7 +69,7 @@ image: images/docImages/liwuzb.png
 > 三、主从架构（Master-Slave Architecture）：
 > 主从架构和主备架构类似，但是备节点可以被配置为只读节点，主节点处理所有的写入操作，而从节点负责处理读取操作。当主节点出现故障时，备节点可以接管主节点的工作，并成为新的主节点。
 > 四、一致性解决方案（Consistency Solution）：
-> 在分布式数据库系统中，一致性解决方案是指确保不同节点之间数据的一致性。常见的一致性解决方案包括 <font color='pink'>**基于时间戳的复制**</font>、 <font color='pink'>**基于多版本并发控制（MVCC）的复制**</font> 、<font color='pink'>**基于Paxos协议的一致性算法**</font> 、<font color='pink'>**基于Raft协议的一致性算法**</font> 等。这些算法都旨在保证不同节点之间数据的一致性和可靠性
+> 在分布式数据库系统中，一致性解决方案是指确保不同节点之间数据的一致性。常见的一致性解决方案包括 <font color='cyan'>**基于时间戳的复制**</font>、 <font color='cyan'>**基于多版本并发控制（MVCC）的复制**</font> 、<font color='cyan'>**基于Paxos协议的一致性算法**</font> 、<font color='cyan'>**基于Raft协议的一致性算法**</font> 等。这些算法都旨在保证不同节点之间数据的一致性和可靠性
 
 ### 数据库架构设计原则(扩展)
 #### 一、数据库的范式化设计：
@@ -88,12 +88,12 @@ image: images/docImages/liwuzb.png
 在数据库架构设计中，监控和调优也是非常重要的。包括实时监控数据库的性能、调整数据库配置参数、调整应用程序、优化数据库查询等。
 
 ### 服务部署
-部署架构：<font color='pink'>**同城主备**</font> 模型
+部署架构：<font color='cyan'>**同城主备**</font> 模型
 ![/images/docImages/servicemodel.png](/images/docImages/servicemodel.png)
 
 ### 双机房缓存一致性问题
-问题：备用机房有 <font color='pink'>**1%的流量**</font> ，可能会导致双边机房缓存 <font color='pink'>**数据不一致**</font>
-方案：<font color='pink'>**扣款逻辑读主库，业务操作成功后，双删两机房Redis**</font>
+问题：备用机房有 <font color='cyan'>**1%的流量**</font> ，可能会导致双边机房缓存 <font color='cyan'>**数据不一致**</font>
+方案：<font color='cyan'>**扣款逻辑读主库，业务操作成功后，双删两机房Redis**</font>
 
 ![/images/docImages/istio.png](/images/docImages/istio.png)
 
@@ -102,7 +102,7 @@ image: images/docImages/liwuzb.png
 ## 仓库礼物过期属性设计
 
 ### 仓库过期需求介绍
-需求背景：大量僵尸账户仓库库存 <font color='pink'>**堆积**</font>， <font color='pink'>**金额庞大**</font>，对平台而言存在资金隐患
+需求背景：大量僵尸账户仓库库存 <font color='cyan'>**堆积**</font>， <font color='cyan'>**金额庞大**</font>，对平台而言存在资金隐患
 
 + 增加礼物过期时间
 + 同一礼物聚合在一起
@@ -110,11 +110,11 @@ image: images/docImages/liwuzb.png
 + 优先扣除最近过期
 
 ### 支持过期属性面临的挑战
-<font color='pink'>**用户体量 大**</font>、<font color='pink'>**礼物种类 多**</font>、且每个礼物需要支持 <font color='pink'>**过期属性**</font>
+<font color='cyan'>**用户体量 大**</font>、<font color='cyan'>**礼物种类 多**</font>、且每个礼物需要支持 <font color='cyan'>**过期属性**</font>
 
 ![/images/docImages/til.png](/images/docImages/til.png)
 
-技术挑战：<font color='pink'>**存储压力 大**</font> 、 <font color='pink'>**S级服务性能要求 高**</font>
+技术挑战：<font color='cyan'>**存储压力 大**</font> 、 <font color='cyan'>**S级服务性能要求 高**</font>
 
 ![/images/docImages/zhibo.png](/images/docImages/zhibo.png)
 
@@ -138,7 +138,7 @@ image: images/docImages/liwuzb.png
 
 ### 性能测试
 结论：可满足当前性能要求
-<font color='pink'>**限制过期时间为3个月，
+<font color='cyan'>**限制过期时间为3个月，
 出仓接口最大QPS: 2000+ ，
 入仓：3000+，
 查询最大支持：8000+**</font>
@@ -151,7 +151,7 @@ image: images/docImages/liwuzb.png
 
 ## 仓库礼物指定房间设计
 ### 指定房间送礼介绍
-需求：农场产出的礼物，只能在 <font color='pink'>**当前直播间**</font> 送出
+需求：农场产出的礼物，只能在 <font color='cyan'>**当前直播间**</font> 送出
 
 目标：
 1. 实现指定房间送礼
@@ -162,8 +162,8 @@ image: images/docImages/liwuzb.png
 ![/images/docImages/liwu.png](/images/docImages/liwu.png)
 
 ### 支持指定房间面临的挑战
-存在 <font color='pink'>**无限膨胀**</font> 的可能性
-需要在原有的仓库的基础上增加 <font color='pink'>**toKugouId字段**</font> ，以仓库目前的体量估算，对仓库db性能有 <font color='pink'>**很大影响**</font> 。
+存在 <font color='cyan'>**无限膨胀**</font> 的可能性
+需要在原有的仓库的基础上增加 <font color='cyan'>**toKugouId字段**</font> ，以仓库目前的体量估算，对仓库db性能有 <font color='cyan'>**很大影响**</font> 。
 
 ![/images/docImages/wxpz.png](/images/docImages/wxpz.png)
 
@@ -191,7 +191,7 @@ image: images/docImages/liwuzb.png
 
 ### 仓库列表设计
 #### 问题：如何实现仓库列表的统计、明细功能
-方案：空间换时间，增加 <font color='pink'>**冗余统计表**</font>
+方案：空间换时间，增加 <font color='cyan'>**冗余统计表**</font>
 
 需求：查询 kugouId = 1 和 toKugouId = 2 的仓库列表统计信息与明细
 
@@ -202,7 +202,7 @@ toKugouId可能会无限膨胀，如果按kugouId为条件查，可能会导致�
 ![/images/docImages/giftList.png](/images/docImages/giftList.png)
 
 #### 问题：按kugouId查询仓库列表，如何实现 分页查询
-方案：前端内存分页，<font color='pink'>**一次性取3000条数据**</font>
+方案：前端内存分页，<font color='cyan'>**一次性取3000条数据**</font>
 ![/images/docImages/fenye.png](/images/docImages/fenye.png)
 
 ![/images/docImages/sjjg.png](/images/docImages/sjjg.png)

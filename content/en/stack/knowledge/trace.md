@@ -84,7 +84,7 @@ Saga 是一种补偿协议
 >面试题：保证不多发少发？
 
 ## 三、多发少发的原因
-产生的原因： 就是 <font color='pink'>**各种异常场景**</font>，也基本上是由 <font color='pink'>**幂等、事务一致性**</font> 导致
+产生的原因： 就是 <font color='cyan'>**各种异常场景**</font>，也基本上是由 <font color='cyan'>**幂等、事务一致性**</font> 导致
 ![/images/docImages/pl10.png](/images/docImages/pl10.png)
 
 
@@ -96,7 +96,7 @@ Saga 是一种补偿协议
 > 前端通过操作id与后端的幂等id做映射，有检验，更安全
 
 >Q:为什么要用全局id?能降级么？
-> 全局id保证了全链路幂等，通过 <font color='pink'>**雪花算法**</font>，降级要基于业务场景考虑，但可能会导致冲突。
+> 全局id保证了全链路幂等，通过 <font color='cyan'>**雪花算法**</font>，降级要基于业务场景考虑，但可能会导致冲突。
 
 ![/images/docImages/pl12.png](/images/docImages/pl12.png)
 
@@ -230,12 +230,12 @@ function getIdempotent() {
 ![/images/docImages/pl24.png](/images/docImages/pl24.png)
 + 单机房写，强一致性，但当master故障、机房网络故障或脑裂时，mysql数据未复制到新master，MHA强制切换可能会造成数据不一致
 + 故障切换时一致性和不可用时长需要取舍
-+ 核心是：<font color='pink'>**止损**</font>
++ 核心是：<font color='cyan'>**止损**</font>
 
-mysql集群一致性问题：都可归为 <font color='pink'>**多副本数据不一致**</font> 的问题
+mysql集群一致性问题：都可归为 <font color='cyan'>**多副本数据不一致**</font> 的问题
 遇到的经典问题：
 ![/images/docImages/pl25.png](/images/docImages/pl25.png)
-线上问题更多的是 <font color='pink'>**读方案**</font> 的问题，而<font color='pink'>**不是MHA切换**</font>  的问题
+线上问题更多的是 <font color='cyan'>**读方案**</font> 的问题，而<font color='cyan'>**不是MHA切换**</font>  的问题
 ### 复盘守的问题
 ![/images/docImages/pl26.png](/images/docImages/pl26.png)
 

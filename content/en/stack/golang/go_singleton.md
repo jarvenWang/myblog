@@ -22,10 +22,10 @@ categories:
 `单例模式` 也叫单子模式，是常用的模式之一，在它的核心结构中只包含一个被称为单例的特殊类，能够保证系统运行中一个类只创建一个实例，本节我们就来介绍一下Go语言中的单例模式。
 
 ## 单例模式实现
-Go语言实现单例模式的有四种方式，分别是 <font color='pink'>**懒汉式**</font> 、 <font color='pink'>**饿汉式**</font> 、 <font color='pink'>**双重检查**</font> 和 <font color='pink'>**sync.Onc**</font>。
+Go语言实现单例模式的有四种方式，分别是 <font color='cyan'>**懒汉式**</font> 、 <font color='cyan'>**饿汉式**</font> 、 <font color='cyan'>**双重检查**</font> 和 <font color='cyan'>**sync.Onc**</font>。
 不管那种模式最终目的只有一个，就是只实例化一次，只允许一个实例存在
 ### 1) 懒汉式——非线程安全
-<font color='pink'>**懒汉式**</font> :创建对象时比较懒，先不急着创建对象，在需要加载配置文件的时候再去创建
+<font color='cyan'>**懒汉式**</font> :创建对象时比较懒，先不急着创建对象，在需要加载配置文件的时候再去创建
 非线程安全，指的是在多线程下可能会创建多次对象。
 ```go
 //使用结构体代替类
@@ -64,7 +64,7 @@ func GetInstance() *Tool {
 ### 2) 饿汉式
 直接创建好对象，不需要判断为空，同时也是线程安全，唯一的缺点是在导入包的同时会创建该对象，并持续占有在内存中。
 
-Go语言饿汉式可以使用 <font color='pink'>**init 函数**</font>，也可以使用 <font color='pink'>**全局变量**</font>。
+Go语言饿汉式可以使用 <font color='cyan'>**init 函数**</font>，也可以使用 <font color='cyan'>**全局变量**</font>。
 
 init 函数:
 ```go

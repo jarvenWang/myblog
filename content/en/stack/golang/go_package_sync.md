@@ -19,7 +19,7 @@ tags:
 ---
 ## 背景
 为什么需要锁？
-锁是 sync 包中的核心，它主要有两个方法，分别是 <font color='pink'>**加锁（Lock）**</font>和 <font color='pink'>**解锁（Unlock）**</font>。
+锁是 sync 包中的核心，它主要有两个方法，分别是 <font color='cyan'>**加锁（Lock）**</font>和 <font color='cyan'>**解锁（Unlock）**</font>。
 
 在并发的情况下，多个线程或协程同时其修改一个变量，使用锁能保证在某一时间内，只有一个协程或线程修改这一变量。
 
@@ -148,8 +148,8 @@ goroutine2: 欧耶，我也解锁了
 
 ## 读写锁
 读写锁有如下四个方法：
-+ 写操作的锁定和解锁分别是<font color='pink'>**func (*RWMutex) Lock**</font> 和 <font color='pink'>**func (*RWMutex) Unlock；**</font>
-+ 读操作的锁定和解锁分别是<font color='pink'>**func (*RWMutex) Rlock**</font> 和 <font color='pink'>**func (*RWMutex) RUnlock**</font>
++ 写操作的锁定和解锁分别是<font color='cyan'>**func (*RWMutex) Lock**</font> 和 <font color='cyan'>**func (*RWMutex) Unlock；**</font>
++ 读操作的锁定和解锁分别是<font color='cyan'>**func (*RWMutex) Rlock**</font> 和 <font color='cyan'>**func (*RWMutex) RUnlock**</font>
 
 ### 读写锁的区别在于：
 + `"写锁定，不读不写直到解锁"`

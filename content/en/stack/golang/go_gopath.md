@@ -18,7 +18,7 @@ tags:
 
 ---
 ## GOPATH
-GOPATH 是 Go语言中使用的一个 <font color='pink'>**环境变量**</font> ，它使用绝对路径提供项目的工作目录
+GOPATH 是 Go语言中使用的一个 <font color='cyan'>**环境变量**</font> ，它使用绝对路径提供项目的工作目录
 
 工作目录 是一个工程开发的相对参考目录，好比当你要在公司编写一套服务器代码，你的工位所包含的桌面、计算机及椅子就是你的工作区
 
@@ -27,7 +27,7 @@ GOPATH 是 Go语言中使用的一个 <font color='pink'>**环境变量**</font>
 GOPATH 适合处理大量 Go语言源码、多个包组合而成的复杂工程。
 
 ### 使用命令行查看GOPATH信息
-在命令行中运行 <font color='pink'>**go env**</font> 后，命令行将提示以下信息：
+在命令行中运行 <font color='cyan'>**go env**</font> 后，命令行将提示以下信息：
 ```shell
 $ go env  
 GOARCH="amd64"  
@@ -54,11 +54,11 @@ PKG_CONFIG="pkg-config"
 ```
 
 命令行说明如下：
-+ GOARCH 表示 <font color='pink'>**目标处理器架构**</font>
-+ GOBIN 表示 <font color='pink'>**编译器和链接器 的安装位置**</font>
-+ GOOS 表示 <font color='pink'>**目标操作系统**</font>
-+ GOPATH 表示 <font color='pink'>**当前工作目录**</font>
-+ GOROOT 表示 Go <font color='pink'>**开发包的安装目录**</font>
++ GOARCH 表示 <font color='cyan'>**目标处理器架构**</font>
++ GOBIN 表示 <font color='cyan'>**编译器和链接器 的安装位置**</font>
++ GOOS 表示 <font color='cyan'>**目标操作系统**</font>
++ GOPATH 表示 <font color='cyan'>**当前工作目录**</font>
++ GOROOT 表示 Go <font color='cyan'>**开发包的安装目录**</font>
 
 在 Go 1.8 版本之前，GOPATH 环境变量默认是空的。从 Go 1.8 版本开始，Go 开发包在安装完成后，将 GOPATH 赋予了一个默认的目录，参见下表。
 

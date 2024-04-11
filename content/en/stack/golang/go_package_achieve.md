@@ -18,7 +18,7 @@ tags:
 
 ---
 ## 封装
-在Go语言中封装 就是 把 <font color='pink'>**抽象出来的字段**</font> 和 <font color='pink'>**对字段的操作**</font> 封装在一起，数据被保护在内部，程序的其它包只能通过被授权的方法，才能对字段进行操作
+在Go语言中封装 就是 把 <font color='cyan'>**抽象出来的字段**</font> 和 <font color='cyan'>**对字段的操作**</font> 封装在一起，数据被保护在内部，程序的其它包只能通过被授权的方法，才能对字段进行操作
 
 ### 封装的好处：
 + 隐藏实现细节；
@@ -28,10 +28,10 @@ tags:
 + 通过方法，包，实现封装
 
 ### 封装的实现步骤：
-1. 将<font color='pink'>**结构体、字段**</font> 的首字母 <font color='pink'>**小写**</font>
-2. 给结构体所在的包提供一个 <font color='pink'>**工厂模式的函数 （NewPerson构造函数）**</font> ，首字母大写，类似一个构造函数
-3. 提供一个首字母大写的 <font color='pink'>**Set 方法**</font>（类似其它语言的 public），用于对属性 **判断**并**赋值**
-4. 提供一个首字母大写的 <font color='pink'>**Get 方法**</font>（类似其它语言的 public），用于获取属性的 **值**
+1. 将<font color='cyan'>**结构体、字段**</font> 的首字母 <font color='cyan'>**小写**</font>
+2. 给结构体所在的包提供一个 <font color='cyan'>**工厂模式的函数 （NewPerson构造函数）**</font> ，首字母大写，类似一个构造函数
+3. 提供一个首字母大写的 <font color='cyan'>**Set 方法**</font>（类似其它语言的 public），用于对属性 **判断**并**赋值**
+4. 提供一个首字母大写的 <font color='cyan'>**Get 方法**</font>（类似其它语言的 public），用于获取属性的 **值**
 
 示例：
 对于员工，不能随便查看年龄，工资等隐私，并对输入的年龄进行合理的验证。

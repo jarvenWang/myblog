@@ -23,23 +23,23 @@ Filebeat是一个轻量级的日志数据收集工具，属于Elastic公司的El
 
 ## 特点
 ### 轻量级：
-Filebeat是一个 <font color='pink'>轻量级的代理</font>，对系统资源的<font color='pink'>消耗非常低</font>。它设计用于<font color='pink'>高性能和低延迟</font>，可以在各种环境中运行，包括 <font color='pink'>服务器、容器和虚拟机</font>。
+Filebeat是一个 <font color='cyan'>轻量级的代理</font>，对系统资源的<font color='cyan'>消耗非常低</font>。它设计用于<font color='cyan'>高性能和低延迟</font>，可以在各种环境中运行，包括 <font color='cyan'>服务器、容器和虚拟机</font>。
 ### 多源收集：
-Filebeat支持从各种来源收集数据，包括 <font color='pink'>日志文件、系统日志、Docker容器日志、Windows事件日志</font> 等。它<font color='pink'>具有多个输入模块</font>，可以轻松配置用于不同数据源的数据收集。
+Filebeat支持从各种来源收集数据，包括 <font color='cyan'>日志文件、系统日志、Docker容器日志、Windows事件日志</font> 等。它<font color='cyan'>具有多个输入模块</font>，可以轻松配置用于不同数据源的数据收集。
 ### 模块化：
-Filebeat <font color='pink'>采用模块化的方式组织配置</font>，每个输入类型都可以作为一个模块，<font color='pink'>易于扩展和配置</font>。这使得添加新的数据源和日志格式变得更加简单。
+Filebeat <font color='cyan'>采用模块化的方式组织配置</font>，每个输入类型都可以作为一个模块，<font color='cyan'>易于扩展和配置</font>。这使得添加新的数据源和日志格式变得更加简单。
 ### 自动发现：
-Filebeat支持 <font color='pink'>自动发现服务</font>，可以在容器化环境中自动识别新的容器和服务，并开始收集其日志数据。
+Filebeat支持 <font color='cyan'>自动发现服务</font>，可以在容器化环境中自动识别新的容器和服务，并开始收集其日志数据。
 ### 安全性：
-Filebeat支持 <font color='pink'>安全传输</font>，可以使用 <font color='pink'>TLS/SSL加密协议</font>  将数据安全地传输到目标。它还支持基于令牌的身份验证。
+Filebeat支持 <font color='cyan'>安全传输</font>，可以使用 <font color='cyan'>TLS/SSL加密协议</font>  将数据安全地传输到目标。它还支持基于令牌的身份验证。
 ### 数据处理：
-Filebeat可以对数据进行简单的处理，如 <font color='pink'>字段分割、字段重命名和数据过滤</font> ，以确保数据适合进一步处理和分析。
+Filebeat可以对数据进行简单的处理，如 <font color='cyan'>字段分割、字段重命名和数据过滤</font> ，以确保数据适合进一步处理和分析。
 ### 目标输出：
-Filebeat可以 <font color='pink'>将数据发送到多个目标</font> ，最常见的是将数据发送到 <font color='pink'>Elasticsearch</font>，以便进行全文搜索和分析。此外，还可以将数据发送到 <font color='pink'>Logstash、Kafka</font>等目标。
+Filebeat可以 <font color='cyan'>将数据发送到多个目标</font> ，最常见的是将数据发送到 <font color='cyan'>Elasticsearch</font>，以便进行全文搜索和分析。此外，还可以将数据发送到 <font color='cyan'>Logstash、Kafka</font>等目标。
 ### 实时性：
-Filebeat可以以 <font color='pink'>实时方式收集和传输数据</font>，确保日志数据及时可用于分析和可视化。
+Filebeat可以以 <font color='cyan'>实时方式收集和传输数据</font>，确保日志数据及时可用于分析和可视化。
 ### 监控和管理：
-Filebeat具有 <font color='pink'>自身的监控功能</font>，可以监视自身的状态和性能，并与 <font color='pink'>Elasticsearch、Kibana</font>  等工具集成，用于管理和监控数据收集
+Filebeat具有 <font color='cyan'>自身的监控功能</font>，可以监视自身的状态和性能，并与 <font color='cyan'>Elasticsearch、Kibana</font>  等工具集成，用于管理和监控数据收集
 
 ![/images/docImages/fb1.png](/images/docImages/fb1.png)
 

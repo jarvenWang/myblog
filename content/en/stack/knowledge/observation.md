@@ -31,8 +31,8 @@ categories:
 `fluentd->kafka->fluentd->elasticsearch->kibana；`
 
 ### 监控方案：
-比较统一的都在使用 <font color='pink'>**prometheus**</font> ，<font color='pink'>**prometheus-operator**</font> ，<font color='pink'>**thanos**</font>，<font color='pink'>**grafana**</font>
+比较统一的都在使用 <font color='cyan'>**prometheus**</font> ，<font color='cyan'>**prometheus-operator**</font> ，<font color='cyan'>**thanos**</font>，<font color='cyan'>**grafana**</font>
 
 ### 链路方案:
-主要方案有开源的 <font color='pink'>**skywalking**</font>，<font color='pink'>**jaeger**</font>，<font color='pink'>**zipkin**</font>，还有商业的方案，如 <font color='pink'>**dynatrace**</font> 等。
+主要方案有开源的 <font color='cyan'>**skywalking**</font>，<font color='cyan'>**jaeger**</font>，<font color='cyan'>**zipkin**</font>，还有商业的方案，如 <font color='cyan'>**dynatrace**</font> 等。
 

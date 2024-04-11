@@ -18,4 +18,4 @@ categories:
 ---
 
 ## istio概念
-讲多了记不住，那就：<font color='pink'>**服务网格 + 微服务治理**</font> 。
+讲多了记不住，那就：<font color='cyan'>**服务网格 + 微服务治理**</font> 。

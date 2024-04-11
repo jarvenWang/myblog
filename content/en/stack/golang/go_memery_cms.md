@@ -30,17 +30,17 @@ go中的堆 mheap 正是"缓存"的思想。
 堆 是Go运行时中最大的临界共享资源，这意味着每次存取都要加锁，在性能层面是一件很可怕的事情。
 
 相关概念：
-1. <font color='pink'>mheap</font> : 全局的内存起源，访问要加全局锁
-2. <font color='pink'>mcentral</font> : 每种对象大小规格（全局共划分为68种）对应的缓存，锁的粒度也仅限于同一种规格以内
-3. <font color='pink'>mcache</font> ：每个P（正是GMP中的P）持有一份的内存缓存，访问时无锁
+1. <font color='cyan'>mheap</font> : 全局的内存起源，访问要加全局锁
+2. <font color='cyan'>mcentral</font> : 每种对象大小规格（全局共划分为68种）对应的缓存，锁的粒度也仅限于同一种规格以内
+3. <font color='cyan'>mcache</font> ：每个P（正是GMP中的P）持有一份的内存缓存，访问时无锁
 
 ### 3.多级规格，提高利用率
 --> span大小趋势递增 
 --> 分配object大小趋势递增
 相关概念：
-1. <font color='pink'>page</font> ： 最小的存储单元
-go借鉴操作系统分页管理的思想，每个最小的存储单元也称之为页 <font color='pink'>**page**</font> ，但大小为 <font color='pink'>**8KB**</font>
-2. <font color='pink'>mspan</font> : 最小的管理单元
+1. <font color='cyan'>page</font> ： 最小的存储单元
+go借鉴操作系统分页管理的思想，每个最小的存储单元也称之为页 <font color='cyan'>**page**</font> ，但大小为 <font color='cyan'>**8KB**</font>
+2. <font color='cyan'>mspan</font> : 最小的管理单元
 mspan大小为page的整数倍，且从8B到80KB被划分为 68 种不同的规格，分配对象时，会根据大小映射到不同规格的mspan，从中获取空间
 
 ## 内存单元mspan
@@ -156,9 +156,9 @@ type mheap struct {
 
 ## 空闲页索引pageAlloc
 基数树数据结构的含义：
-1. mheap会基于 bitMap 标识内存中各页的使用情况，<font color='pink'>**bit位为 0 ，代表该页是空闲的，为 1 代表该页已被mspan占用**</font>。
-2. 每棵基数树聚合了 <font color='pink'>**16GB**</font> 内存空间中各页使用情况的索引信息，用于帮助mheap快速找到指定长度的连续空闲页的所在位置
-3. mheap持有 <font color='pink'>**2^14**</font> 棵基数树，因此索引全面覆盖到 <font color='pink'>**2^14 * 16GB = 256 T**</font> 的内存空间。
+1. mheap会基于 bitMap 标识内存中各页的使用情况，<font color='cyan'>**bit位为 0 ，代表该页是空闲的，为 1 代表该页已被mspan占用**</font>。
+2. 每棵基数树聚合了 <font color='cyan'>**16GB**</font> 内存空间中各页使用情况的索引信息，用于帮助mheap快速找到指定长度的连续空闲页的所在位置
+3. mheap持有 <font color='cyan'>**2^14**</font> 棵基数树，因此索引全面覆盖到 <font color='cyan'>**2^14 * 16GB = 256 T**</font> 的内存空间。
 
 
 

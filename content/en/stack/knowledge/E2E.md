@@ -89,7 +89,7 @@ QQ音乐和酷狗全链路压测的演进史
 
 ## 实践案例分享
 ### 社交属性业务特性与挑战
-业务特性： <font color='pink'>**突增流量、高并发读写、实时性**</font>
+业务特性： <font color='cyan'>**突增流量、高并发读写、实时性**</font>
 ![/images/docImages/jm25.png](/images/docImages/jm25.png)
 
 ### 实例分享-时代少年团空降评论区
@@ -97,12 +97,12 @@ QQ音乐和酷狗全链路压测的演进史
 ![/images/docImages/jm27.png](/images/docImages/jm27.png)
 
 #### 迭代优化方案
-+ <font color='pink'>**热key问题**</font>
-+ <font color='pink'>**缓存命中率**</font>
-+ <font color='pink'>**缓存防穿透**</font>
-+ <font color='pink'>**业务降级策略**</font>
-+ <font color='pink'>**中间件**</font>
-+ <font color='pink'>**业务机器扩容**</font>
++ <font color='cyan'>**热key问题**</font>
++ <font color='cyan'>**缓存命中率**</font>
++ <font color='cyan'>**缓存防穿透**</font>
++ <font color='cyan'>**业务降级策略**</font>
++ <font color='cyan'>**中间件**</font>
++ <font color='cyan'>**业务机器扩容**</font>
 
   ![/images/docImages/jm28.png](/images/docImages/jm28.png)
   ![/images/docImages/jm29.png](/images/docImages/jm29.png)
