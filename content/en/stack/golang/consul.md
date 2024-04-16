@@ -1,6 +1,6 @@
 ---
 author: "wangjinbao"
-title: "consul"
+title: "consul安装"
 date: 2022-12-03 00:00:01
 description: "Consul 简化了分布式环境中的服务的注册和发现流程，通过 HTTP 或者 DNS 接口发现"
 draft: false
@@ -57,9 +57,7 @@ sudo dnf -y install consul
 命令：
 ```shell
 # node1
-consul agent -server -bootstrap-expect 2 -data-dir /tmp/consul -node=n1 
--bind=192.168.110.123 -ui -config-dir /etc/consul.d -rejoin 
--join 192.168.110.123 -client 0.0.0.0
+consul agent -server -bootstrap-expect 2 -data-dir /tmp/consul -node=n1 -bind=192.168.110.123 -ui -config-dir /etc/consul.d -rejoin -join 192.168.110.123 -client 0.0.0.0
 ```
 说明
 #运行consul agent以server模式
@@ -75,9 +73,7 @@ consul agent -server -bootstrap-expect 2 -data-dir /tmp/consul -node=n1
 
 ```shell
 # node2
-consul agent -server -bootstrap-expect 2 -data-dir /tmp/consul -node=n2 
--bind=192.168.110.156 -ui -rejoin 
--join 192.168.110.123
+consul agent -server -bootstrap-expect 2 -data-dir /tmp/consul -node=n2 -bind=192.168.110.156 -ui -rejoin -join 192.168.110.123
 ```
 
 #### 启动Consul Client
@@ -85,9 +81,7 @@ consul agent -server -bootstrap-expect 2 -data-dir /tmp/consul -node=n2
 运行consul agent以clent模式，-join 加入到已有的集群中去
 ```shell
 # node3
-consul agent -data-dir /tmp/consul -node=n3 
--bind=192.168.110.124 -config-dir /etc/consul.d -rejoin 
--join 192.168.110.123
+consul agent -data-dir /tmp/consul -node=n3 -bind=192.168.110.124 -config-dir /etc/consul.d -rejoin -join 192.168.110.123
 ```
 
 #### 验证启动
