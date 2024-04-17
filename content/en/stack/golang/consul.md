@@ -12,7 +12,7 @@ authorEmoji: 👻
 tags: 
 - golang
 categories:
-- go
+- consul
 
 
 

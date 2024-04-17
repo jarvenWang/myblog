@@ -61,7 +61,7 @@ consul通过DNS或者HTTP接口使服务注册和服务发现变的很容易，�
 
 ![/images/docImages/cl2.png](/images/docImages/cl2.png)
 
-## consul安装
+## consul安装(本地)
 官方网站：
 https://consul.io/
 
@@ -85,6 +85,177 @@ consul agent -dev
 ```
 访问浏览器：
 http://127.0.0.1:8500/
+
+
+## consul安装(集群)
+首先准备三个节点node1、node2、node3：
++ 10.25.84.163
++ 10.25.84.164
++ 10.25.84.165
+
+### 下载安装包
+以linux下安装为例，首先下载安装包，下载地址：`https://www.consul.io/downloads.html`
+下载后上传到linux服务器，或者直接在linux上下载，版本可自行替换
+```shell
+wget https://releases.hashicorp.com/consul/1.7.0/consul_1.7.0_linux_amd64.zip
+unzip consul_1.7.0_linux_amd64.zip -d /usr/local/bin
+```
+### 设置环境变量
+```shell
+$ vi /etc/profile
+export CONSUL_HOME=/usr/local/bin/consul
+export PATH=$PATH:CONSUL_HOME
+
+$ source /etc/profile
+```
+### 验证（三台机）
+```shell
+$ consul version
+Consul v1.7.0
+Protocol 2 spoken by default, understands 2 to 3
+```
+
+### 启动agent
+分别在三台服务器输入以下对应的命令：
+```shell
+// 启动10.25.84.163
+consul agent -server -ui -bootstrap-expect=3 -data-dir=/data/consul -node=server-1 -client=0.0.0.0 -bind=10.25.84.163 -datacenter=dc1
+
+// 启动10.25.84.164，并加入10.25.84.163节点
+consul agent -server -ui -bootstrap-expect=3 -data-dir=/data/consul -node=server-2 -client=0.0.0.0 -bind=10.25.84.164 -datacenter=dc1 -join 10.25.84.163
+
+// 启动10.25.84.165，并加入10.25.84.163节点
+consul agent -server -ui -bootstrap-expect=3 -data-dir=/data/consul -node=server-3 -client=0.0.0.0 -bind=10.25.84.165 -datacenter=dc1 -join 10.25.84.163
+
+```
+#### 启动日志
+```shell
+[root@localhost ~]# consul agent -server -ui -bootstrap-expect=3 -data-dir=/data/consul -node=server-1 -client=0.0.0.0 -bind=10.25.84.163 -datacenter=dc1
+bootstrap_expect > 0: expecting 3 servers
+==> Starting Consul agent...
+           Version: 'v1.7.0'
+           Node ID: '4a60c9bd-472b-01a3-57f4-c74b8ba4d3df'
+         Node name: 'server-1'
+        Datacenter: 'dc1' (Segment: '<all>')
+            Server: true (Bootstrap: false)
+       Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, gRPC: -1, DNS: 8600)
+      Cluster Addr: 10.25.84.163 (LAN: 8301, WAN: 8302)
+           Encrypt: Gossip: false, TLS-Outgoing: false, TLS-Incoming: false, Auto-Encrypt-TLS: false
+
+==> Log data will now stream in as it occurs:
+
+    2020-02-21T11:28:20.323+0800 [INFO]  agent.server.raft: initial configuration: index=0 servers=[]
+    2020-02-21T11:28:20.324+0800 [INFO]  agent.server.raft: entering follower state: follower="Node at 10.25.84.163:8300 [Follower]" leader=
+    2020-02-21T11:28:20.325+0800 [INFO]  agent.server.serf.wan: serf: EventMemberJoin: server-1.dc1 10.25.84.163
+    2020-02-21T11:28:20.326+0800 [INFO]  agent.server.serf.lan: serf: EventMemberJoin: server-1 10.25.84.163
+    2020-02-21T11:28:20.326+0800 [INFO]  agent.server: Adding LAN server: server="server-1 (Addr: tcp/10.25.84.163:8300) (DC: dc1)"
+    2020-02-21T11:28:20.326+0800 [INFO]  agent.server: Handled event for server in area: event=member-join server=server-1.dc1 area=wan
+    2020-02-21T11:28:20.327+0800 [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=tcp
+    2020-02-21T11:28:20.327+0800 [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=udp
+    2020-02-21T11:28:20.328+0800 [INFO]  agent: Started HTTP server: address=[::]:8500 network=tcp
+    2020-02-21T11:28:20.328+0800 [INFO]  agent: started state syncer
+==> Consul agent running!
+...
+    2020-02-21T11:29:27.352+0800 [INFO]  agent.server.raft: pipelining replication: peer="{Voter 31174405-571f-f598-ef74-0a9aba59a6a8 10.25.84.165:8300}"
+    2020-02-21T11:29:27.352+0800 [WARN]  agent.server.raft: appendEntries rejected, sending older logs: peer="{Voter b3d84299-a458-19bf-2b98-ca9031e6aea4 10.25.84.164:8300}" next=1
+    2020-02-21T11:29:27.356+0800 [INFO]  agent.server.raft: pipelining replication: peer="{Voter b3d84299-a458-19bf-2b98-ca9031e6aea4 10.25.84.164:8300}"
+    2020-02-21T11:29:27.368+0800 [INFO]  agent.leader: started routine: routine="CA root pruning"
+    2020-02-21T11:29:27.368+0800 [INFO]  agent.server: member joined, marking health alive: member=server-1
+    2020-02-21T11:29:27.381+0800 [INFO]  agent.server: member joined, marking health alive: member=server-2
+    2020-02-21T11:29:27.396+0800 [INFO]  agent.server: member joined, marking health alive: member=server-3
+    2020-02-21T11:29:28.609+0800 [INFO]  agent: Synced node info
+```
+#### 查看集群成员：
+```shell
+[root@localhost ~]# consul members
+Node      Address            Status  Type    Build  Protocol  DC   Segment
+server-1  10.25.84.163:8301  alive   server  1.7.0  2         dc1  <all>
+server-2  10.25.84.164:8301  alive   server  1.7.0  2         dc1  <all>
+server-3  10.25.84.165:8301  alive   server  1.7.0  2         dc1  <all>
+
+```
+命令输出显示了集群节点名称、IP端口、健康状态、启动模式、所在数据中心和版本信息。
+
+####  通过HTTP API查看
+```shell
+curl 10.25.84.163:8500/v1/catalog/nodes
+```
+返回数据
+```shell
+[
+    {
+        "ID":"99f8e10c-edda-bb40-21b4-8719ba851308",
+        "Node":"agent-1",
+        "Address":"10.25.84.163",
+        "Datacenter":"dc1",
+        "TaggedAddresses":{
+            "lan":"10.25.84.163",
+            "lan_ipv4":"10.25.84.163",
+            "wan":"10.25.84.163",
+            "wan_ipv4":"10.25.84.163"
+        },
+        "Meta":{
+            "consul-network-segment":""
+        },
+        "CreateIndex":5,
+        "ModifyIndex":11
+    },
+    {
+        "ID":"824a86e6-9713-a136-8037-c489222a88e1",
+        "Node":"agent-2",
+        "Address":"10.25.84.164",
+        "Datacenter":"dc1",
+        "TaggedAddresses":{
+            "lan":"10.25.84.164",
+            "lan_ipv4":"10.25.84.164",
+            "wan":"10.25.84.164",
+            "wan_ipv4":"10.25.84.164"
+        },
+        "Meta":{
+...
+```
+
+####  通过DNS接口查看
+```shell
+[root@localhost ~]$ dig @10.25.84.163 -p 8600 server-1.node.consul
+
+; <<>> DiG 9.11.4-P2-RedHat-9.11.4-9.P2.el7 <<>> @10.25.84.163 -p 8600 server-1.node.consul
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64004
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;server-1.node.consul.		IN	A
+
+;; ANSWER SECTION:
+server-1.node.consul.	0	IN	A	10.25.84.163
+
+;; ADDITIONAL SECTION:
+server-1.node.consul.	0	IN	TXT	"consul-network-segment="
+
+;; Query time: 1 msec
+;; SERVER: 10.25.84.163#8600(10.25.84.163)
+;; WHEN: Fri Feb 21 12:47:15 CST 2020
+;; MSG SIZE  rcvd: 101
+
+```
+其中server-1.node.consul中第一部分需要替换成自己的agent节点名
+
+dig命令如果不存在需要安装下，命令：
+`yum -y install bind-utils`
+
+#### 停止agent服务
+通过consul leave命令优雅停止服务，我们再打开一个从节点机器终端，运行该命令
+```shell
+$ consul leave
+Graceful leave complete
+```
+
 
 
 ## kratos微服务注册consul
@@ -242,3 +413,5 @@ kratos run
 ### 验证成功
 去浏览器查看：
 ![/images/docImages/cl3.png](/images/docImages/cl3.png)
+
+
