@@ -88,6 +88,32 @@ docker run -d --name=jaeger -p6831:6831/udp -p16686:16686 jaegertracing/all-in-o
 浏览器Web UI： `http://localhost:16686/`
 > PS:注意：这个docker镜像封装的jaeger是把数据放在<font color='cyan'>**内存中**</font> 的，仅用于测试，正式使用需指定<font color='cyan'>**后端存储**</font>
 
+docker-compose部署如下：
+docker-compose.yml
+```yaml
+version: "3"
+services:
+  jeager:
+    build: ./jeager
+    container_name: jeager
+    environment:
+      - COLLECTOR_ZIPKIN_HTTP_PORT=9411
+    ports:
+      - "5775:5775/udp"
+      - "6831:6831/udp"
+      - "6832:6832/udp"
+      - "5778:5778"
+      - "16686:16686"
+      - "14268:14268"
+      - "9411:9411"
+    volumes:
+      - /Users/wangdante/D/kugou/:/var/www/html/
+    restart: always
+    networks:
+      jarven:
+        ipv4_address: 172.19.0.20
+...
+```
 
 ![/images/docImages/jg3.png](/images/docImages/jg3.png)
 
@@ -223,3 +249,64 @@ go run ./main.go all
 这样的比较可以在调查事件时提供非常及时和细致的线索。我们可以快速而自信地缩小搜索范围。
 
 如果发生上图这样的事件，我们不应该直接去看深红色的span细节，而应该<font color='cyan'>查看**靠近它们的灰色span的log信息**</font>，以快速定位问题。
+
+
+## kratos集成jeager
+前提docker下已经部署了jeager，之后开放了端口 http://localhost:14268
+### 下载安装包
+```shell
+# 主要是otel ==> go get -u go.opentelemetry.io/otel
+$ go get -u go.opentelemetry.io/otel/exporters/jaeger
+```
+
+### 添加jeager到grpc服务
+文件地址：`balance/internal/server/grpc.go`
+```go
+package server
+
+import (
+...
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/exporters/jaeger"
+	"go.opentelemetry.io/otel/sdk/resource"
+	"go.opentelemetry.io/otel/sdk/trace"
+	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
+...
+)
+
+// 设置全局trace
+func initTracer(url string) error {
+	// 创建 Jaeger exporter
+	exp, err := jaeger.New(jaeger.WithCollectorEndpoint(jaeger.WithEndpoint(url)))
+	if err != nil {
+		return err
+	}
+	tp := trace.NewTracerProvider(
+		// 将基于父span的采样率设置为100%
+		trace.WithSampler(trace.ParentBased(trace.TraceIDRatioBased(1.0))),
+		// 始终确保再生成中批量处理
+		trace.WithBatcher(exp),
+		// 在资源中记录有关此应用程序的信息
+		trace.WithResource(resource.NewSchemaless(
+			semconv.ServiceNameKey.String("kratos-balance"),
+			attribute.String("exporter", "wjb"),
+			attribute.Float64("float", 388.66),
+		)),
+	)
+	otel.SetTracerProvider(tp)
+	return nil
+}
+// NewGRPCServer new a gRPC server.
+func NewGRPCServer(c *conf.Server, balanceService *service.BalanceService, logger log.Logger) *grpc.Server {
+...
+	err := initTracer("http://localhost:14268/api/traces")
+	if err != nil {
+		panic(err)
+	}
+...
+}
+```
+
+![/images/docImages/jgr1.png](/images/docImages/jgr1.png)
+![/images/docImages/jgr2.png](/images/docImages/jgr2.png)
