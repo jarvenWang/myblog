@@ -1,6 +1,6 @@
 ---
 author: "wangjinbao"
-title: "Jeager"
+title: "Jeager链路追踪系统"
 date: 2023-05-20
 description: "Jaeger是一个开源的分布式追踪系统，用于监控和诊断微服务架构中的应用程序。"
 draft: false

@@ -60,3 +60,9 @@ sudo ln -sf /usr/knowledge/zoneinfo/<时区> localtime
 
 注意：以上方法需要使用管理员权限，确保在修改时区时谨慎操作，避免因设置错误导致系统时间混乱。
 
+## 时间同步
+```shell
+mount /dev/sr0 /mnt
+yum install ntpdate -y
+ntpdate cn.ntp.org.cn
+```
