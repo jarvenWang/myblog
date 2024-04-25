@@ -86,6 +86,67 @@ consul agent -dev
 访问浏览器：
 http://127.0.0.1:8500/
 
+## consul安装(docker-compose)
+`vim docker-compose.yml`
+```yml
+version: '3.5'
+services:
+  consul1:
+    image: consul:latest
+    container_name: consul1
+    restart: always
+    command: agent -server -client=0.0.0.0 -bootstrap-expect=3 -node=consul1
+    volumes:
+      - /usr/local/docker_my/consul/consul1/data:/consul/data
+      - /usr/local/docker_my/consul/consul1/config:/consul/config
+  consul2:
+    image: consul:latest
+    container_name: consul2
+    restart: always
+    command: agent -server -client=0.0.0.0 -retry-join=consul1 -node=consul2
+    volumes:
+      - /usr/local/docker_my/consul/consul2/data:/consul/data
+      - /usr/local/docker_my/consul/consul2/config:/consul/config
+  consul3:
+    image: consul:latest
+    container_name: consul3
+    restart: always
+    command: agent -server -client=0.0.0.0 -retry-join=consul1 -node=consul3
+    volumes:
+      - /usr/local/docker_my/consul/consul3/data:/consul/data
+      - /usr/local/docker_my/consul/consul3/config:/consul/config
+  consul4:
+    image: consul:latest
+    container_name: consul4
+    restart: always
+    ports:
+      - 8500:8500
+    command: agent -client=0.0.0.0 -retry-join=consul1 -ui -node=client1
+    volumes:
+      - /usr/local/docker_my/consul/consul4/data:/consul/data
+      - /usr/local/docker_my/consul/consul4/config:/consul/config
+```
+说明：
+
+启动了4个consul，其中consul1 是主节点，consul2、consul3 是子节点。consul4是提供ui服务的。
+
+启动：
+`docker-compose up -d`
+
+参数说明：
+server模式启动的命令行参数说明：
++ -server：表示当前使用的server模式；如果没有指定，则表示是client模式。
++ -node：指定当前节点在集群中的名称。
++ -config-dir：指定配置文件路径，定义服务的；路径下面的所有.json结尾的文件都被访问；缺省值为：/consul/config。
++ -data-dir： consul存储数据的目录；缺省值为：/consul/data。
++ -datacenter：数据中心名称，缺省值为dc1。
++ -ui：使用consul自带的web UI界面 。
++ -join：加入到已有的集群中。
++ -enable-script-checks： 检查服务是否处于活动状态，类似开启心跳。
++ -bind： 绑定服务器的ip地址。
++ -client： 客户端可访问ip，缺省值为：“127.0.0.1”，即仅允许环回连接。
++ -bootstrap-expect：在一个datacenter中期望的server节点数目，consul启动时会一直等待直到达到这个数目的server才会引导整个集群。这个参数的值在同一个datacenter的所有server节点上必须保持一致。
+
 
 ## consul安装(集群)
 首先准备三个节点node1、node2、node3：
