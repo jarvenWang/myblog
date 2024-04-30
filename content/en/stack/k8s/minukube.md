@@ -93,6 +93,10 @@ Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
 # kubectl 的配置已经指向 minikube
 $ kubectl config current-context 
 minikube
+# 删除minikube集群
+kubectl config get-contexts
+kubectl config use-context docker-desktop 切换其它群集
+
 
 # kubectl 集群信息
 kubectl cluster-info
