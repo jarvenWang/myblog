@@ -651,9 +651,9 @@
 
   
     
-    var baseurl = JSON.parse("\"http://wangjinbao.netlify.app\"");
+    var baseurl = JSON.parse("\"http://ingress.test1.com\"");
     
-    var permalink = JSON.parse("\"http://wangjinbao.netlify.app/en/experience/\"");
+    var permalink = JSON.parse("\"http://ingress.test1.com/en/experience/\"");
     
     var langprefix = JSON.parse("\"/en\"");
     var searchResults = null;
@@ -1343,13 +1343,13 @@
 
 <meta property="og:site_name" content="Home">
 <meta property="og:title" content="个人风采">
-<meta property="og:url" content="http://wangjinbao.netlify.app/en/experience/">
+<meta property="og:url" content="http://ingress.test1.com/en/experience/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="photo gallery">
 
   
-    <meta property="og:image" content="http://wangjinbao.netlify.app/images/feature2/gallery.png">
-    <meta property="og:image:url" content="http://wangjinbao.netlify.app/images/feature2/gallery.png">
+    <meta property="og:image" content="http://ingress.test1.com/images/feature2/gallery.png">
+    <meta property="og:image:url" content="http://ingress.test1.com/images/feature2/gallery.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Home">
     <meta property="twitter:title" content="个人风采">
@@ -1365,7 +1365,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="http://wangjinbao.netlify.app/en/experience/">
+<link rel="canonical" href="http://ingress.test1.com/en/experience/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1394,17 +1394,17 @@
     "headline": "个人风采",
     "datePublished": "2019-10-31T10:20:16+09:00",
     "dateModified": "2019-10-31T10:20:16+09:00",
-    "url" : "http://wangjinbao.netlify.app/en/experience/",
+    "url" : "http://ingress.test1.com/en/experience/",
     "description": "photo gallery",
-    "image" : "http://wangjinbao.netlify.app/images/feature2/gallery.png",
+    "image" : "http://ingress.test1.com/images/feature2/gallery.png",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "http://wangjinbao.netlify.app"
+      "@id": "http://ingress.test1.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Home",
-      "url": "http://wangjinbao.netlify.app"
+      "url": "http://ingress.test1.com"
     }
   }
 </script>
@@ -1422,7 +1422,7 @@
     
 </head>
 
-<body id="root" class="theme__kimbie">
+<body id="root" class="theme__dark">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1461,7 +1461,7 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          kimbie
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1477,7 +1477,7 @@
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          kimbie
         </a>
         
       
@@ -1520,46 +1520,8 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/about">About</a>
+          <a href="/en/archive">历程图</a>
         </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item ">
-          <a href="/en/archive">Archive</a>
-        </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item active">
-          <a href="/en/gallery">
-            Gallery
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-          </a>
-        </li>
-
-        
-          <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/gallery/cartoon">Cartoon</a>
-          </li>
-        
-          <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/gallery/photo">Photo</a>
-          </li>
-        
-
       
       
     
@@ -1571,7 +1533,7 @@
       
         <li class="navbarm__menu--item ">
           <a href="/en/stack">
-            语言
+            技术类型
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
           </a>
         </li>
@@ -1579,6 +1541,14 @@
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
             <a href="/en/stack/golang">golang</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/php">php</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/python">python</a>
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
@@ -1590,11 +1560,15 @@
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/stack/php">php</a>
+            <a href="/en/stack/bigdata">bigdata</a>
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/stack/python">python</a>
+            <a href="/en/stack/k8s">k8s</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/knowledge">knowledge</a>
           </li>
         
 
@@ -1608,7 +1582,7 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/posts">帖子</a>
+          <a href="/en/about">个人经历</a>
         </li>
       
       
@@ -1620,7 +1594,7 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/showcase">Showcase</a>
+          <a href="/en/posts">热门帖子</a>
         </li>
       
       
@@ -1632,7 +1606,19 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/experience">图片</a>
+          <a href="/en/showcase">开源项目</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/en/experience">个人风采</a>
         </li>
       
       
@@ -1672,7 +1658,7 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          kimbie
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1688,7 +1674,7 @@
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          kimbie
         </a>
         
       
@@ -1703,36 +1689,7 @@
   
   
   
-  <a href="/en/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">About</a>
-  
-  
-  
-  
-  
-  
-  
-  <a href="/en/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Archive</a>
-  
-  
-  
-  
-  
-  
-  
-  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
-    <a href="/en/gallery" class="navbar__menu-item active"
-      dir="ltr">
-      Gallery
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-    </a>
-    <div class="navbar__dropdown--content">
-      
-      <a href="/en/gallery/cartoon" class="navbar__dropdown--item" dir="ltr">Cartoon</a>
-      
-      <a href="/en/gallery/photo" class="navbar__dropdown--item" dir="ltr">Photo</a>
-      
-    </div>
-  </div>
+  <a href="/en/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">历程图</a>
   
   
   
@@ -1743,20 +1700,26 @@
   <div class="navbar__dropdown navbar__slide-down" data-ani="true">
     <a href="/en/stack" class="navbar__menu-item "
       dir="ltr">
-      语言
+      技术类型
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
     </a>
     <div class="navbar__dropdown--content">
       
       <a href="/en/stack/golang" class="navbar__dropdown--item" dir="ltr">golang</a>
       
+      <a href="/en/stack/php" class="navbar__dropdown--item" dir="ltr">php</a>
+      
+      <a href="/en/stack/python" class="navbar__dropdown--item" dir="ltr">python</a>
+      
       <a href="/en/stack/javascript" class="navbar__dropdown--item" dir="ltr">javascript</a>
       
       <a href="/en/stack/linux" class="navbar__dropdown--item" dir="ltr">linux</a>
       
-      <a href="/en/stack/php" class="navbar__dropdown--item" dir="ltr">php</a>
+      <a href="/en/stack/bigdata" class="navbar__dropdown--item" dir="ltr">bigdata</a>
       
-      <a href="/en/stack/python" class="navbar__dropdown--item" dir="ltr">python</a>
+      <a href="/en/stack/k8s" class="navbar__dropdown--item" dir="ltr">k8s</a>
+      
+      <a href="/en/stack/knowledge" class="navbar__dropdown--item" dir="ltr">knowledge</a>
       
     </div>
   </div>
@@ -1767,7 +1730,7 @@
   
   
   
-  <a href="/en/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">帖子</a>
+  <a href="/en/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">个人经历</a>
   
   
   
@@ -1775,7 +1738,7 @@
   
   
   
-  <a href="/en/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Showcase</a>
+  <a href="/en/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">热门帖子</a>
   
   
   
@@ -1783,7 +1746,15 @@
   
   
   
-  <a href="/en/experience" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">图片</a>
+  <a href="/en/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">开源项目</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/en/experience" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">个人风采</a>
   
   
 </div>
@@ -1802,16 +1773,35 @@
 <main class="gallery main">
   <div class="grid gallery__container">
     <div class="grid-sizer"></div>
-
-      <div class="grid-item">
-          <img src="/experience/302.JPG" alt="圣索菲亚大教堂" />
-          <div class="grid-item__desc hide">
+    
+    
+    <div class="grid-item">
+      <img src="/experience/302.JPG" alt="腾讯音乐酷狗" />
+      <div class="grid-item__desc hide">
         <span class="grid-item__desc--text">
-          圣索菲亚大教堂
+          腾讯音乐酷狗
         </span>
-          </div>
       </div>
-
+    </div>
+    
+    <div class="grid-item">
+      <img src="/experience/301.JPG" alt="健康乐动" />
+      <div class="grid-item__desc hide">
+        <span class="grid-item__desc--text">
+          健康乐动
+        </span>
+      </div>
+    </div>
+    
+    <div class="grid-item">
+      <img src="/experience/299.JPG" alt="酷狗中区" />
+      <div class="grid-item__desc hide">
+        <span class="grid-item__desc--text">
+          酷狗中区
+        </span>
+      </div>
+    </div>
+    
     <div class="grid-item">
       <img src="/experience/13.webp" alt="圣索菲亚大教堂" />
       <div class="grid-item__desc hide">
@@ -2377,7 +2367,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="http://wangjinbao.netlify.app/en/experience/" data-lang="en" class="dropdown-item is-active">English</a>
+              <a href="http://ingress.test1.com/en/experience/" data-lang="en" class="dropdown-item is-active">English</a>
             
           
         
@@ -2512,7 +2502,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2024, All Rights Reserved
                 
             </p>
         

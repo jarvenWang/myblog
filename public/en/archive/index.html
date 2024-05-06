@@ -651,9 +651,9 @@
 
   
     
-    var baseurl = JSON.parse("\"http://wangjinbao.netlify.app\"");
+    var baseurl = JSON.parse("\"http://ingress.test1.com\"");
     
-    var permalink = JSON.parse("\"http://wangjinbao.netlify.app/en/archive/\"");
+    var permalink = JSON.parse("\"http://ingress.test1.com/en/archive/\"");
     
     var langprefix = JSON.parse("\"/en\"");
     var searchResults = null;
@@ -1331,7 +1331,7 @@
 
 
     
-<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="http://wangjinbao.netlify.app/en/archive/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="http://ingress.test1.com/en/archive/index.xml">
 
 <meta name="description" content="Archive Page" />
 
@@ -1345,7 +1345,7 @@
 
 <meta property="og:site_name" content="Home">
 <meta property="og:title" content="Archive">
-<meta property="og:url" content="http://wangjinbao.netlify.app/en/archive/">
+<meta property="og:url" content="http://ingress.test1.com/en/archive/">
 <meta property="og:type" content="website">
 <meta property="og:description" content="Archive Page">
 
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="http://wangjinbao.netlify.app/en/archive/">
+<link rel="canonical" href="http://ingress.test1.com/en/archive/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1384,17 +1384,17 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url" : "http://wangjinbao.netlify.app/en/archive/",
+    "url" : "http://ingress.test1.com/en/archive/",
     "name": "Archive",
     "description": "Archive Page",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "http://wangjinbao.netlify.app"
+      "@id": "http://ingress.test1.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Home",
-      "url": "http://wangjinbao.netlify.app"
+      "url": "http://ingress.test1.com"
     }
   }
 </script>
@@ -1412,7 +1412,7 @@
     
 </head>
 
-<body id="root" class="theme__kimbie">
+<body id="root" class="theme__dark">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1451,7 +1451,7 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          kimbie
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1467,7 +1467,7 @@
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          kimbie
         </a>
         
       
@@ -1509,47 +1509,9 @@
       
 
       
-        <li class="navbarm__menu--item ">
-          <a href="/en/about">About</a>
-        </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
         <li class="navbarm__menu--item active">
-          <a href="/en/archive">Archive</a>
+          <a href="/en/archive">历程图</a>
         </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item ">
-          <a href="/en/gallery">
-            Gallery
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-          </a>
-        </li>
-
-        
-          <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/gallery/cartoon">Cartoon</a>
-          </li>
-        
-          <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/gallery/photo">Photo</a>
-          </li>
-        
-
       
       
     
@@ -1561,7 +1523,7 @@
       
         <li class="navbarm__menu--item ">
           <a href="/en/stack">
-            语言
+            技术类型
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
           </a>
         </li>
@@ -1569,6 +1531,14 @@
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
             <a href="/en/stack/golang">golang</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/php">php</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/python">python</a>
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
@@ -1580,11 +1550,15 @@
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/stack/php">php</a>
+            <a href="/en/stack/bigdata">bigdata</a>
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/stack/python">python</a>
+            <a href="/en/stack/k8s">k8s</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/knowledge">knowledge</a>
           </li>
         
 
@@ -1598,7 +1572,7 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/posts">帖子</a>
+          <a href="/en/about">个人经历</a>
         </li>
       
       
@@ -1610,7 +1584,7 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/showcase">Showcase</a>
+          <a href="/en/posts">热门帖子</a>
         </li>
       
       
@@ -1622,7 +1596,19 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/experience">图片</a>
+          <a href="/en/showcase">开源项目</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/experience">个人风采</a>
         </li>
       
       
@@ -1662,7 +1648,7 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          kimbie
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1678,7 +1664,7 @@
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          kimbie
         </a>
         
       
@@ -1693,36 +1679,7 @@
   
   
   
-  <a href="/en/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">About</a>
-  
-  
-  
-  
-  
-  
-  
-  <a href="/en/archive" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">Archive</a>
-  
-  
-  
-  
-  
-  
-  
-  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
-    <a href="/en/gallery" class="navbar__menu-item "
-      dir="ltr">
-      Gallery
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-    </a>
-    <div class="navbar__dropdown--content">
-      
-      <a href="/en/gallery/cartoon" class="navbar__dropdown--item" dir="ltr">Cartoon</a>
-      
-      <a href="/en/gallery/photo" class="navbar__dropdown--item" dir="ltr">Photo</a>
-      
-    </div>
-  </div>
+  <a href="/en/archive" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">历程图</a>
   
   
   
@@ -1733,20 +1690,26 @@
   <div class="navbar__dropdown navbar__slide-down" data-ani="true">
     <a href="/en/stack" class="navbar__menu-item "
       dir="ltr">
-      语言
+      技术类型
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
     </a>
     <div class="navbar__dropdown--content">
       
       <a href="/en/stack/golang" class="navbar__dropdown--item" dir="ltr">golang</a>
       
+      <a href="/en/stack/php" class="navbar__dropdown--item" dir="ltr">php</a>
+      
+      <a href="/en/stack/python" class="navbar__dropdown--item" dir="ltr">python</a>
+      
       <a href="/en/stack/javascript" class="navbar__dropdown--item" dir="ltr">javascript</a>
       
       <a href="/en/stack/linux" class="navbar__dropdown--item" dir="ltr">linux</a>
       
-      <a href="/en/stack/php" class="navbar__dropdown--item" dir="ltr">php</a>
+      <a href="/en/stack/bigdata" class="navbar__dropdown--item" dir="ltr">bigdata</a>
       
-      <a href="/en/stack/python" class="navbar__dropdown--item" dir="ltr">python</a>
+      <a href="/en/stack/k8s" class="navbar__dropdown--item" dir="ltr">k8s</a>
+      
+      <a href="/en/stack/knowledge" class="navbar__dropdown--item" dir="ltr">knowledge</a>
       
     </div>
   </div>
@@ -1757,7 +1720,7 @@
   
   
   
-  <a href="/en/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">帖子</a>
+  <a href="/en/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">个人经历</a>
   
   
   
@@ -1765,7 +1728,7 @@
   
   
   
-  <a href="/en/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Showcase</a>
+  <a href="/en/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">热门帖子</a>
   
   
   
@@ -1773,7 +1736,15 @@
   
   
   
-  <a href="/en/experience" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">图片</a>
+  <a href="/en/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">开源项目</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/en/experience" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">个人风采</a>
   
   
 </div>
@@ -1811,147 +1782,137 @@
   
     
     
-      <span class="archive__key" data-ani="true">2022</span>
+      <span class="archive__key" data-ani="true">2023</span>
       <ul class="archive__ul" data-dir="ltr">
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jun 8</span>
+              <span class="archive__date">Jun 25</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/grow_up/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">go开发者成长路线图</a>
+          <a href="http://ingress.test1.com/en/stack/bigdata/starrocks/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">StarRocks使用</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 2</span>
+              <span class="archive__date">Jun 24</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/linux/zsh/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">zsh下安装主题Powerlevel9k</a>
+          <a href="http://ingress.test1.com/en/stack/bigdata/design/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">数仓模型设计原则</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 1</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/linux/proxy47/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Nginx负载均衡中4层代理和7层代理的区别</a>
-        </li>
-        
-      </ul>
-    
-      <span class="archive__key" data-ani="true">2021</span>
-      <ul class="archive__ul" data-dir="ltr">
-        
-        <li class="archive__li" data-dir="ltr">
-          <span class="archive__meta" data-ani="true">
-            
-              <span class="archive__type">stack</span>
-              <span class="archive__date">Dec 1</span>
-            
-          </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/goframe_machinery/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">goframe框架集成任务队列machinery和定时任务</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s8/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k8s实践与总结-6(ingress)</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Feb 3</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/goframe2/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">goframe框架-2</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s7/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k8s实践与总结-5(service)</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Feb 2</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/goframe1/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">goframe框架-1</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s6/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k8s实践与总结-4(控制器)</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Feb 1</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/gofamedir/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">goframe目录</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s5/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k8s实践与总结-3(pod生命周期)</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 4</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/go_part2/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">学习go(第二部分)</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s4/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k8s实践与总结-2(资源与属性)</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 3</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/go_part1/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">学习go(第一部分)</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s3/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k8s实践与总结-1(pod)</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 2</span>
+              <span class="archive__date">Jun 23</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/install_linux/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">linux安装golang</a>
+          <a href="http://ingress.test1.com/en/stack/k8s/k8s2/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">k3s&#43;multipass实践k8s集群操作</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 2</span>
+              <span class="archive__date">Jun 1</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/tips/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">golang注意事项</a>
+          <a href="http://ingress.test1.com/en/stack/javascript/style/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">样式技巧</a>        
         </li>
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
               <span class="archive__type">stack</span>
-              <span class="archive__date">Jan 1</span>
+              <span class="archive__date">Jun 1</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/stack/golang/get_started/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">golang安装、配置及版本升级</a>
+          <a href="http://ingress.test1.com/en/stack/javascript/debugger/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Vue的debug调试</a>        
         </li>
-        
-      </ul>
-    
-      <span class="archive__key" data-ani="true">2020</span>
-      <ul class="archive__ul" data-dir="ltr">
         
         <li class="archive__li" data-dir="ltr">
           <span class="archive__meta" data-ani="true">
             
-              <span class="archive__type">posts</span>
-              <span class="archive__date">Jan 25</span>
+              <span class="archive__type">stack</span>
+              <span class="archive__date">Jun 1</span>
             
           </span>
-          <a href="http://wangjinbao.netlify.app/en/posts/django/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">django框架</a>
+          <a href="http://ingress.test1.com/en/stack/javascript/demo/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">vue3简单例子</a>        
+        </li>
+        
+        <li class="archive__li" data-dir="ltr">
+          <span class="archive__meta" data-ani="true">
+            
+              <span class="archive__type">stack</span>
+              <span class="archive__date">Jun 1</span>
+            
+          </span>
+          <a href="http://ingress.test1.com/en/stack/javascript/vue1/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">vue3框架</a>        
         </li>
         
       </ul>
@@ -1967,6 +1928,10 @@
   
   
   
+    
+      
+    
+    
     
   
   <ul class="pagination">
@@ -1984,6 +1949,32 @@
       
       
         <li ><a href="/en/archive/page/3/">3</a></li>
+      
+    
+      
+      
+        <li ><a href="/en/archive/page/4/">4</a></li>
+      
+    
+      
+      
+        <li ><a href="/en/archive/page/5/">5</a></li>
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+        <li class="disabled"><a name="">&hellip;</a></li>
+      
+    
+      
+      
+        <li ><a href="/en/archive/page/9/">9</a></li>
       
     
   </ul>
@@ -2025,7 +2016,7 @@
         
           
             
-              <a href="http://wangjinbao.netlify.app/en/archive/" data-lang="en" class="dropdown-item is-active">English</a>
+              <a href="http://ingress.test1.com/en/archive/" data-lang="en" class="dropdown-item is-active">English</a>
             
           
         
@@ -2041,7 +2032,7 @@
         
           
             
-              <a href="http://wangjinbao.netlify.app/ko/archive/" data-lang="ko" class="dropdown-item">한국어</a>
+              <a href="http://ingress.test1.com/ko/archive/" data-lang="ko" class="dropdown-item">한국어</a>
             
           
         
@@ -2174,7 +2165,7 @@
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2024, All Rights Reserved
                 
             </p>
         

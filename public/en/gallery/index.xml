@@ -7,30 +7,30 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on Home</title>
-    <link>http://wangjinbao.netlify.app/en/gallery/</link>
+    <link>http://ingress.test1.com/en/gallery/</link>
     <description>Recent content in Galleries on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
     <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
+    <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
-        <atom:link href="http://wangjinbao.netlify.app/en/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://ingress.test1.com/en/gallery/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Cartoon</title>
-        <link>http://wangjinbao.netlify.app/en/gallery/cartoon/</link>
+        <link>http://ingress.test1.com/en/gallery/cartoon/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>http://wangjinbao.netlify.app/en/gallery/cartoon/</guid>
+        <guid>http://ingress.test1.com/en/gallery/cartoon/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://wangjinbao.netlify.appimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://ingress.test1.comimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -40,15 +40,15 @@
       
       <item>
         <title>Photo</title>
-        <link>http://wangjinbao.netlify.app/en/gallery/photo/</link>
+        <link>http://ingress.test1.com/en/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
-        <guid>http://wangjinbao.netlify.app/en/gallery/photo/</guid>
+        <guid>http://ingress.test1.com/en/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://wangjinbao.netlify.appimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://ingress.test1.comimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

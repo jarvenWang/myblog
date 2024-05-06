@@ -7,26 +7,26 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Home</title>
-    <link>http://wangjinbao.netlify.app/en/categories/</link>
+    <link>http://ingress.test1.com/en/categories/</link>
     <description>Recent content in Categories on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
     <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 24 Jan 2020 06:40:51 +0900</lastBuildDate>
+    <copyright>©2024, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 23 Jun 2023 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://wangjinbao.netlify.app/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://ingress.test1.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>hugo</title>
-        <link>http://wangjinbao.netlify.app/en/categories/hugo/</link>
-        <pubDate>Fri, 24 Jan 2020 06:40:51 +0900</pubDate>
+        <title>k3s</title>
+        <link>http://ingress.test1.com/en/categories/k3s/</link>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://wangjinbao.netlify.app/en/categories/hugo/</guid>
+        <guid>http://ingress.test1.com/en/categories/k3s/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -39,12 +39,12 @@
       </item>
       
       <item>
-        <title>syntax</title>
-        <link>http://wangjinbao.netlify.app/en/categories/syntax/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>k8s</title>
+        <link>http://ingress.test1.com/en/categories/k8s/</link>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://wangjinbao.netlify.app/en/categories/syntax/</guid>
+        <guid>http://ingress.test1.com/en/categories/k8s/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -57,12 +57,12 @@
       </item>
       
       <item>
-        <title>themes</title>
-        <link>http://wangjinbao.netlify.app/en/categories/themes/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>multipass</title>
+        <link>http://ingress.test1.com/en/categories/multipass/</link>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://wangjinbao.netlify.app/en/categories/themes/</guid>
+        <guid>http://ingress.test1.com/en/categories/multipass/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -75,12 +75,12 @@
       </item>
       
       <item>
-        <title>diagram</title>
-        <link>http://wangjinbao.netlify.app/en/categories/diagram/</link>
-        <pubDate>Mon, 18 Nov 2019 21:00:06 +0900</pubDate>
+        <title>jeager</title>
+        <link>http://ingress.test1.com/en/categories/jeager/</link>
+        <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://wangjinbao.netlify.app/en/categories/diagram/</guid>
+        <guid>http://ingress.test1.com/en/categories/jeager/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -93,12 +93,300 @@
       </item>
       
       <item>
-        <title>math</title>
-        <link>http://wangjinbao.netlify.app/en/categories/math/</link>
-        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
+        <title>prometheus</title>
+        <link>http://ingress.test1.com/en/categories/prometheus/</link>
+        <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://wangjinbao.netlify.app/en/categories/math/</guid>
+        <guid>http://ingress.test1.com/en/categories/prometheus/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>yaml</title>
+        <link>http://ingress.test1.com/en/categories/yaml/</link>
+        <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/yaml/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>consul</title>
+        <link>http://ingress.test1.com/en/categories/consul/</link>
+        <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/consul/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>seata</title>
+        <link>http://ingress.test1.com/en/categories/seata/</link>
+        <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/seata/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>db</title>
+        <link>http://ingress.test1.com/en/categories/db/</link>
+        <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/db/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>go</title>
+        <link>http://ingress.test1.com/en/categories/go/</link>
+        <pubDate>Sat, 03 Dec 2022 00:00:01 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/go/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>helm</title>
+        <link>http://ingress.test1.com/en/categories/helm/</link>
+        <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/helm/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>minikube</title>
+        <link>http://ingress.test1.com/en/categories/minikube/</link>
+        <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/minikube/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>es</title>
+        <link>http://ingress.test1.com/en/categories/es/</link>
+        <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/es/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>fluentd</title>
+        <link>http://ingress.test1.com/en/categories/fluentd/</link>
+        <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/fluentd/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kibana</title>
+        <link>http://ingress.test1.com/en/categories/kibana/</link>
+        <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/kibana/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>golang</title>
+        <link>http://ingress.test1.com/en/categories/golang/</link>
+        <pubDate>Wed, 08 Jun 2022 12:00:06 +0900</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/golang/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>mysql</title>
+        <link>http://ingress.test1.com/en/categories/mysql/</link>
+        <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/mysql/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>redis</title>
+        <link>http://ingress.test1.com/en/categories/redis/</link>
+        <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/redis/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kafka</title>
+        <link>http://ingress.test1.com/en/categories/kafka/</link>
+        <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/kafka/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>linux</title>
+        <link>http://ingress.test1.com/en/categories/linux/</link>
+        <pubDate>Sun, 02 Jan 2022 00:00:01 +0000</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/linux/</guid>
+        <description></description>
+        
+        <dc:creator>wangjinbao</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>python</title>
+        <link>http://ingress.test1.com/en/categories/python/</link>
+        <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
+        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        
+        <guid>http://ingress.test1.com/en/categories/python/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>

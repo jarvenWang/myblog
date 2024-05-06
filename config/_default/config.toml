@@ -1,4 +1,4 @@
-baseURL = "http://wangjinbao.netlify.app"
+baseURL = "http://ingress.test1.com"
 title = "The blog of wangjinbao"
 theme = "zzo"
 

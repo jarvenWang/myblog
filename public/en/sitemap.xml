@@ -2,346 +2,642 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://wangjinbao.netlify.app/en/showcase/hugo/hugo-theme-zzo/</loc>
+    <loc>http://ingress.test1.com/en/showcase/hugo/hugo-theme-zzo/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/showcase/hugo/hugo-theme-zdoc/</loc>
+    <loc>http://ingress.test1.com/en/showcase/hugo/hugo-theme-zdoc/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/golang/</loc>
-    <lastmod>2022-06-08T12:00:06+09:00</lastmod>
+    <loc>http://ingress.test1.com/en/tags/bigdata/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/</loc>
-    <lastmod>2022-06-08T12:00:06+09:00</lastmod>
+    <loc>http://ingress.test1.com/en/stack/bigdata/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/grow_up/</loc>
-    <lastmod>2022-06-08T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/</loc>
-    <lastmod>2022-06-08T12:00:06+09:00</lastmod>
+    <loc>http://ingress.test1.com/en/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/"
+                href="http://ingress.test1.com/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/"
+                href="http://ingress.test1.com/en/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/</loc>
-    <lastmod>2022-06-08T12:00:06+09:00</lastmod>
+    <loc>http://ingress.test1.com/en/stack/bigdata/starrocks/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/tags/"
+                href="http://ingress.test1.com/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/tags/"
+                href="http://ingress.test1.com/en/tags/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/</loc>
+    <loc>http://ingress.test1.com/en/stack/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/design/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://ingress.test1.com/ko/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ingress.test1.com/en/categories/"
+                />
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/k3s/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s2/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/k8s/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/k8s/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s3/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s4/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s5/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s6/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s7/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s8/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/multipass/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/javascript/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/project/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/vue1/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/demo/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/debugger/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/style/</loc>
+    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/airflow/</loc>
+    <lastmod>2023-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/dolphinscheduler/</loc>
+    <lastmod>2023-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/sql_func/</loc>
+    <lastmod>2023-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/sql_high/</loc>
+    <lastmod>2023-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/select/</loc>
+    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/plan/</loc>
+    <lastmod>2023-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/jeager/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/jeager/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/knowledge/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/opentracing/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/prometheus/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/prometheus/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/yaml/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/tips/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/yaml/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/consul/</loc>
+    <lastmod>2023-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/consul_center/</loc>
+    <lastmod>2023-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/seata/</loc>
+    <lastmod>2023-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/seata/</loc>
+    <lastmod>2023-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/db/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/db/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/posts/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://ingress.test1.com/ko/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ingress.test1.com/en/posts/"
+                />
+  </url><url>
+    <loc>http://ingress.test1.com/en/posts/gift/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/bigdata/gift/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/golang/</loc>
+    <lastmod>2022-12-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/</loc>
+    <lastmod>2022-12-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/gin_gorilla/</loc>
+    <lastmod>2022-12-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/kratos_project/</loc>
+    <lastmod>2022-12-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_crypt/</loc>
+    <lastmod>2022-12-04T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/paxos/</loc>
+    <lastmod>2022-12-04T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/consul/</loc>
+    <lastmod>2022-12-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/debug/</loc>
+    <lastmod>2022-12-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/gin_validator/</loc>
+    <lastmod>2022-12-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/go/</loc>
+    <lastmod>2022-12-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/kratos/</loc>
+    <lastmod>2022-12-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/microservices/</loc>
+    <lastmod>2022-12-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/mod/</loc>
+    <lastmod>2022-12-02T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/k8s/</loc>
+    <lastmod>2022-11-04T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/linux/</loc>
+    <lastmod>2022-11-04T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/</loc>
+    <lastmod>2022-11-04T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/serverless/</loc>
+    <lastmod>2022-11-04T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/process/</loc>
+    <lastmod>2022-11-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/socket/</loc>
+    <lastmod>2022-11-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/gorountine/</loc>
+    <lastmod>2022-11-03T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/epoll/</loc>
+    <lastmod>2022-11-02T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/gorountines/</loc>
+    <lastmod>2022-11-02T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/layout/</loc>
+    <lastmod>2022-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/yarn/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/javascript/system/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/docker/</loc>
+    <lastmod>2022-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/helm/</loc>
+    <lastmod>2022-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/minikube/</loc>
+    <lastmod>2022-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/k8s1/</loc>
+    <lastmod>2022-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/efk/</loc>
+    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/es/</loc>
+    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/fluentd/</loc>
+    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/kibana/</loc>
+    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/golang/</loc>
     <lastmod>2022-06-08T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/linux/</loc>
+    <loc>http://ingress.test1.com/en/posts/grow_up/</loc>
+    <lastmod>2022-06-08T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/career/qtjq/</loc>
+    <lastmod>2022-06-06T00:00:05+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/career/</loc>
+    <lastmod>2022-06-06T00:00:05+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/career/</loc>
+    <lastmod>2022-06-06T00:00:05+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/career/txjy/</loc>
+    <lastmod>2022-06-06T00:00:03+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/career/tjy/</loc>
+    <lastmod>2022-06-06T00:00:02+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/career/zybne/</loc>
+    <lastmod>2022-06-06T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/minukube/</loc>
+    <lastmod>2022-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/kubernetes/</loc>
+    <lastmod>2022-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/python/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/python/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/python/answer/</loc>
+    <lastmod>2022-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/mysql/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/python/links/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/e2e/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/transaction/</loc>
+    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/redis/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/data_same/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/monitor/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/trace/</loc>
+    <lastmod>2022-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/kafkatips/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/categories/kafka/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/kafkaquestion/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/observation/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/manyquest/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/filebeat/</loc>
+    <lastmod>2022-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/knowledge/kafka/</loc>
+    <lastmod>2022-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_memery_analysis/</loc>
+    <lastmod>2022-02-06T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_package_sync/</loc>
+    <lastmod>2022-02-06T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_memery_cms/</loc>
+    <lastmod>2022-02-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_commond/</loc>
+    <lastmod>2022-02-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/centos_stop/</loc>
+    <lastmod>2022-01-05T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/istio/</loc>
     <lastmod>2022-01-02T00:00:01+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/linux/</loc>
+    <loc>http://ingress.test1.com/en/categories/linux/</loc>
     <lastmod>2022-01-02T00:00:01+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/linux/zsh/</loc>
+    <loc>http://ingress.test1.com/en/stack/linux/zsh/</loc>
     <lastmod>2022-01-02T00:00:01+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/linux/proxy47/</loc>
+    <loc>http://ingress.test1.com/en/stack/linux/linux_model/</loc>
     <lastmod>2022-01-01T00:00:01+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/goframe_machinery/</loc>
+    <loc>http://ingress.test1.com/en/stack/linux/proxy47/</loc>
+    <lastmod>2022-01-01T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/goframe_machinery/</loc>
     <lastmod>2021-12-01T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/goframe2/</loc>
+    <loc>http://ingress.test1.com/en/stack/k8s/sshlogin/</loc>
+    <lastmod>2021-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/k8s/docker/</loc>
+    <lastmod>2021-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/goframe2/</loc>
     <lastmod>2021-02-03T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/goframe1/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/goframe1/</loc>
     <lastmod>2021-02-02T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/gofamedir/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/gofamedir/</loc>
     <lastmod>2021-02-01T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/go_part2/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/go_part2/</loc>
     <lastmod>2021-01-04T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/go_part1/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/go_part1/</loc>
     <lastmod>2021-01-03T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/install_linux/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/install_linux/</loc>
     <lastmod>2021-01-02T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/tips/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/tips/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/golang/get_started/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/get_started/</loc>
     <lastmod>2021-01-01T01:01:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/article/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/go_observer/</loc>
+    <lastmod>2021-01-01T00:00:10+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_decorator/</loc>
+    <lastmod>2021-01-01T00:00:09+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_factory/</loc>
+    <lastmod>2021-01-01T00:00:08+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_singleton/</loc>
+    <lastmod>2021-01-01T00:00:07+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_pkg_normal/</loc>
+    <lastmod>2021-01-01T00:00:05+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_gopath/</loc>
+    <lastmod>2021-01-01T00:00:03+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/finalshell/</loc>
+    <lastmod>2021-01-01T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/golang/go_package/</loc>
+    <lastmod>2021-01-01T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/shell/</loc>
+    <lastmod>2021-01-01T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/linux1/</loc>
+    <lastmod>2021-01-01T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/linux/date/</loc>
+    <lastmod>2021-01-01T00:00:01+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/php/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/php/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/stack/php/design/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://ingress.test1.com/en/publication/article/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/book/</loc>
+    <loc>http://ingress.test1.com/en/publication/book/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/misc/</loc>
+    <loc>http://ingress.test1.com/en/publication/misc/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/</loc>
+    <loc>http://ingress.test1.com/en/publication/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/django/</loc>
+    <loc>http://ingress.test1.com/en/posts/django/</loc>
     <lastmod>2020-01-25T06:40:51+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wangjinbao.netlify.app/en/posts/"
-                />
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/shortcode/</loc>
+    <loc>http://ingress.test1.com/en/stack/python/django/</loc>
     <lastmod>2020-01-25T06:40:51+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/categories/</loc>
-    <lastmod>2020-01-24T06:40:51+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wangjinbao.netlify.app/en/categories/"
-                />
+    <loc>http://ingress.test1.com/en/categories/python/</loc>
+    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/hugo/</loc>
-    <lastmod>2020-01-24T06:40:51+09:00</lastmod>
+    <loc>http://ingress.test1.com/en/tags/shortcode/</loc>
+    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/categories/hugo/</loc>
-    <lastmod>2020-01-24T06:40:51+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/syntax-highlight/</loc>
-    <lastmod>2020-01-24T06:40:51+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/shortcodes/</loc>
-    <lastmod>2020-01-23T06:40:51+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/showcase/hugo/</loc>
+    <loc>http://ingress.test1.com/en/showcase/hugo/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/showcase/</loc>
+    <loc>http://ingress.test1.com/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/css/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/html/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/markdown/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/markdown-syntax/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/series/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://wangjinbao.netlify.app/en/series/"
-                />
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/categories/syntax/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/themes/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/categories/themes/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/series/themes-guide/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/math-typesetting/</loc>
-    <lastmod>2019-12-17T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/amoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/bamoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/emoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/emoji-support/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/gamoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/namoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/categories/diagram/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-viz/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-wavedrom/</loc>
-    <lastmod>2019-11-18T18:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-chartjs/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-js-sequence-diagrams/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/diagram/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-mermaid/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/categories/math/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-mathjax/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-katex/</loc>
-    <lastmod>2019-11-15T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/posts/test-flowchart/</loc>
-    <lastmod>2019-11-14T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>http://wangjinbao.netlify.app/en/gallery/cartoon/</loc>
+    <loc>http://ingress.test1.com/en/gallery/cartoon/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/gallery/cartoon/"
+                href="http://ingress.test1.com/ko/gallery/cartoon/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/gallery/cartoon/"
+                href="http://ingress.test1.com/en/gallery/cartoon/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/gallery/</loc>
+    <loc>http://ingress.test1.com/en/gallery/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/gallery/"
+                href="http://ingress.test1.com/ko/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/gallery/"
+                href="http://ingress.test1.com/en/gallery/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/gallery/photo/</loc>
+    <loc>http://ingress.test1.com/en/gallery/photo/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/gallery/photo/"
+                href="http://ingress.test1.com/ko/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/gallery/photo/"
+                href="http://ingress.test1.com/en/gallery/photo/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/experience/</loc>
+    <loc>http://ingress.test1.com/en/experience/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/presentation/dir/fourth/</loc>
+    <loc>http://ingress.test1.com/en/presentation/dir/fourth/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/presentation/</loc>
+    <loc>http://ingress.test1.com/en/presentation/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/presentation/third/</loc>
+    <loc>http://ingress.test1.com/en/presentation/third/</loc>
     <lastmod>2019-10-30T20:46:30+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/presentation/second/</loc>
+    <loc>http://ingress.test1.com/en/presentation/second/</loc>
     <lastmod>2019-10-30T20:45:24+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/presentation/first/</loc>
+    <loc>http://ingress.test1.com/en/presentation/first/</loc>
     <lastmod>2019-10-30T19:45:20+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/archive/</loc>
+    <loc>http://ingress.test1.com/en/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/archive/"
+                href="http://ingress.test1.com/ko/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/archive/"
+                href="http://ingress.test1.com/en/archive/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/about/</loc>
+    <loc>http://ingress.test1.com/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/about/"
+                href="http://ingress.test1.com/ko/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/about/"
+                href="http://ingress.test1.com/en/about/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/article/article_any_folder_name_1/</loc>
+    <loc>http://ingress.test1.com/en/publication/article/article_any_folder_name_1/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/book/book_any_folder_name_1/</loc>
+    <loc>http://ingress.test1.com/en/publication/book/book_any_folder_name_1/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/publication/misc/misc_any_folder_name_1/</loc>
+    <loc>http://ingress.test1.com/en/publication/misc/misc_any_folder_name_1/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/index/</loc>
+    <loc>http://ingress.test1.com/en/stack/golang/go_package_achieve/</loc>
+  </url><url>
+    <loc>http://ingress.test1.com/en/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/tags/index/"
+                href="http://ingress.test1.com/ko/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/tags/index/"
+                href="http://ingress.test1.com/en/tags/index/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/javascript/</loc>
+    <loc>http://ingress.test1.com/en/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://ingress.test1.com/ko/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ingress.test1.com/en/series/"
+                />
   </url>
 </urlset>

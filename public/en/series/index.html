@@ -651,9 +651,9 @@
 
   
     
-    var baseurl = JSON.parse("\"http://wangjinbao.netlify.app\"");
+    var baseurl = JSON.parse("\"http://ingress.test1.com\"");
     
-    var permalink = JSON.parse("\"http://wangjinbao.netlify.app/en/series/\"");
+    var permalink = JSON.parse("\"http://ingress.test1.com/en/series/\"");
     
     var langprefix = JSON.parse("\"/en\"");
     var searchResults = null;
@@ -1331,21 +1331,21 @@
 
 
     
-<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="http://wangjinbao.netlify.app/en/series/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="http://ingress.test1.com/en/series/index.xml">
 
 <meta name="description" content="这是一个分享作者技术知识、生活阅历的个人博客." />
 
 
-<meta name="created" content="2019-12-20T12:00:06&#43;0900">
-<meta name="modified" content="2019-12-20T12:00:06&#43;0900">
-<meta property="article:published_time" content="2019-12-20T12:00:06&#43;0900">
+<meta name="created" content="0001-01-01T00:00:00&#43;0000">
+<meta name="modified" content="0001-01-01T00:00:00&#43;0000">
+<meta property="article:published_time" content="0001-01-01T00:00:00&#43;0000">
 
 <meta name="author" content="wangjinbao">
 
 
 <meta property="og:site_name" content="Home">
 <meta property="og:title" content="Series">
-<meta property="og:url" content="http://wangjinbao.netlify.app/en/series/">
+<meta property="og:url" content="http://ingress.test1.com/en/series/">
 <meta property="og:type" content="website">
 <meta property="og:description" content="这是一个分享作者技术知识、生活阅历的个人博客.">
 
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="http://wangjinbao.netlify.app/en/series/">
+<link rel="canonical" href="http://ingress.test1.com/en/series/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1384,17 +1384,17 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url" : "http://wangjinbao.netlify.app/en/series/",
+    "url" : "http://ingress.test1.com/en/series/",
     "name": "Series",
     "description": "这是一个分享作者技术知识、生活阅历的个人博客.",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "http://wangjinbao.netlify.app"
+      "@id": "http://ingress.test1.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Home",
-      "url": "http://wangjinbao.netlify.app"
+      "url": "http://ingress.test1.com"
     }
   }
 </script>
@@ -1412,7 +1412,7 @@
     
 </head>
 
-<body id="root" class="theme__kimbie">
+<body id="root" class="theme__dark">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1451,7 +1451,7 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          kimbie
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1467,7 +1467,7 @@
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          kimbie
         </a>
         
       
@@ -1510,46 +1510,8 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/about">About</a>
+          <a href="/en/archive">历程图</a>
         </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item ">
-          <a href="/en/archive">Archive</a>
-        </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item ">
-          <a href="/en/gallery">
-            Gallery
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-          </a>
-        </li>
-
-        
-          <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/gallery/cartoon">Cartoon</a>
-          </li>
-        
-          <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/gallery/photo">Photo</a>
-          </li>
-        
-
       
       
     
@@ -1561,7 +1523,7 @@
       
         <li class="navbarm__menu--item ">
           <a href="/en/stack">
-            语言
+            技术类型
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
           </a>
         </li>
@@ -1569,6 +1531,14 @@
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
             <a href="/en/stack/golang">golang</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/php">php</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/python">python</a>
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
@@ -1580,11 +1550,15 @@
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/stack/php">php</a>
+            <a href="/en/stack/bigdata">bigdata</a>
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/en/stack/python">python</a>
+            <a href="/en/stack/k8s">k8s</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/en/stack/knowledge">knowledge</a>
           </li>
         
 
@@ -1598,7 +1572,7 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/posts">帖子</a>
+          <a href="/en/about">个人经历</a>
         </li>
       
       
@@ -1610,7 +1584,7 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/showcase">Showcase</a>
+          <a href="/en/posts">热门帖子</a>
         </li>
       
       
@@ -1622,7 +1596,19 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/en/experience">图片</a>
+          <a href="/en/showcase">开源项目</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/en/experience">个人风采</a>
         </li>
       
       
@@ -1662,7 +1648,7 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          kimbie
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1678,7 +1664,7 @@
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          kimbie
         </a>
         
       
@@ -1693,36 +1679,7 @@
   
   
   
-  <a href="/en/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">About</a>
-  
-  
-  
-  
-  
-  
-  
-  <a href="/en/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Archive</a>
-  
-  
-  
-  
-  
-  
-  
-  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
-    <a href="/en/gallery" class="navbar__menu-item "
-      dir="ltr">
-      Gallery
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-    </a>
-    <div class="navbar__dropdown--content">
-      
-      <a href="/en/gallery/cartoon" class="navbar__dropdown--item" dir="ltr">Cartoon</a>
-      
-      <a href="/en/gallery/photo" class="navbar__dropdown--item" dir="ltr">Photo</a>
-      
-    </div>
-  </div>
+  <a href="/en/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">历程图</a>
   
   
   
@@ -1733,20 +1690,26 @@
   <div class="navbar__dropdown navbar__slide-down" data-ani="true">
     <a href="/en/stack" class="navbar__menu-item "
       dir="ltr">
-      语言
+      技术类型
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
     </a>
     <div class="navbar__dropdown--content">
       
       <a href="/en/stack/golang" class="navbar__dropdown--item" dir="ltr">golang</a>
       
+      <a href="/en/stack/php" class="navbar__dropdown--item" dir="ltr">php</a>
+      
+      <a href="/en/stack/python" class="navbar__dropdown--item" dir="ltr">python</a>
+      
       <a href="/en/stack/javascript" class="navbar__dropdown--item" dir="ltr">javascript</a>
       
       <a href="/en/stack/linux" class="navbar__dropdown--item" dir="ltr">linux</a>
       
-      <a href="/en/stack/php" class="navbar__dropdown--item" dir="ltr">php</a>
+      <a href="/en/stack/bigdata" class="navbar__dropdown--item" dir="ltr">bigdata</a>
       
-      <a href="/en/stack/python" class="navbar__dropdown--item" dir="ltr">python</a>
+      <a href="/en/stack/k8s" class="navbar__dropdown--item" dir="ltr">k8s</a>
+      
+      <a href="/en/stack/knowledge" class="navbar__dropdown--item" dir="ltr">knowledge</a>
       
     </div>
   </div>
@@ -1757,7 +1720,7 @@
   
   
   
-  <a href="/en/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">帖子</a>
+  <a href="/en/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">个人经历</a>
   
   
   
@@ -1765,7 +1728,7 @@
   
   
   
-  <a href="/en/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Showcase</a>
+  <a href="/en/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">热门帖子</a>
   
   
   
@@ -1773,7 +1736,15 @@
   
   
   
-  <a href="/en/experience" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">图片</a>
+  <a href="/en/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">开源项目</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/en/experience" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">个人风采</a>
   
   
 </div>
@@ -1786,15 +1757,6 @@
 </header>
 <main class="terms main">  
   <div class="terms__list">
-    
-    
-      <a href="/en/series/themes-guide/" class="terms__item is-small">
-        <span class="terms__series">
-          Themes Guide
-        </span>
-        <span class="terms__len">(1)</span>
-      </a>
-    
     
   </div>
 </main>
@@ -1834,7 +1796,7 @@
         
           
             
-              <a href="http://wangjinbao.netlify.app/en/series/" data-lang="en" class="dropdown-item is-active">English</a>
+              <a href="http://ingress.test1.com/en/series/" data-lang="en" class="dropdown-item is-active">English</a>
             
           
         
@@ -1850,7 +1812,7 @@
         
           
             
-              <a href="http://wangjinbao.netlify.app/ko/series/" data-lang="ko" class="dropdown-item">한국어</a>
+              <a href="http://ingress.test1.com/ko/series/" data-lang="ko" class="dropdown-item">한국어</a>
             
           
         
@@ -1958,7 +1920,7 @@
   
   
     
-      <a href="http://wangjinbao.netlify.app/en/series//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+      <a href="http://ingress.test1.com/en/series//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
       </a>
     
@@ -1990,7 +1952,7 @@
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2024, All Rights Reserved
                 
             </p>
         

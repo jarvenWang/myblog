@@ -7,16 +7,16 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Hugo Zzo Theme</title>
-    <link>http://wangjinbao.netlify.app/ko/</link>
+    <link>http://ingress.test1.com/ko/</link>
     <description>Recent content on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
     <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
+    <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
     
-        <atom:link href="http://wangjinbao.netlify.app/ko/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://ingress.test1.com/ko/index.xml" rel="self" type="application/rss+xml" />
     
       
       

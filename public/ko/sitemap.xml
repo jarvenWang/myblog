@@ -2,142 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://wangjinbao.netlify.app/ko/</loc>
+    <loc>http://ingress.test1.com/ko/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/"
+                href="http://ingress.test1.com/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/"
+                href="http://ingress.test1.com/ko/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/archive/</loc>
+    <loc>http://ingress.test1.com/ko/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/archive/"
+                href="http://ingress.test1.com/en/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/archive/"
+                href="http://ingress.test1.com/ko/archive/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/about/</loc>
+    <loc>http://ingress.test1.com/ko/about/</loc>
     <lastmod>2019-10-09T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/about/"
+                href="http://ingress.test1.com/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/about/"
+                href="http://ingress.test1.com/ko/about/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/gallery/</loc>
+    <loc>http://ingress.test1.com/ko/gallery/</loc>
     <lastmod>2018-10-12T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/gallery/"
+                href="http://ingress.test1.com/en/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/gallery/"
+                href="http://ingress.test1.com/ko/gallery/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/gallery/photo/</loc>
+    <loc>http://ingress.test1.com/ko/gallery/photo/</loc>
     <lastmod>2018-10-12T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/gallery/photo/"
+                href="http://ingress.test1.com/en/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/gallery/photo/"
+                href="http://ingress.test1.com/ko/gallery/photo/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/gallery/cartoon/</loc>
+    <loc>http://ingress.test1.com/ko/gallery/cartoon/</loc>
     <lastmod>2018-10-11T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/gallery/cartoon/"
+                href="http://ingress.test1.com/en/gallery/cartoon/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/gallery/cartoon/"
+                href="http://ingress.test1.com/ko/gallery/cartoon/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/categories/</loc>
+    <loc>http://ingress.test1.com/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/categories/"
+                href="http://ingress.test1.com/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/categories/"
+                href="http://ingress.test1.com/ko/categories/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/tags/index/</loc>
+    <loc>http://ingress.test1.com/ko/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/tags/index/"
+                href="http://ingress.test1.com/en/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/tags/index/"
+                href="http://ingress.test1.com/ko/tags/index/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/posts/</loc>
+    <loc>http://ingress.test1.com/ko/posts/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/posts/"
+                href="http://ingress.test1.com/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/posts/"
+                href="http://ingress.test1.com/ko/posts/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/series/</loc>
+    <loc>http://ingress.test1.com/ko/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/series/"
+                href="http://ingress.test1.com/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/series/"
+                href="http://ingress.test1.com/ko/series/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/ko/tags/</loc>
+    <loc>http://ingress.test1.com/ko/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://wangjinbao.netlify.app/en/tags/"
+                href="http://ingress.test1.com/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://wangjinbao.netlify.app/ko/tags/"
+                href="http://ingress.test1.com/ko/tags/"
                 />
   </url>
 </urlset>
