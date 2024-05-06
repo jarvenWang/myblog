@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Home</title>
-    <link>http://ingress.test1.com/en/tags/</link>
+    <link>http://wangjinbao.netlify.app/en/tags/</link>
     <description>Recent content in Tags on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 08 Jun 2022 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://ingress.test1.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://wangjinbao.netlify.app/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>golang</title>
-        <link>http://ingress.test1.com/en/tags/golang/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/golang/</link>
         <pubDate>Wed, 08 Jun 2022 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/golang/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/golang/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>linux</title>
-        <link>http://ingress.test1.com/en/tags/linux/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/linux/</link>
         <pubDate>Sun, 02 Jan 2022 00:00:01 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/linux/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/linux/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>shortcode</title>
-        <link>http://ingress.test1.com/en/tags/shortcode/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/shortcode/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/shortcode/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/shortcode/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>hugo</title>
-        <link>http://ingress.test1.com/en/tags/hugo/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/hugo/</link>
         <pubDate>Fri, 24 Jan 2020 06:40:51 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/hugo/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/hugo/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>css</title>
-        <link>http://ingress.test1.com/en/tags/css/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/css/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/css/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/css/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -112,11 +112,11 @@
       
       <item>
         <title>html</title>
-        <link>http://ingress.test1.com/en/tags/html/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/html/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/html/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/html/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -130,11 +130,11 @@
       
       <item>
         <title>markdown</title>
-        <link>http://ingress.test1.com/en/tags/markdown/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/markdown/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/markdown/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/markdown/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -148,11 +148,11 @@
       
       <item>
         <title>themes</title>
-        <link>http://ingress.test1.com/en/tags/themes/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/themes/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/themes/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/themes/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -166,11 +166,11 @@
       
       <item>
         <title>amoji</title>
-        <link>http://ingress.test1.com/en/tags/amoji/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/amoji/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/amoji/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/amoji/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -184,11 +184,11 @@
       
       <item>
         <title>bamoji</title>
-        <link>http://ingress.test1.com/en/tags/bamoji/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/bamoji/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/bamoji/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/bamoji/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -202,11 +202,11 @@
       
       <item>
         <title>emoji</title>
-        <link>http://ingress.test1.com/en/tags/emoji/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/emoji/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/emoji/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/emoji/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -220,11 +220,11 @@
       
       <item>
         <title>gamoji</title>
-        <link>http://ingress.test1.com/en/tags/gamoji/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/gamoji/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/gamoji/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/gamoji/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -238,11 +238,11 @@
       
       <item>
         <title>namoji</title>
-        <link>http://ingress.test1.com/en/tags/namoji/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/namoji/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/namoji/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/namoji/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -256,11 +256,11 @@
       
       <item>
         <title>diagram</title>
-        <link>http://ingress.test1.com/en/tags/diagram/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/diagram/</link>
         <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/diagram/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/diagram/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -274,11 +274,11 @@
       
       <item>
         <title>index</title>
-        <link>http://ingress.test1.com/en/tags/index/</link>
+        <link>http://wangjinbao.netlify.app/en/tags/index/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/tags/index/</guid>
+        <guid>http://wangjinbao.netlify.app/en/tags/index/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>

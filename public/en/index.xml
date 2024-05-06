@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Home</title>
-    <link>http://ingress.test1.com/en/</link>
+    <link>http://wangjinbao.netlify.app/en/</link>
     <description>Recent content on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 08 Jun 2022 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://ingress.test1.com/en/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://wangjinbao.netlify.app/en/index.xml" rel="self" type="application/rss+xml" />
     
       
       
@@ -43,15 +43,15 @@
       
       <item>
         <title>go开发者成长路线图</title>
-        <link>http://ingress.test1.com/en/stack/golang/grow_up/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/grow_up/</link>
         <pubDate>Wed, 08 Jun 2022 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Wed, 08 Jun 2022 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/grow_up/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/grow_up/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature3/img_2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature3/img_2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -69,11 +69,11 @@
       
       <item>
         <title>zsh下安装主题Powerlevel9k</title>
-        <link>http://ingress.test1.com/en/stack/linux/zsh/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/linux/zsh/</link>
         <pubDate>Sun, 02 Jan 2022 00:00:01 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sun, 02 Jan 2022 00:00:01 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/linux/zsh/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/linux/zsh/</guid>
         <description>安装 Powerlevel9k 步骤一：安装 Powerline 字体库 1 2 3 4 $git clone https://github.com/powerline/fonts.git $./install.sh Copying fonts... Powerline fonts installed to /Users/wangdante/Library/Fonts （字段安装的目录） brew tap 更新第三方库，才能用 homebrew 安裝字型。执行过可以跳过 brew tap caskroom/fonts (旧版本，</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -95,11 +95,11 @@
       
       <item>
         <title>Nginx负载均衡中4层代理和7层代理的区别</title>
-        <link>http://ingress.test1.com/en/stack/linux/proxy47/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/linux/proxy47/</link>
         <pubDate>Sat, 01 Jan 2022 00:00:01 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sat, 01 Jan 2022 00:00:01 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/linux/proxy47/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/linux/proxy47/</guid>
         <description>一、4层代理和7层代理什么意思？ 这里的层是OSI 7层网络模型，OSI 模型是从上往下的，越底层越接近硬件，越往上越接近软件，这七层模型分别是：</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -121,11 +121,11 @@
       
       <item>
         <title>goframe框架集成任务队列machinery和定时任务</title>
-        <link>http://ingress.test1.com/en/stack/golang/goframe_machinery/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/goframe_machinery/</link>
         <pubDate>Wed, 01 Dec 2021 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Wed, 01 Dec 2021 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/goframe_machinery/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/goframe_machinery/</guid>
         <description>Machinery Golang的分布式任务队列还不算多，目前比较成熟的应该就只有 Machinery 了。 如果熟悉Python中的异步任务框架的话，想必一定听过Celery。 异</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -147,11 +147,11 @@
       
       <item>
         <title>goframe框架-2</title>
-        <link>http://ingress.test1.com/en/stack/golang/goframe2/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/goframe2/</link>
         <pubDate>Wed, 03 Feb 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Wed, 03 Feb 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/goframe2/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/goframe2/</guid>
         <description>命令管理 GetArg*参数获取 GetArg 方法用以获取默认解析的命令行参数，参数通过输入索引位置获取，索引位置从 0 开始，但往往我们需要获取的参数是从 1</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -173,11 +173,11 @@
       
       <item>
         <title>goframe框架-1</title>
-        <link>http://ingress.test1.com/en/stack/golang/goframe1/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/goframe1/</link>
         <pubDate>Tue, 02 Feb 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Tue, 02 Feb 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/goframe1/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/goframe1/</guid>
         <description>手动编译安装 这是万能的安装方式： 1 git clone https://github.com/gogf/gf &amp;amp;&amp;amp; cd gf/cmd/gf &amp;amp;&amp;amp; go install 验证安装成功 1 2 3 4 5 $ gf -v GoFrame CLI Tool v2.2.1, https://goframe.org GoFrame Version: cannot find goframe requirement in go.mod CLI Installed At: /usr/local/go/bin/gf Current is a custom installed version, no installation information. 创建项目</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -199,11 +199,11 @@
       
       <item>
         <title>goframe目录</title>
-        <link>http://ingress.test1.com/en/stack/golang/gofamedir/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/gofamedir/</link>
         <pubDate>Mon, 01 Feb 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 01 Feb 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/gofamedir/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/gofamedir/</guid>
         <description>一、工程目录结构 GoFrame业务项目基本目录结构如下（以Single Repo为例）： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 / ├── api ├── hack</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -225,11 +225,11 @@
       
       <item>
         <title>学习go(第二部分)</title>
-        <link>http://ingress.test1.com/en/stack/golang/go_part2/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/go_part2/</link>
         <pubDate>Mon, 04 Jan 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 04 Jan 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/go_part2/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/go_part2/</guid>
         <description>一、基本结构与基本数据类型 1、文件名、关键字与标识符 1.1 文件名 文件名 均由小写字母组成，如 scanner.go。 如果文件名由多个部分组成，则使用</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -251,11 +251,11 @@
       
       <item>
         <title>学习go(第一部分)</title>
-        <link>http://ingress.test1.com/en/stack/golang/go_part1/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/go_part1/</link>
         <pubDate>Sun, 03 Jan 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sun, 03 Jan 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/go_part1/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/go_part1/</guid>
         <description>一、起源与发展 起源 Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -277,11 +277,11 @@
       
       <item>
         <title>linux安装golang</title>
-        <link>http://ingress.test1.com/en/stack/golang/install_linux/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/install_linux/</link>
         <pubDate>Sat, 02 Jan 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sat, 02 Jan 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/install_linux/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/install_linux/</guid>
         <description>一、下载 去官网下载 ，国内地址：https://golang.google.cn/dl/ 1 $ wget https://golang.google.cn/dl/go1.16.7.linux-amd64.tar.gz 二、解压(需要root权限) 1 $ sudo tar -C /usr/local -xzf go1.16.7.linux-amd64.tar.gz 三</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -303,11 +303,11 @@
       
       <item>
         <title>golang注意事项</title>
-        <link>http://ingress.test1.com/en/stack/golang/tips/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/tips/</link>
         <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sat, 02 Jan 2021 00:00:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/tips/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/tips/</guid>
         <description>1、左大括号 { 不能单独放一行 在其他大多数语言中，{ 的位置你自行决定。Go比较特别，遵守分号注入规则（automatic semicolon injection）</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -329,11 +329,11 @@
       
       <item>
         <title>golang安装、配置及版本升级</title>
-        <link>http://ingress.test1.com/en/stack/golang/get_started/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/golang/get_started/</link>
         <pubDate>Fri, 01 Jan 2021 01:01:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Fri, 01 Jan 2021 01:01:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/golang/get_started/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/golang/get_started/</guid>
         <description>一、下载 去官网下载 ，国内地址：https://golang.google.cn/dl/ 选择对应的版本即可，我本地使用的是https://go</description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -355,15 +355,15 @@
       
       <item>
         <title>django框架</title>
-        <link>http://ingress.test1.com/en/posts/django/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/django/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/django/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/django/</guid>
         <description>一、安装 pip 安装 pip install django 安装成功后会有 django-admin 命令 创建新项目 django-admin startproject website(项目名) 开启项目 python manage.py startapp app &amp;ndash;不能重名 启动项目 python manage.py runserver 指定 IP+</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature3/django.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature3/django.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -387,15 +387,15 @@
       
       <item>
         <title>Syntax highlighting</title>
-        <link>http://ingress.test1.com/en/posts/syntax-highlight/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/syntax-highlight/</link>
         <pubDate>Fri, 24 Jan 2020 06:40:51 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Fri, 24 Jan 2020 06:40:51 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/syntax-highlight/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/syntax-highlight/</guid>
         <description>Code Syntax Highlighting123123123 Verify the following code blocks render as code blocks and highlight properly. More about tuning syntax highlighting is the Hugo documentation. Diff 1 2 3 4 5 6 7 8 9 10 *** /path/to/original &amp;#39;&amp;#39;timestamp&amp;#39;&amp;#39; --- /path/to/new &amp;#39;&amp;#39;timestamp&amp;#39;&amp;#39; *************** *** 1 **** ! This is a line. --- 1 --- ! This is a replacement line. It is important to spell -removed line +new line *** /path/to/original</description>
         
         <dc:creator>Jeus</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature2/color-palette.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature2/color-palette.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -421,16 +421,16 @@
       
       <item>
         <title>Shortcodes</title>
-        <link>http://ingress.test1.com/en/posts/shortcodes/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/shortcodes/</link>
         <pubDate>Thu, 23 Jan 2020 06:40:51 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Thu, 23 Jan 2020 06:40:51 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/shortcodes/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/shortcodes/</guid>
         <description>Markdownify box This is boxmd shortcode Simple box This is **box** shortcode  Code tabs Make it easy to switch between different code
 java javascript  1  System.out.println(&amp;#39;Hello World!&amp;#39;);     1  console.log(&amp;#39;Hello World!&amp;#39;);       &#39;use strict&#39;; var containerId = JSON.parse(&#34;\&#34;beee16b23b213409\&#34;&#34;); var containerElem = document.getElementById(containerId); var codetabLinks = null; var codetabContents = null; var ids = []; if (containerElem) { codetabLinks = containerElem.</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature3/css3.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature3/css3.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -454,15 +454,15 @@ java javascript  1  System.out.println(&amp;#39;Hello World!&amp;#39;);     1  c
       
       <item>
         <title>Markdown Syntax Guide</title>
-        <link>http://ingress.test1.com/en/posts/markdown-syntax/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/markdown-syntax/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Fri, 20 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/markdown-syntax/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/markdown-syntax/</guid>
         <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
         
         <dc:creator>Choi</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature1/markdown.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature1/markdown.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -506,11 +506,11 @@ java javascript  1  System.out.println(&amp;#39;Hello World!&amp;#39;);     1  c
       
       <item>
         <title>Math Typesetting</title>
-        <link>http://ingress.test1.com/en/posts/math-typesetting/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/math-typesetting/</link>
         <pubDate>Tue, 17 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Tue, 17 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/math-typesetting/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/math-typesetting/</guid>
         <description>&lt;div class=&#34;box&#34;&gt;
 We need goldmark katex entension which is not yet we have: 
 [https://github.com/gohugoio/hugo/issues/6544](https://github.com/gohugoio/hugo/issues/6544)
@@ -528,11 +528,11 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>Emoji Support</title>
-        <link>http://ingress.test1.com/en/posts/emoji-support/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/emoji-support/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/emoji-support/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/emoji-support/</guid>
         <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
         
         <dc:creator>Kim</dc:creator>
@@ -568,15 +568,15 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>Viz support</title>
-        <link>http://ingress.test1.com/en/posts/test-viz/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-viz/</link>
         <pubDate>Mon, 18 Nov 2019 21:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 18 Nov 2019 21:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-viz/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-viz/</guid>
         <description>digraph G { subgraph cluster_0 { style=filled; color=lightgrey; node [style=filled,color=white]; a0 -&amp;gt; a1 -&amp;gt; a2 -&amp;gt; a3; label = &amp;quot;process #1&amp;quot;; } subgraph cluster_1 { node [style=filled]; b0 -&amp;gt; b1 -&amp;gt; b2 -&amp;gt; b3; label = &amp;quot;process #2&amp;quot;; color=blue } start -&amp;gt; a0; start -&amp;gt; b0; a1 -&amp;gt; b3; b2 -&amp;gt; a3; a3 -&amp;gt; a0; a3 -&amp;gt; end; b3 -&amp;gt; end; start [shape=Mdiamond]; end [shape=Msquare]; } </description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature2/graph.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature2/graph.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -600,15 +600,15 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>Wavedrom support</title>
-        <link>http://ingress.test1.com/en/posts/test-wavedrom/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-wavedrom/</link>
         <pubDate>Mon, 18 Nov 2019 18:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 18 Nov 2019 18:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-wavedrom/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-wavedrom/</guid>
         <description>{ &amp;quot;signal&amp;quot;: [ {&amp;quot;name&amp;quot;: &amp;quot;CLK&amp;quot;, &amp;quot;wave&amp;quot;: &amp;quot;p.....|...&amp;quot;}, {&amp;quot;name&amp;quot;:&amp;quot;DAT&amp;quot;, &amp;quot;wave&amp;quot;:&amp;quot;x.345x|=.x&amp;quot;, &amp;quot;data&amp;quot;:[&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;D&amp;quot;]}, {&amp;quot;name&amp;quot;: &amp;quot;REQ&amp;quot;, &amp;quot;wave&amp;quot;: &amp;quot;0.1..0|1.0&amp;quot;}, {}, {&amp;quot;name&amp;quot;: &amp;quot;ACK&amp;quot;, &amp;quot;wave&amp;quot;: &amp;quot;1.....|01.&amp;quot;} ]} </description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature1/wave.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature1/wave.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -632,15 +632,15 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>Chart support</title>
-        <link>http://ingress.test1.com/en/posts/test-chartjs/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-chartjs/</link>
         <pubDate>Mon, 18 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 18 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-chartjs/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-chartjs/</guid>
         <description>{ &amp;quot;type&amp;quot;: &amp;quot;bar&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;labels&amp;quot;: [&amp;quot;One&amp;quot;, &amp;quot;Two&amp;quot;, &amp;quot;Three&amp;quot;, &amp;quot;Four&amp;quot;, &amp;quot;Five&amp;quot;, &amp;quot;Six&amp;quot;], &amp;quot;datasets&amp;quot;: [{ &amp;quot;label&amp;quot;: &amp;quot;# of Votes&amp;quot;, &amp;quot;data&amp;quot;: [12, 19, 3, 5, 3, 8] }] } } { &amp;quot;type&amp;quot;: &amp;quot;line&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;labels&amp;quot;: [&amp;quot;One&amp;quot;, &amp;quot;Two&amp;quot;, &amp;quot;Three&amp;quot;, &amp;quot;Four&amp;quot;, &amp;quot;Five&amp;quot;, &amp;quot;Six&amp;quot;], &amp;quot;datasets&amp;quot;: [ { &amp;quot;label&amp;quot;: &amp;quot;# of Votes&amp;quot;, &amp;quot;data&amp;quot;: [12, 19, 3, 5, 2, 3], &amp;quot;backgroundColor&amp;quot;:&amp;quot;transparent&amp;quot;, &amp;quot;borderColor&amp;quot;:&amp;quot;orange&amp;quot; }, { &amp;quot;label&amp;quot;: &amp;quot;Some other set&amp;quot;, &amp;quot;data&amp;quot;: [15, 8, 13, 5, 5, 9], &amp;quot;backgroundColor&amp;quot;:&amp;quot;transparent&amp;quot;, &amp;quot;borderColor&amp;quot;:&amp;quot;#44ccff&amp;quot; } ] } } </description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature1/graph.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature1/graph.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -664,15 +664,15 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>JS Sequence Diagram support</title>
-        <link>http://ingress.test1.com/en/posts/test-js-sequence-diagrams/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-js-sequence-diagrams/</link>
         <pubDate>Mon, 18 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 18 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-js-sequence-diagrams/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-js-sequence-diagrams/</guid>
         <description>Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks! Title: Here is a title A-&amp;gt;B: Normal line B--&amp;gt;C: Dashed line C-&amp;gt;&amp;gt;D: Open arrow D--&amp;gt;&amp;gt;A: Dashed open arrow </description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature2/transfer.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature2/transfer.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -696,15 +696,15 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>Mermaid support</title>
-        <link>http://ingress.test1.com/en/posts/test-mermaid/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-mermaid/</link>
         <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sun, 17 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-mermaid/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-mermaid/</guid>
         <description>graph TD; A--&amp;gt;B; A--&amp;gt;C; B--&amp;gt;D; C--&amp;gt;D; sequenceDiagram participant Alice participant Bob Alice-&amp;gt;John: Hello John, how are you? loop Healthcheck John-&amp;gt;John: Fight against hypochondria end Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail... John--&amp;gt;Alice: Great! John-&amp;gt;Bob: How about you? Bob--&amp;gt;John: Jolly good! graph TD A[Hard] --&amp;gt;|Text| B(Round) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result 1] C --&amp;gt;|Two| E[Result 2] gantt section Section Completed :done, des1, 2014-01-06,2014-01-08 Active :active, des2, 2014-01-07, 3d Parallel 1 : des3, after des1, 1d Parallel 2 : des4, after des1, 1d Parallel 3 : des5, after des3, 1d Parallel 4 : des6, after des4, 1d classDiagram Class01 &amp;lt;|-- AveryLongClass : Cool &amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01 Class09 --&amp;gt; C2 : Where am i?</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature2/workflow.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature2/workflow.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -730,16 +730,16 @@ We need goldmark katex entension which is not yet we have:
       
       <item>
         <title>MathJax support</title>
-        <link>http://ingress.test1.com/en/posts/test-mathjax/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-mathjax/</link>
         <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Sat, 16 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-mathjax/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-mathjax/</guid>
         <description>When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature1/infinity.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature1/infinity.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -763,11 +763,11 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</description>
       
       <item>
         <title>Katex support</title>
-        <link>http://ingress.test1.com/en/posts/test-katex/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-katex/</link>
         <pubDate>Fri, 15 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Fri, 15 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-katex/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-katex/</guid>
         <description>The following
 $$ \int_{a}^{b} x^2 dx $$
 Is an integral
@@ -778,7 +778,7 @@ Note: For inline math to render correctly, your content file extension must be .
 Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature2/mathbook.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature2/mathbook.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -802,15 +802,15 @@ Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.</description>
       
       <item>
         <title>Flowchart support</title>
-        <link>http://ingress.test1.com/en/posts/test-flowchart/</link>
+        <link>http://wangjinbao.netlify.app/en/posts/test-flowchart/</link>
         <pubDate>Thu, 14 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Thu, 14 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>http://ingress.test1.com/en/posts/test-flowchart/</guid>
+        <guid>http://wangjinbao.netlify.app/en/posts/test-flowchart/</guid>
         <description>st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank] e=&amp;gt;end: End|future:&amp;gt;http://www.google.com op1=&amp;gt;operation: My Operation|past op2=&amp;gt;operation: Stuff|current sub1=&amp;gt;subroutine: My Subroutine|invalid cond=&amp;gt;condition: Yes or No?|approved:&amp;gt;http://www.google.com c2=&amp;gt;condition: Good idea|rejected io=&amp;gt;inputoutput: catch something...|future st-&amp;gt;op1(right)-&amp;gt;cond cond(yes, right)-&amp;gt;c2 cond(no)-&amp;gt;sub1(left)-&amp;gt;op1 c2(yes)-&amp;gt;io-&amp;gt;e c2(no)-&amp;gt;op2-&amp;gt;e st=&amp;gt;start: Start e=&amp;gt;end: 需求变更备案 op1=&amp;gt;operation: 需求基线确定|past op2=&amp;gt;operation: 内部需求变更|current op3=&amp;gt;operation: 下一个版本</description>
         
         <dc:creator>wangjinbao</dc:creator>
-        <media:content url="http://ingress.test1.comimages/feature1/flowchart.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="http://wangjinbao.netlify.appimages/feature1/flowchart.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -834,11 +834,11 @@ Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.</description>
       
       <item>
         <title>javascript</title>
-        <link>http://ingress.test1.com/en/stack/javascript/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/javascript/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/stack/javascript/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/javascript/</guid>
         <description></description>
         
         <dc:creator>Hugo Authors</dc:creator>

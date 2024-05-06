@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Home</title>
-    <link>http://ingress.test1.com/en/categories/</link>
+    <link>http://wangjinbao.netlify.app/en/categories/</link>
     <description>Recent content in Categories on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 24 Jan 2020 06:40:51 +0900</lastBuildDate>
     
-        <atom:link href="http://ingress.test1.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://wangjinbao.netlify.app/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>hugo</title>
-        <link>http://ingress.test1.com/en/categories/hugo/</link>
+        <link>http://wangjinbao.netlify.app/en/categories/hugo/</link>
         <pubDate>Fri, 24 Jan 2020 06:40:51 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/categories/hugo/</guid>
+        <guid>http://wangjinbao.netlify.app/en/categories/hugo/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>syntax</title>
-        <link>http://ingress.test1.com/en/categories/syntax/</link>
+        <link>http://wangjinbao.netlify.app/en/categories/syntax/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/categories/syntax/</guid>
+        <guid>http://wangjinbao.netlify.app/en/categories/syntax/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>themes</title>
-        <link>http://ingress.test1.com/en/categories/themes/</link>
+        <link>http://wangjinbao.netlify.app/en/categories/themes/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/categories/themes/</guid>
+        <guid>http://wangjinbao.netlify.app/en/categories/themes/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>diagram</title>
-        <link>http://ingress.test1.com/en/categories/diagram/</link>
+        <link>http://wangjinbao.netlify.app/en/categories/diagram/</link>
         <pubDate>Mon, 18 Nov 2019 21:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/categories/diagram/</guid>
+        <guid>http://wangjinbao.netlify.app/en/categories/diagram/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>math</title>
-        <link>http://ingress.test1.com/en/categories/math/</link>
+        <link>http://wangjinbao.netlify.app/en/categories/math/</link>
         <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://ingress.test1.com/en/categories/math/</guid>
+        <guid>http://wangjinbao.netlify.app/en/categories/math/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
