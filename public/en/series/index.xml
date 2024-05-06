@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Home</title>
-    <link>http://wangjinbao.netlify.app/en/series/</link>
+    <link>http://ingress.test1.com/en/series/</link>
     <description>Recent content in Series on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://wangjinbao.netlify.app/en/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://ingress.test1.com/en/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Themes Guide</title>
-        <link>http://wangjinbao.netlify.app/en/series/themes-guide/</link>
+        <link>http://ingress.test1.com/en/series/themes-guide/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         
-        <guid>http://wangjinbao.netlify.app/en/series/themes-guide/</guid>
+        <guid>http://ingress.test1.com/en/series/themes-guide/</guid>
         <description></description>
         
         <dc:creator>wangjinbao</dc:creator>
