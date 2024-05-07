@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>php on Home</title>
-    <link>http://ingress.test1.com/en/tags/php/</link>
+    <link>http://wangjinbao.netlify.app/en/tags/php/</link>
     <description>Recent content in php on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://ingress.test1.com/en/tags/php/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://wangjinbao.netlify.app/en/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>php常用设计模式代码</title>
-        <link>http://ingress.test1.com/en/stack/php/design/</link>
+        <link>http://wangjinbao.netlify.app/en/stack/php/design/</link>
         <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
         <author>wang_jin_bao@163.com (wangjinbao)</author>
         <atom:modified>Mon, 18 May 2020 00:00:00 +0000</atom:modified>
-        <guid>http://ingress.test1.com/en/stack/php/design/</guid>
+        <guid>http://wangjinbao.netlify.app/en/stack/php/design/</guid>
         <description>单例模式 单例模式是一种 创建唯一实例的设计模式。它通常用于管理资源，例如数据库连接或者日志记录。 单例模式可以确保 一个类只有一个实例 ，这样就可以</description>
         
         <dc:creator>wangjinbao</dc:creator>
