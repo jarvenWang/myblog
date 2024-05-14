@@ -114,3 +114,32 @@ MyISAM是非聚集索引：
 3. 效率高：
 
 ## 索引优化
+### 联合索引失效场景：
+<font color='cyan'>"左、右、函数、范围后、select */!=/not in/单引号"</font>
+1. 最左前缀法则：<font color='cyan'>缺少最左索引，跳过中间</font>
+2. 在索引列上操作（<font color='cyan'>计算、函数、or</font>）：函数 打断了索引的有序 固失效
+3. 索引字段 <font color='cyan'>范围之后全失效</font> `where name = tom and age >10 and score=100`
+4. 使用覆盖索引，不使用 `select *`
+5. 使用不等于`!=`、`not in`索引失效
+6. like% <font color='cyan'>百分写最右</font>
+7. 字体符号不加单引号
+
+
+>PS:有possiblity_key强制使用索引 `FORCE INDEX( XXX )`
+
+## trace工具
+步骤：
+1. 开启trace: `set session optimizer_trace="enabled_on",end_markers_in_json=on;`
+2. `select * from user where age=18 and name='张三';`
+3. `SELECT * FROM information_schema.OPTIMIZER_TRACE;`
+
+## SQL优化
+`select` `from` `left` `group by` `batch` `limit`
+1. <font color='cyan'>不用`select *`</font>:不会走覆盖索引
+2. <font color='cyan'>小表驱动大表</font>： `from 小表 left join 大表`
+3. <font color='cyan'>用连接查询代替子查询</font>
+4. <font color='cyan'>group by 的列加索引</font>
+5. <font color='cyan'>批量插入batch</font>
+6. <font color='cyan'>使用limit</font>
+7. <font color='cyan'>用union all 代替 union</font>: union all 不去重，union去重
+8. <font color='cyan'>join表不宜过多</font>
