@@ -10,7 +10,7 @@ enableTocContent: false
 author: wangjinbao
 authorEmoji: 👻
 tags:
-- bigdata
+- db
 categories:
 - mysql
 

@@ -8,10 +8,10 @@
     <loc>http://wangjinbao.netlify.app/en/showcase/hugo/hugo-theme-zdoc/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/tags/bigdata/</loc>
+    <loc>http://wangjinbao.netlify.app/en/tags/db/</loc>
     <lastmod>2023-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/</loc>
     <lastmod>2023-06-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://wangjinbao.netlify.app/en/</loc>
@@ -27,7 +27,7 @@
                 href="http://wangjinbao.netlify.app/en/"
                 />
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/starrocks/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/starrocks/</loc>
     <lastmod>2023-06-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://wangjinbao.netlify.app/en/tags/</loc>
@@ -46,7 +46,7 @@
     <loc>http://wangjinbao.netlify.app/en/stack/</loc>
     <lastmod>2023-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/design/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/design/</loc>
     <lastmod>2023-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://wangjinbao.netlify.app/en/categories/</loc>
@@ -119,22 +119,22 @@
     <loc>http://wangjinbao.netlify.app/en/stack/javascript/style/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/airflow/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/airflow/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/dolphinscheduler/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/dolphinscheduler/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/sql_func/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/sql_func/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/sql_high/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/sql_high/</loc>
     <lastmod>2023-05-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/select/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/select/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/plan/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/plan/</loc>
     <lastmod>2023-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://wangjinbao.netlify.app/en/categories/jeager/</loc>
@@ -158,7 +158,7 @@
     <loc>http://wangjinbao.netlify.app/en/categories/yaml/</loc>
     <lastmod>2023-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/tips/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/tips/</loc>
     <lastmod>2023-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://wangjinbao.netlify.app/en/stack/knowledge/yaml/</loc>
@@ -201,7 +201,7 @@
     <loc>http://wangjinbao.netlify.app/en/posts/gift/</loc>
     <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://wangjinbao.netlify.app/en/stack/bigdata/gift/</loc>
+    <loc>http://wangjinbao.netlify.app/en/stack/db/gift/</loc>
     <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://wangjinbao.netlify.app/en/tags/golang/</loc>

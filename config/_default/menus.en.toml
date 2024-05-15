@@ -37,8 +37,8 @@
 
 [[main]]
   parent = "stack"
-  name = "bigdata"
-  url = "stack/bigdata"
+  name = "db"
+  url = "stack/db"
   weight = 6
 
   [[main]]
