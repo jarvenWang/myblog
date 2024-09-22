@@ -11,8 +11,8 @@
     <description>Recent content in php on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
-    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <managingEditor>jarvaniv0611@gmail.com (Karson)</managingEditor>
+    <webMaster>jarvaniv0611@gmail.com (Karson)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>php常用设计模式代码</title>
         <link>http://wangjinbao.netlify.app/en/stack/php/design/</link>
         <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Mon, 18 May 2020 00:00:00 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/php/design/</guid>
         <description>单例模式 单例模式是一种 创建唯一实例的设计模式。它通常用于管理资源，例如数据库连接或者日志记录。 单例模式可以确保 一个类只有一个实例 ，这样就可以</description>

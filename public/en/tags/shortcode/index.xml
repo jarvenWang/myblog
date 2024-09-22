@@ -11,8 +11,8 @@
     <description>Recent content in shortcode on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
-    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <managingEditor>jarvaniv0611@gmail.com (Karson)</managingEditor>
+    <webMaster>jarvaniv0611@gmail.com (Karson)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>django框架</title>
         <link>http://wangjinbao.netlify.app/en/posts/django/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/posts/django/</guid>
         <description>一、安装 pip 安装 pip install django 安装成功后会有 django-admin 命令 创建新项目 django-admin startproject website(项目名) 开启项目 python manage.py startapp app &amp;ndash;不能重名 启动项目 python manage.py runserver 指定 IP+</description>
@@ -58,7 +58,7 @@
         <title>django框架</title>
         <link>http://wangjinbao.netlify.app/en/stack/python/django/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/python/django/</guid>
         <description>一、安装 pip 安装 pip install django 安装成功后会有 django-admin 命令 创建新项目 django-admin startproject website(项目名) 开启项目 python manage.py startapp app &amp;ndash;不能重名 启动项目 python manage.py runserver 指定 IP+</description>

@@ -11,8 +11,8 @@
     <description>Recent content in linux on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
-    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <managingEditor>jarvaniv0611@gmail.com (Karson)</managingEditor>
+    <webMaster>jarvaniv0611@gmail.com (Karson)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 02 Jan 2022 00:00:01 +0000</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>Istio</title>
         <link>http://wangjinbao.netlify.app/en/stack/linux/istio/</link>
         <pubDate>Sun, 02 Jan 2022 00:00:01 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sun, 02 Jan 2022 00:00:01 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/linux/istio/</guid>
         <description>istio概念 讲多了记不住，那就：服务网格 + 微服务治理 。</description>

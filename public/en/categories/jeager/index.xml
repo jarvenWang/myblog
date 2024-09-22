@@ -11,8 +11,8 @@
     <description>Recent content in jeager on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
-    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <managingEditor>jarvaniv0611@gmail.com (Karson)</managingEditor>
+    <webMaster>jarvaniv0611@gmail.com (Karson)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>Jeager链路追踪系统</title>
         <link>http://wangjinbao.netlify.app/en/stack/knowledge/jeager/</link>
         <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sat, 20 May 2023 00:00:00 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/knowledge/jeager/</guid>
         <description>概述 Jaeger 是 Uber 开发并开源的一款 分布式链路追踪系统 ，兼容 OpenTracing API。 适用场景： 分布式跟踪信息传递 分布式事务监控 问题分析 依赖分析 性能优化 特性 高扩展性 J</description>
@@ -54,7 +54,7 @@
         <title>OpenTracing</title>
         <link>http://wangjinbao.netlify.app/en/stack/knowledge/opentracing/</link>
         <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sat, 20 May 2023 00:00:00 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/knowledge/opentracing/</guid>
         <description>OpenTracing概念 OpenTracing 分布式调用链标准（OpenTracing） 为了让分布式链路追踪技术有一个行业标准，CNCF（云原生计算基金会） 推</description>

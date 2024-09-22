@@ -11,8 +11,8 @@
     <description>Recent content in yaml on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
-    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <managingEditor>jarvaniv0611@gmail.com (Karson)</managingEditor>
+    <webMaster>jarvaniv0611@gmail.com (Karson)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>浅谈yaml</title>
         <link>http://wangjinbao.netlify.app/en/stack/knowledge/yaml/</link>
         <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sat, 20 May 2023 00:00:00 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/knowledge/yaml/</guid>
         <description>介绍 是一个可读性高，用来表达数据序列的格式。 YAML 的意思其实：仍是一种 标记语言，但为是强调这种语言 以数据做为中心，而不是以标记语言为重点 基本语法</description>

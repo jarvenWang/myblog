@@ -11,8 +11,8 @@
     <description>Recent content in python on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>wang_jin_bao@163.com (wangjinbao)</managingEditor>
-    <webMaster>wang_jin_bao@163.com (wangjinbao)</webMaster>
+    <managingEditor>jarvaniv0611@gmail.com (Karson)</managingEditor>
+    <webMaster>jarvaniv0611@gmail.com (Karson)</webMaster>
     <copyright>©2024, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>文本匹配模型</title>
         <link>http://wangjinbao.netlify.app/en/stack/python/answer/</link>
         <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Fri, 20 May 2022 00:00:00 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/python/answer/</guid>
         <description>1、文本匹配模型分类 文本匹配模型在问答系统、信息检索、文本分类、自然语言处理等任务中都有广泛的应用。根据具体的任务和需求，可以选择合适的模型</description>
@@ -50,7 +50,7 @@
         <title>python常用资料</title>
         <link>http://wangjinbao.netlify.app/en/stack/python/links/</link>
         <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Thu, 19 May 2022 00:00:00 +0000</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/python/links/</guid>
         <description>1、相关连接 Python官方网站： https://www.python.org/ 这是Python语言的官方网站，你可以在这里找到Python的最新版本、文档、教程等。 Python入门教</description>
@@ -76,7 +76,7 @@
         <title>django框架</title>
         <link>http://wangjinbao.netlify.app/en/stack/python/django/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>wang_jin_bao@163.com (wangjinbao)</author>
+        <author>jarvaniv0611@gmail.com (Karson)</author>
         <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
         <guid>http://wangjinbao.netlify.app/en/stack/python/django/</guid>
         <description>一、安装 pip 安装 pip install django 安装成功后会有 django-admin 命令 创建新项目 django-admin startproject website(项目名) 开启项目 python manage.py startapp app &amp;ndash;不能重名 启动项目 python manage.py runserver 指定 IP+</description>
