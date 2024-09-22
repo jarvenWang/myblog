@@ -94,11 +94,11 @@
   url = "posts"
   weight = 5
 
-[[main]]
-  identifier = "showcase"
-  name = "开源项目"
-  url = "showcase"
-  weight = 6
+# [[main]]
+#   identifier = "showcase"
+#   name = "开源项目"
+#   url = "showcase"
+#   weight = 6
 
 #[[main]]
 #  identifier = "publication"
