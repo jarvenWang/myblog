@@ -1,5 +1,5 @@
 ---
-author: "wangjinbao"
+author: "Karson"
 title: "minikube安装(单机集群)"
 date: 2022-05-21
 description: "用于在本地计算机上运行单节点Kubernetes集群的工具"
@@ -7,7 +7,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: wangjinbao
+author: Karson
 authorEmoji: 👻
 tags:
 - docker 

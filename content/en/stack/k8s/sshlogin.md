@@ -1,5 +1,5 @@
 ---
-author: "wangjinbao"
+author: "Karson"
 title: "ssh无密码登录容器"
 date: 2021-05-23
 description: "Docker中设置authorized_keys进行无密码登录"
@@ -7,7 +7,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: wangjinbao
+author: Karson
 authorEmoji: 👻
 tags:
 - docker

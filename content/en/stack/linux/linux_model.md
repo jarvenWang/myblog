@@ -1,5 +1,5 @@
 ---
-author: "wangjinbao"
+author: "Karson"
 title: "linux的架构"
 date: 2022-01-01 00:00:01
 description: "linux的架构"
@@ -7,7 +7,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: wangjinbao
+author: Karson
 authorEmoji: 👻
 tags: 
 - linux

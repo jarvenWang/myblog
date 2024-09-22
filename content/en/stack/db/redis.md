@@ -1,5 +1,5 @@
 ---
-author: "wangjinbao"
+author: "Karson"
 title: "redis应用问题与解决方案"
 date: 2022-08-26
 description: "redis应用问题与解决方案"
@@ -7,7 +7,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: wangjinbao
+author: Karson
 authorEmoji: 👻
 tags:
 - db

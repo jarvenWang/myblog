@@ -1,5 +1,5 @@
 ---
-author: "wangjinbao"
+author: "Karson"
 title: "微服务架构之幂等性问题"
 date: 2022-05-17
 description: "微服务架构之幂等性问题"
@@ -7,7 +7,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: wangjinbao
+author: Karson
 authorEmoji: 👻
 tags:
 - knowledge

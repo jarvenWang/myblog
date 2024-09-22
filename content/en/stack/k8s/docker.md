@@ -1,5 +1,5 @@
 ---
-author: "wangjinbao"
+author: "Karson"
 title: "十个实验熟练掌握Docker"
 date: 2021-05-21
 description: "Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。让打包应用以及依赖包到一个轻量级、可移植的容器中，发布到任何Linux机器上。"
@@ -7,7 +7,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: wangjinbao
+author: Karson
 authorEmoji: 👻
 tags:
 - docker
