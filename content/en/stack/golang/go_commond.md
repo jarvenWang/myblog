@@ -272,10 +272,10 @@ usage: go doc [-u] [-c] [package|[package.]symbol[.methodOrField]]
 $ go doc -c crontab
 package crontab // import "kg_info_dashboard_api/crontab"
 
-* @Author: jarvenwang wang_jin_bao@163.com * @Date: 2022-07-25 09:53:30 *
-@LastEditors: dante wang_jin_bao@163.com * @LastEditTime: 2022-11-24 19:24:02 *
+* @Author: jarvenwang jarvaniv0611@gmail.com * @Date: 2022-07-25 09:53:30 *
+@LastEditors: dante jarvaniv0611@gmail.com * @LastEditTime: 2022-11-24 19:24:02 *
 @FilePath: /kg_info_dashboard_api/crontab/cron.go * @Description: * * Copyright
-(c) 2022 by jarvenwang wang_jin_bao@163.com, All Rights Reserved.
+(c) 2022 by jarvenwang jarvaniv0611@gmail.com, All Rights Reserved.
 
 func CronExec()
 func FindKPIChildDataPermission(adminUserName string) string

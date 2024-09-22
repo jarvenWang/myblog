@@ -61,7 +61,7 @@ typeIcon = "🎯"
 
 # whoami
 myname = "Karson"
-email = "wang_jin_bao@163.com"
+email = "jarvaniv0611@gmail.com"
 whoami = "Web Developer"
 bioImageUrl = ""
 useGravatar = false
@@ -161,7 +161,7 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "wang_jin_bao@163.com"
+  email = "jarvaniv0611@gmail.com"
   phone = ""
   facebook = "http://example.org/"
   twitter = "http://example.org/"
